@@ -1,0 +1,508 @@
+{
+ "doc_type": {
+  "counts": {
+   "specific": 100
+  },
+  "distinct": 20,
+  "top": [
+   [
+    "guide",
+    17
+   ],
+   [
+    "leg",
+    14
+   ],
+   [
+    "instr",
+    11
+   ],
+   [
+    "wi",
+    10
+   ],
+   [
+    "proc",
+    9
+   ],
+   [
+    "ovw",
+    8
+   ]
+  ]
+ },
+ "process_domain": {
+  "counts": {
+   "specific": 100
+  },
+  "distinct": 17,
+  "top": [
+   [
+    "g2n",
+    40
+   ],
+   [
+    "abs",
+    15
+   ],
+   [
+    "pay",
+    11
+   ],
+   [
+    "decl",
+    11
+   ],
+   [
+    "ben",
+    11
+   ],
+   [
+    "gov",
+    9
+   ]
+  ]
+ },
+ "worker_category": {
+  "counts": {
+   "wildcard": 77,
+   "specific": 23
+  },
+  "distinct": 9,
+  "top": [
+   [
+    "arbeider",
+    8
+   ],
+   [
+    "bediende",
+    5
+   ],
+   [
+    "frontier",
+    5
+   ],
+   [
+    "inpat",
+    5
+   ],
+   [
+    "uitzend",
+    4
+   ],
+   [
+    "flexi",
+    2
+   ]
+  ]
+ },
+ "pay_component": {
+  "counts": {
+   "wildcard": 63,
+   "specific": 36,
+   "unknown": 1
+  },
+  "distinct": 20,
+  "top": [
+   [
+    "holiday_pay",
+    6
+   ],
+   [
+    "severance",
+    4
+   ],
+   [
+    "shift",
+    4
+   ],
+   [
+    "pension",
+    3
+   ],
+   [
+    "dbl_holiday",
+    3
+   ],
+   [
+    "sick_pay",
+    2
+   ]
+  ]
+ },
+ "bindingness": {
+  "counts": {
+   "specific": 99,
+   "unknown": 1
+  },
+  "distinct": 4,
+  "top": [
+   [
+    "b",
+    80
+   ],
+   [
+    "a",
+    16
+   ],
+   [
+    "p",
+    2
+   ],
+   [
+    "n",
+    1
+   ]
+  ]
+ },
+ "scope_level": {
+  "counts": {
+   "specific": 100
+  },
+  "distinct": 7,
+  "top": [
+   [
+    "fed",
+    39
+   ],
+   [
+    "internal",
+    38
+   ],
+   [
+    "client",
+    11
+   ],
+   [
+    "sector",
+    11
+   ],
+   [
+    "eu",
+    9
+   ],
+   [
+    "company",
+    2
+   ]
+  ]
+ },
+ "lang": {
+  "counts": {
+   "specific": 100
+  },
+  "distinct": 3,
+  "top": [
+   [
+    "nl",
+    89
+   ],
+   [
+    "en",
+    9
+   ],
+   [
+    "fr",
+    2
+   ]
+  ]
+ },
+ "acl": {
+  "counts": {
+   "specific": 100
+  },
+  "distinct": 4,
+  "top": [
+   [
+    "all",
+    81
+   ],
+   [
+    "client",
+    12
+   ],
+   [
+    "team",
+    6
+   ],
+   [
+    "legal",
+    1
+   ]
+  ]
+ },
+ "country": {
+  "counts": {
+   "specific": 96,
+   "wildcard": 4
+  },
+  "distinct": 7,
+  "top": [
+   [
+    "BE",
+    82
+   ],
+   [
+    "multi",
+    6
+   ],
+   [
+    "BE+EU",
+    4
+   ],
+   [
+    "BE+NL",
+    1
+   ],
+   [
+    "BE+FR",
+    1
+   ],
+   [
+    "EU",
+    1
+   ]
+  ]
+ },
+ "pc_code": {
+  "counts": {
+   "wildcard": 82,
+   "specific": 10,
+   "unknown": 8
+  },
+  "distinct": 7,
+  "top": [
+   [
+    "322",
+    3
+   ],
+   [
+    "124",
+    2
+   ],
+   [
+    "330",
+    1
+   ],
+   [
+    "118",
+    1
+   ],
+   [
+    "200",
+    1
+   ],
+   [
+    "116",
+    1
+   ]
+  ]
+ },
+ "client": {
+  "counts": {
+   "wildcard": 86,
+   "specific": 12,
+   "unknown": 2
+  },
+  "distinct": 10,
+  "top": [
+   [
+    "C1",
+    2
+   ],
+   [
+    "C2",
+    2
+   ],
+   [
+    "C3",
+    1
+   ],
+   [
+    "C4",
+    1
+   ],
+   [
+    "C5",
+    1
+   ],
+   [
+    "C6",
+    1
+   ]
+  ]
+ },
+ "service_line": {
+  "counts": {
+   "specific": 100
+  },
+  "distinct": 7,
+  "top": [
+   [
+    "pay",
+    80
+   ],
+   [
+    "multi",
+    14
+   ],
+   [
+    "reward",
+    10
+   ],
+   [
+    "sys",
+    7
+   ],
+   [
+    "hr",
+    5
+   ],
+   [
+    "staff",
+    3
+   ]
+  ]
+ },
+ "instrument": {
+  "counts": {
+   "na": 56,
+   "specific": 44
+  },
+  "distinct": 3,
+  "top": [
+   [
+    "law",
+    36
+   ],
+   [
+    "eu",
+    9
+   ],
+   [
+    "cao",
+    7
+   ]
+  ]
+ },
+ "legal_ref": {
+  "counts": {
+   "na": 53,
+   "specific": 47
+  },
+  "distinct": 4,
+  "top": [
+   [
+    "law",
+    34
+   ],
+   [
+    "cao",
+    9
+   ],
+   [
+    "case",
+    2
+   ],
+   [
+    "eu",
+    2
+   ]
+  ]
+ },
+ "run_type": {
+  "counts": {
+   "specific": 8,
+   "na": 92
+  },
+  "distinct": 5,
+  "top": [
+   [
+    "reg",
+    3
+   ],
+   [
+    "par",
+    2
+   ],
+   [
+    "corr",
+    1
+   ],
+   [
+    "sim",
+    1
+   ],
+   [
+    "off",
+    1
+   ]
+  ]
+ },
+ "declaration_channel": {
+  "counts": {
+   "na": 87,
+   "specific": 12,
+   "unknown": 1
+  },
+  "distinct": 8,
+  "top": [
+   [
+    "btax",
+    4
+   ],
+   [
+    "dmfa",
+    3
+   ],
+   [
+    "dimona",
+    2
+   ],
+   [
+    "a1",
+    1
+   ],
+   [
+    "bv",
+    1
+   ],
+   [
+    "rszq",
+    1
+   ]
+  ]
+ },
+ "temporal": {
+  "counts": {
+   "specific": 100
+  },
+  "distinct": 12,
+  "top": [
+   [
+    "undated",
+    50
+   ],
+   [
+    "law-window:-",
+    28
+   ],
+   [
+    "periodic:2026",
+    6
+   ],
+   [
+    "periodic:yearly",
+    6
+   ],
+   [
+    "law-window:2017-",
+    2
+   ],
+   [
+    "law-window:2018-",
+    2
+   ]
+  ]
+ }
+}

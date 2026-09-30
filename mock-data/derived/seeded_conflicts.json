@@ -1,0 +1,111 @@
+[
+  {
+    "conflict_id": "conflict-cutoff-d4-vs-d3",
+    "topic": "Retail payroll cutoff",
+    "facts": [
+      {
+        "claim": "Standing retail exception cutoff is D-4 at 12:00.",
+        "source_ids": [
+          "SP-PROX-002",
+          "outlook-msg-0002",
+          "teams-msg-0002"
+        ],
+        "trust_note": "official calendar and repeated reminders"
+      },
+      {
+        "claim": "D-3 was accepted for August retail corrections.",
+        "source_ids": [
+          "outlook-msg-0003",
+          "teams-msg-0005",
+          "teams-msg-0011"
+        ],
+        "trust_note": "valid one-off operational exception"
+      },
+      {
+        "claim": "D-3 has occurred before and is mentioned in handover notes.",
+        "source_ids": [
+          "SP-PROX-005",
+          "teams-msg-0066"
+        ],
+        "trust_note": "useful precedent but not policy"
+      }
+    ],
+    "expected_engine_behavior": "Answer that D-4 is the standing rule; D-3 was August-only and needs validation for future use."
+  },
+  {
+    "conflict_id": "conflict-payment-approval-owner",
+    "topic": "Final SEPA payment approval owner",
+    "facts": [
+      {
+        "claim": "HR Shared Services is final approval owner.",
+        "source_ids": [
+          "SP-PROX-003"
+        ],
+        "trust_note": "old unowned procedure"
+      },
+      {
+        "claim": "Finance Operations is final payment approver from May 2026.",
+        "source_ids": [
+          "outlook-msg-0004",
+          "outlook-msg-0006",
+          "teams-msg-0015"
+        ],
+        "trust_note": "recent customer confirmation"
+      }
+    ],
+    "expected_engine_behavior": "Flag SP-PROX-003 as stale; prefer the customer email decision and request SharePoint update."
+  },
+  {
+    "conflict_id": "conflict-standby-allowance-code",
+    "topic": "Field technician night intervention allowance",
+    "facts": [
+      {
+        "claim": "Old matrix uses code 5419 for night intervention.",
+        "source_ids": [
+          "SP-PROX-004"
+        ],
+        "trust_note": "semi-official but under review"
+      },
+      {
+        "claim": "Code 5413 is planned for Belgium from September after signed request.",
+        "source_ids": [
+          "outlook-msg-0008",
+          "teams-msg-0027"
+        ],
+        "trust_note": "customer policy confirmation but effective date depends on signed request"
+      },
+      {
+        "claim": "September payroll stayed on old code because signed request was not available.",
+        "source_ids": [
+          "teams-msg-0092",
+          "teams-msg-0093"
+        ],
+        "trust_note": "meeting/war room decision"
+      }
+    ],
+    "expected_engine_behavior": "Separate planned policy from active payroll configuration; warn Belgium-only."
+  },
+  {
+    "conflict_id": "conflict-offcycle-threshold",
+    "topic": "Off-cycle correction threshold",
+    "facts": [
+      {
+        "claim": "Manual says urgent off-cycle may be considered above EUR 100.",
+        "source_ids": [
+          "SP-PROX-001",
+          "outlook-msg-0011"
+        ],
+        "trust_note": "validated procedure and service lead decision"
+      },
+      {
+        "claim": "Handover notes mention previous EUR 75 precedent.",
+        "source_ids": [
+          "SP-PROX-005",
+          "teams-msg-0041"
+        ],
+        "trust_note": "practical precedent, not policy"
+      }
+    ],
+    "expected_engine_behavior": "Prefer EUR 100 as policy; flag EUR 75 as unvalidated historical precedent."
+  }
+]

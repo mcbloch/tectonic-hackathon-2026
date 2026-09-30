@@ -1,0 +1,286 @@
+{
+ "version": 2,
+ "corpus": "data/documents.json",
+ "tagger": "data/tagged.v1.json",
+ "states": {
+  "<value>": "specific",
+  "*": "applies to all / unscoped (positive wildcard)",
+  "null": "not determinable - pipeline or human must fill it",
+  "n/a": "structurally inapplicable"
+ },
+ "filter_rule": "match(doc, q) = (doc.tags & q.tags is non-empty) OR doc.tags == '*'; nulls raise a coverage warning and are never dropped silently",
+ "copy_rule": "pc_code, client_id, country fall back to the client master record; transcription from doc text is not the source of truth",
+ "required": [
+  "doc_id",
+  "title",
+  "doc_type",
+  "process_domain",
+  "lang",
+  "visibility",
+  "temporal_type"
+ ],
+ "fields": {
+  "doc_id": {
+   "t": "str"
+  },
+  "title": {
+   "t": "str"
+  },
+  "version": {
+   "t": "int"
+  },
+  "supersedes": {
+   "t": "doc_id?"
+  },
+  "translation_of": {
+   "t": "doc_id?",
+   "note": "doc 100 -> doc 1"
+  },
+  "doc_type": {
+   "t": "enum(8)",
+   "v": [
+    "legal_summary",
+    "procedure",
+    "control",
+    "reference",
+    "client_instruction",
+    "template",
+    "comms",
+    "system"
+   ],
+   "fill": "100%",
+   "source": "extract"
+  },
+  "process_domain": {
+   "t": "multi enum(13)",
+   "v": [
+    "absence",
+    "benefits",
+    "compliance",
+    "declarations",
+    "deductions",
+    "governance",
+    "gross_to_net",
+    "immigration",
+    "implementation",
+    "input",
+    "payment",
+    "quality",
+    "reporting",
+    "systems",
+    "termination",
+    "time_attendance",
+    "year_end"
+   ],
+   "fill": "100%, 49% multi",
+   "source": "extract"
+  },
+  "client_id": {
+   "t": "multi id",
+   "fill": "12% specific / 86% '*' / 2% null",
+   "source": "source-system metadata, never extracted"
+  },
+  "client_scope": {
+   "t": "enum",
+   "v": [
+    "generic",
+    "per_client"
+   ],
+   "note": "per_client + null client => must be instantiated before answering a client question"
+  },
+  "country": {
+   "t": "multi ISO3166",
+   "fill": "96% (82% BE)",
+   "source": "extract + client master",
+   "wildcard": "* = all countries"
+  },
+  "sub_jurisdiction": {
+   "t": "multi enum",
+   "fill": "0% on this corpus",
+   "note": "no doc exercises it; either add the regional incentives/subsidies doc class or defer"
+  },
+  "pc_code": {
+   "t": "multi code",
+   "fill": "10% specific / 82% '*' / 8% null",
+   "source": "inherit from client master"
+  },
+  "worker_category": {
+   "t": "multi enum",
+   "fill": "23% specific / 77% '*'",
+   "source": "extract"
+  },
+  "pay_component": {
+   "t": "multi enum",
+   "fill": "36% specific / 63% '*' / 1% null",
+   "source": "extract, keys map to payroll engine wage codes"
+  },
+  "service_line": {
+   "t": "multi enum",
+   "fill": "100%, 21% multi"
+  },
+  "legal_basis": {
+   "t": "{scheme,id}?",
+   "schemes": [
+    "eu_reg",
+    "law",
+    "kb",
+    "cao",
+    "case",
+    "form",
+    "be_pc",
+    "fr_idcc",
+    "de_tarif",
+    "it_ccnl",
+    "es_convenio",
+    "nl_cao",
+    "ch_gav",
+    "at_kv",
+    "lu_cct",
+    "se_kollektivavtal",
+    "no_tariffavtale"
+   ],
+   "schemes_note": "the last group are the sector-agreement identifier schemes from country_packs.json; one field, per-country vocabularies",
+   "fill": "44%, 56% n/a",
+   "source": "extract"
+  },
+  "rule_level": {
+   "t": "multi enum?",
+   "v": [
+    "eu",
+    "federal",
+    "regional",
+    "sector",
+    "company",
+    "works_council",
+    "client",
+    "individual"
+   ],
+   "rule": "derive from legal_basis.scheme where present, else null; never the token 'multi'",
+   "fill": "62 docs"
+  },
+  "precedence": {
+   "t": "int 1-8?",
+   "note": "index into rule_level; most specific wins on conflict; null for non-rule docs"
+  },
+  "bindingness": {
+   "t": "enum(4)",
+   "v": [
+    "binding",
+    "advisory",
+    "practice",
+    "consultative"
+   ],
+   "fill": "99%",
+   "source": "human-confirmed"
+  },
+  "output_channel": {
+   "t": "multi open list?",
+   "v": [
+    "dmfa",
+    "dimona",
+    "belcotax",
+    "bedrijfsvoorheffing",
+    "rsz_quarterly",
+    "nbb",
+    "co2",
+    "a1",
+    "limosa",
+    "dsn",
+    "uniemens",
+    "cu",
+    "rti_fps",
+    "p11d",
+    "deuev",
+    "loonaangifte",
+    "upa",
+    "a_melding",
+    "agi",
+    "siltra",
+    "certifica",
+    "elda",
+    "ccss",
+    "revenue_payroll_submission",
+    "incomes_register"
+   ],
+   "channels_note": "one open list for all countries; the enum must survive a new country being added, so unknown channels are quarantined to needs_review rather than dropped",
+   "fill": "12%",
+   "note": "must stay open, one doc needed a value outside the enum"
+  },
+  "temporal_type": {
+   "t": "enum(5)",
+   "v": [
+    "law_window",
+    "evergreen",
+    "periodic",
+    "one_off",
+    "release"
+   ],
+   "fill": "100% (50/35/12/2/1)"
+  },
+  "valid_from": {
+   "t": "date?",
+   "note": "only when temporal_type != evergreen"
+  },
+  "valid_to": {
+   "t": "date?"
+  },
+  "last_reviewed": {
+   "t": "date",
+   "note": "required for evergreen docs - otherwise half the corpus carries zero temporal signal"
+  },
+  "known_at": {
+   "t": "date?",
+   "note": "for retroactive change notifications (doc 95 class)"
+  },
+  "lang": {
+   "t": "ISO639",
+   "fill": "100%: nl 89 / en 9 / fr 2"
+  },
+  "visibility": {
+   "t": "enum",
+   "v": [
+    "all",
+    "client",
+    "team",
+    "legal",
+    "hr",
+    "mgmt"
+   ],
+   "fill": "100% (81% all)"
+  },
+  "owner_team": {
+   "t": "enum?",
+   "v": [
+    "country_desk",
+    "sector_desk",
+    "product",
+    "legal",
+    "quality"
+   ]
+  },
+  "source_system": {
+   "t": "enum",
+   "v": [
+    "sharepoint",
+    "zendesk",
+    "dms",
+    "confluence",
+    "mail"
+   ]
+  },
+  "uri": {
+   "t": "str"
+  }
+ },
+ "dropped": {
+  "run_type": "8% fill / 92% n/a - subsumed by doc_type+process_domain ('correction procedure' is already a procedure)",
+  "instrument standalone": "folded into legal_basis.scheme",
+  "scope_level": "conflated rule layer with authorship; split into rule_level + doc_type",
+  "authored_by": "constant (~100 docs SD Worx-authored) => zero selectivity"
+ },
+ "fixed_after_pass": {
+  "'multi' leaked into rule_level": "facet-local wildcards only; country='*' is not rule_level='multi'",
+  "declaration_channel overflow": "became output_channel with an open value list",
+  "temporal was one profile string": "split into temporal_type + 4 date fields"
+ }
+}

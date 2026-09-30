@@ -1,0 +1,57 @@
+{
+  "note": "Three different things are called 'a country' at SD Worx. Do not collapse them into one attribute.",
+  "tier1_own_employment": {
+    "definition": "Countries where SD Worx employs people (own operations). Source: SD Worx Annual Report 2025, ESG Report p.70, 'Total number of employees, including subsidiaries (2025)'.",
+    "source": "https://country-cms.prd.sdworx.com/sites/default/files/2026-04/SDWorx_AR2025_FullVersion_0.pdf",
+    "total_headcount": 9369,
+    "total_fte": 9005,
+    "countries": [
+      {"iso": "BE", "name": "Belgium",        "headcount": 2869, "fte": 2712, "role": "market+hq",        "pack": "full"},
+      {"iso": "IT", "name": "Italy",          "headcount": 980,  "fte": 935,  "role": "market",           "pack": "full"},
+      {"iso": "MU", "name": "Mauritius",      "headcount": 843,  "fte": 842,  "role": "delivery_centre",  "pack": "none", "inference": true},
+      {"iso": "DE", "name": "Germany",        "headcount": 726,  "fte": 689,  "role": "market",           "pack": "full"},
+      {"iso": "ES", "name": "Spain",          "headcount": 696,  "fte": 689,  "role": "market",           "pack": "full"},
+      {"iso": "NL", "name": "Netherlands",    "headcount": 601,  "fte": 550,  "role": "market",           "pack": "full"},
+      {"iso": "PL", "name": "Poland",         "headcount": 421,  "fte": 419,  "role": "market+delivery",  "pack": "full"},
+      {"iso": "GB", "name": "United Kingdom", "headcount": 383,  "fte": 375,  "role": "market",           "pack": "full"},
+      {"iso": "FR", "name": "France",         "headcount": 351,  "fte": 326,  "role": "market",           "pack": "full"},
+      {"iso": "AL", "name": "Albania",        "headcount": 328,  "fte": 327,  "role": "delivery_centre",  "pack": "none", "inference": true},
+      {"iso": "FI", "name": "Finland",        "headcount": 264,  "fte": 262,  "role": "market",           "pack": "partial"},
+      {"iso": "SE", "name": "Sweden",         "headcount": 228,  "fte": 225,  "role": "market",           "pack": "partial"},
+      {"iso": "NO", "name": "Norway",         "headcount": 150,  "fte": 144,  "role": "market",           "pack": "partial"},
+      {"iso": "RO", "name": "Romania",        "headcount": 145,  "fte": 143,  "role": "delivery_centre",  "pack": "none", "inference": true},
+      {"iso": "IE", "name": "Ireland",        "headcount": 99,   "fte": 95,   "role": "market",           "pack": "full"},
+      {"iso": "HR", "name": "Croatia",        "headcount": 87,   "fte": 86,   "role": "market?",          "pack": "partial", "inference": true},
+      {"iso": "LU", "name": "Luxembourg",     "headcount": 80,   "fte": 76,   "role": "market",           "pack": "full"},
+      {"iso": "AT", "name": "Austria",        "headcount": 60,   "fte": 55,   "role": "market",           "pack": "partial"},
+      {"iso": "EE", "name": "Estonia",        "headcount": 25,   "fte": 23,   "role": "market?",          "pack": "none", "inference": true},
+      {"iso": "CH", "name": "Switzerland",    "headcount": 12,   "fte": 11,   "role": "market",           "pack": "partial"},
+      {"iso": "DK", "name": "Denmark",        "headcount": 8,    "fte": 8,    "role": "entity_only",      "pack": "none", "inference": true},
+      {"iso": "RS", "name": "Serbia",         "headcount": 8,    "fte": 8,    "role": "entity_only",      "pack": "none", "inference": true},
+      {"iso": "SI", "name": "Slovenia",       "headcount": 4,    "fte": 4,    "role": "entity_only",      "pack": "none", "inference": true},
+      {"iso": "HU", "name": "Hungary",        "headcount": 1,    "fte": 1,    "role": "entity_only",      "pack": "none", "inference": true}
+    ]
+  },
+  "tier2_european_coverage": {
+    "definition": "Countries where SD Worx says it has subject-matter experts / delivers managed payroll, including countries without own employment.",
+    "claims": [
+      {"claim": "26+ European countries", "source": "international.sdworx.com managed-payroll-services"},
+      {"claim": "subject matter experts in 30 European countries", "source": "sdworx.com/en-en"},
+      {"claim": "30 European countries covered", "source": "sdworx.co.uk/en-gb/about-sdworx"}
+    ],
+    "gap_vs_tier1": "Tier 2 adds ~6 countries on top of the 24 with own staff; those are partner- or network-delivered. LinkedIn/marketing lists also name Czechia, Slovakia, Bulgaria, Portugal - none of them appear in the AR2025 employment table, so treat them as partner-covered, not owned."
+  },
+  "tier3_global_partner_network": {
+    "definition": "Payroll delivered through partners, no own legislation capability.",
+    "claims": [
+      {"claim": "120 countries worldwide through the partner network", "source": "international.sdworx.com managed-payroll-services"},
+      {"claim": "150 countries worldwide, 80+ offices in Europe", "source": "sdworx.co.uk/en-gb/about-sdworx + 2021-01-11 press release"},
+      {"claim": "Global EOR via G-P (Globalisation Partners)", "source": "international.sdworx.com"}
+    ],
+    "document_consequence": "Tier-3 docs are typically coverage FAQs, EOR checklists and partner escalation paths - a different document class, not legislation summaries."
+  },
+  "schema_consequence": {
+    "add": ["coverage_tier (1|2|3)", "pack_status (full|partial|none)", "country_role (market|delivery_centre|entity_only)"],
+    "why": "A Mauritius ops procedure (843 staff, delivery centre) and a Belgian CAO fiche are both 'country-scoped' but answer completely different questions. One country attribute alone conflates them; tier + role keeps them apart and lets answers carry a confidence caveat when pack_status is not 'full'."
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "client_id": "PROX-BE-001",
+  "client_name": "Proximus SA Belgium",
+  "synthetic": true,
+  "memory_scope": "Belgian monthly payroll continuity",
+  "aliases": [
+    "Proximus",
+    "Proximus SA",
+    "Proximus Belgium",
+    "Proximus Group",
+    "PXS",
+    "PROX-BE-001"
+  ],
+  "standing_rules": [
+    {
+      "rule_id": "rule-001",
+      "statement": "Standard payroll input freeze is D-5 at 17:00.",
+      "evidence": [
+        "SP-PROX-001",
+        "SP-PROX-002"
+      ]
+    },
+    {
+      "rule_id": "rule-002",
+      "statement": "Retail roster corrections are accepted until D-4 at 12:00 only when the documented criteria are met.",
+      "evidence": [
+        "SP-PROX-002"
+      ]
+    },
+    {
+      "rule_id": "rule-003",
+      "statement": "Finance Operations must approve the SEPA payment total before release.",
+      "evidence": [
+        "outlook-msg-0004",
+        "outlook-msg-0006"
+      ]
+    },
+    {
+      "rule_id": "rule-004",
+      "statement": "Urgent off-cycle corrections normally require net impact above EUR 100.",
+      "evidence": [
+        "SP-PROX-001",
+        "outlook-msg-0011"
+      ]
+    }
+  ],
+  "exceptions": [
+    {
+      "exception_id": "exc-001",
+      "statement": "August 2026 D-3 retail roster correction accepted as one-off only.",
+      "status": "validated one-off",
+      "evidence": [
+        "outlook-msg-0003",
+        "teams-msg-0005"
+      ]
+    },
+    {
+      "exception_id": "exc-002",
+      "statement": "September 2026 temporary mapping PXS-RET-OLD to PXS-RET-BE.",
+      "status": "expires after September payroll",
+      "evidence": [
+        "outlook-msg-0013",
+        "teams-msg-0053"
+      ]
+    },
+    {
+      "exception_id": "exc-003",
+      "statement": "EUR 75 off-cycle precedent exists but is not policy.",
+      "status": "unvalidated",
+      "evidence": [
+        "SP-PROX-005",
+        "teams-msg-0041"
+      ]
+    }
+  ],
+  "payroll_deadlines": [
+    {
+      "deadline": "D-8",
+      "activity": "Population changes and absence flags from Proximus"
+    },
+    {
+      "deadline": "D-6",
+      "activity": "Technical import completeness check"
+    },
+    {
+      "deadline": "D-5 17:00",
+      "activity": "Standard input freeze"
+    },
+    {
+      "deadline": "D-4 12:00",
+      "activity": "Retail roster exception cutoff"
+    },
+    {
+      "deadline": "D-2 16:00",
+      "activity": "Final approval pack"
+    },
+    {
+      "deadline": "D-1 11:00",
+      "activity": "Payment file release deadline"
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "dec-001",
+      "date": "2026-05-22",
+      "decision": "Finance Operations is final SEPA payment approver.",
+      "evidence": [
+        "outlook-msg-0004"
+      ]
+    },
+    {
+      "decision_id": "dec-002",
+      "date": "2026-08-18",
+      "decision": "D-3 retail correction accepted for August only.",
+      "evidence": [
+        "outlook-msg-0003"
+      ]
+    },
+    {
+      "decision_id": "dec-003",
+      "date": "2026-09-23",
+      "decision": "September payroll uses old field technician code because signed request was not available.",
+      "evidence": [
+        "teams-msg-0092",
+        "teams-msg-0093"
+      ]
+    }
+  ],
+  "open_issues": [
+    {
+      "issue_id": "issue-001",
+      "issue": "SP-PROX-003 is stale and has no owner.",
+      "owner": "Jonas Vermeulen",
+      "status": "needs SharePoint update"
+    },
+    {
+      "issue_id": "issue-002",
+      "issue": "SP-PROX-004 mixes Belgium and Luxembourg context.",
+      "owner": "Amina Rahman",
+      "status": "needs country split"
+    },
+    {
+      "issue_id": "issue-003",
+      "issue": "Retail cost center cleanup before October payroll.",
+      "owner": "Sarah Van den Berghe",
+      "status": "open"
+    },
+    {
+      "issue_id": "issue-004",
+      "issue": "Signed change request for code 5413.",
+      "owner": "Nadia Leclercq",
+      "status": "pending"
+    }
+  ],
+  "conflicting_information": [
+    {
+      "conflict_id": "conflict-cutoff-d4-vs-d3",
+      "topic": "Retail cutoff",
+      "current_resolution": "D-4 is standing rule; D-3 was August-only."
+    },
+    {
+      "conflict_id": "conflict-payment-owner",
+      "topic": "Payment approver",
+      "current_resolution": "Finance Operations is current approver; old procedure stale."
+    },
+    {
+      "conflict_id": "conflict-standby-code",
+      "topic": "Field technician night intervention code",
+      "current_resolution": "Do not activate code 5413 until signed request."
+    },
+    {
+      "conflict_id": "conflict-offcycle-threshold",
+      "topic": "Off-cycle threshold",
+      "current_resolution": "EUR 100 is policy; EUR 75 is unvalidated precedent."
+    }
+  ],
+  "recent_changes": [
+    {
+      "date": "2026-09-29",
+      "change": "Year-end tax ownership confirmed by Proximus."
+    },
+    {
+      "date": "2026-09-26",
+      "change": "Weekend premium correction handling agreed."
+    },
+    {
+      "date": "2026-09-23",
+      "change": "September field technician code decision made in payroll war room."
+    },
+    {
+      "date": "2026-09-19",
+      "change": "Temporary cost center mapping approved."
+    },
+    {
+      "date": "2026-09-11",
+      "change": "Calendar clarified D-3 is not standing rule."
+    }
+  ],
+  "people_owners": [
+    {
+      "name": "Jonas Vermeulen",
+      "org": "SD Worx",
+      "role": "Payroll Service Lead",
+      "owns": [
+        "exception approval",
+        "procedure review"
+      ]
+    },
+    {
+      "name": "Lina Smet",
+      "org": "SD Worx",
+      "role": "Incoming Payroll Consultant",
+      "owns": [
+        "client memory",
+        "monthly continuity"
+      ]
+    },
+    {
+      "name": "Amina Rahman",
+      "org": "SD Worx",
+      "role": "Belgian Payroll Legal Expert",
+      "owns": [
+        "legal interpretation",
+        "country applicability"
+      ]
+    },
+    {
+      "name": "Tom De Smet",
+      "org": "SD Worx",
+      "role": "Integration Specialist",
+      "owns": [
+        "interfaces",
+        "import mapping"
+      ]
+    },
+    {
+      "name": "Anne Peeters",
+      "org": "Proximus",
+      "role": "HR Shared Services",
+      "owns": [
+        "HR input validation"
+      ]
+    },
+    {
+      "name": "Pieter Claes",
+      "org": "Proximus",
+      "role": "Finance Operations",
+      "owns": [
+        "SEPA payment approval"
+      ]
+    },
+    {
+      "name": "Sarah Van den Berghe",
+      "org": "Proximus",
+      "role": "Retail Operations",
+      "owns": [
+        "retail roster corrections"
+      ]
+    },
+    {
+      "name": "Olivier Janssens",
+      "org": "Proximus",
+      "role": "Network Operations",
+      "owns": [
+        "field technician standby validation"
+      ]
+    },
+    {
+      "name": "Nadia Leclercq",
+      "org": "Proximus",
+      "role": "Labour Relations",
+      "owns": [
+        "allowance interpretation"
+      ]
+    }
+  ]
+}

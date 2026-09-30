@@ -1,0 +1,80 @@
+[
+  {
+    "document_id": "SP-PROX-001",
+    "source_system": "sharepoint",
+    "file_name": "SP-PROX-001 Proximus Belgium Payroll Operating Manual 2026.docx",
+    "file_format": "docx",
+    "title": "Proximus Belgium Payroll Operating Manual 2026",
+    "owner": "Jonas Vermeulen",
+    "status": "validated",
+    "relative_path": "sharepoint-onedrive/documents/SP-PROX-001 Proximus Belgium Payroll Operating Manual 2026.docx",
+    "topics": [
+      "standing_rules",
+      "payroll_deadlines",
+      "payslips",
+      "off_cycle"
+    ]
+  },
+  {
+    "document_id": "SP-PROX-002",
+    "source_system": "sharepoint",
+    "file_name": "SP-PROX-002 Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions.xlsx",
+    "file_format": "xlsx",
+    "title": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+    "owner": "Elise Lambert",
+    "status": "recently_edited",
+    "relative_path": "sharepoint-onedrive/documents/SP-PROX-002 Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions.xlsx",
+    "topics": [
+      "payroll_deadlines",
+      "cutoff",
+      "exceptions"
+    ]
+  },
+  {
+    "document_id": "SP-PROX-003",
+    "source_system": "sharepoint",
+    "file_name": "SP-PROX-003 Payment Approval and SEPA Release Procedure.pdf",
+    "file_format": "pdf",
+    "title": "Payment Approval and SEPA Release Procedure",
+    "owner": null,
+    "status": "stale_unowned",
+    "relative_path": "sharepoint-onedrive/documents/SP-PROX-003 Payment Approval and SEPA Release Procedure.pdf",
+    "topics": [
+      "payments",
+      "approval",
+      "conflicting_information"
+    ]
+  },
+  {
+    "document_id": "SP-PROX-004",
+    "source_system": "sharepoint",
+    "file_name": "SP-PROX-004 Field Technician Standby and Intervention Allowance Matrix.xlsx",
+    "file_format": "xlsx",
+    "title": "Field Technician Standby and Intervention Allowance Matrix",
+    "owner": "Amina Rahman",
+    "status": "under_review_country_scope",
+    "relative_path": "sharepoint-onedrive/documents/SP-PROX-004 Field Technician Standby and Intervention Allowance Matrix.xlsx",
+    "topics": [
+      "exceptions",
+      "allowances",
+      "conflicting_information",
+      "people_owners"
+    ]
+  },
+  {
+    "document_id": "SP-PROX-005",
+    "source_system": "onedrive",
+    "file_name": "SP-PROX-005 Consultant Handover Notes Marie Dubois 2026-07.docx",
+    "file_format": "docx",
+    "title": "Consultant Handover Notes Proximus Belgium",
+    "owner": "Marie Dubois",
+    "status": "informal_handover",
+    "relative_path": "sharepoint-onedrive/documents/SP-PROX-005 Consultant Handover Notes Marie Dubois 2026-07.docx",
+    "topics": [
+      "exceptions",
+      "open_issues",
+      "people_owners",
+      "recent_changes"
+    ]
+  }
+]

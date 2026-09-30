@@ -1,0 +1,602 @@
+[
+ {
+  "id": 1,
+  "section": "ops",
+  "name": "WI-PAY-BE-001 Maandelijkse Loonverwerking — Standaard Workflow",
+  "summary": "End-to-end monthly run: input freeze, calculation, controls, payment, delivery."
+ },
+ {
+  "id": 2,
+  "section": "ops",
+  "name": "Payrollkalender 2026 België (vervangt editie 2025)",
+  "summary": "Cut-off, pay and declaration deadlines per month and payment frequency."
+ },
+ {
+  "id": 3,
+  "section": "ops",
+  "name": "Vierogenprincipe en Reconciliatiechecklist",
+  "summary": "Mandatory four-eyes controls before a payroll file may be released."
+ },
+ {
+  "id": 4,
+  "section": "ops",
+  "name": "Correctie- en Herberekingsprocedure",
+  "summary": "Off-cycle corrections, retroactive changes and re-runs."
+ },
+ {
+  "id": 5,
+  "section": "ops",
+  "name": "Simulatierichtlijnen Bruto-Netto",
+  "summary": "Producing and validating what-if simulations without touching live data."
+ },
+ {
+  "id": 6,
+  "section": "ops",
+  "name": "Parallel- en Proefrun Draaiboek",
+  "summary": "Acceptance process before a client goes live on a new ruleset or country package."
+ },
+ {
+  "id": 7,
+  "section": "ops",
+  "name": "Loonfiche en Afleverkanalen",
+  "summary": "Payslip layouts, e-delivery and publication in the client portal."
+ },
+ {
+  "id": 8,
+  "section": "ops",
+  "name": "Betalingsbestanden en SEPA-verwerking",
+  "summary": "Payment file generation, bank rejects, urgent manual payments."
+ },
+ {
+  "id": 9,
+  "section": "ops",
+  "name": "Loonboekingen en Aansluiting met de Klantboekhouding",
+  "summary": "GL export formats and monthly reconciliation with client accounting."
+ },
+ {
+  "id": 10,
+  "section": "ops",
+  "name": "Jaarafsluiting Loonadministratie — Draaiboek",
+  "summary": "Year-end sequence: balances, indexation re-check, fiches, new-year opening."
+ },
+ {
+  "id": 11,
+  "section": "ops",
+  "name": "Onboarding Nieuwe Payrollklant — Implementatiechecklist",
+  "summary": "Data intake, parameterisation, test runs, go/no-go."
+ },
+ {
+  "id": 12,
+  "section": "ops",
+  "name": "Parameter- en Stamgegevensbeheer",
+  "summary": "Company codes, cost centres, wage codes, and who may change what."
+ },
+ {
+  "id": 13,
+  "section": "ops",
+  "name": "Uitdiensttreding Verwerken — Stappenplan",
+  "summary": "Termination workflow: final settlement, holiday pay, attest delivery."
+ },
+ {
+  "id": 14,
+  "section": "ops",
+  "name": "Loonbeslag, Overdracht en Derdenbeslag",
+  "summary": "Garnishments and assignments: priorities, limits, communication rules."
+ },
+ {
+  "id": 15,
+  "section": "ops",
+  "name": "Gewaarborgd Loon bij Arbeidsongeschiktheid",
+  "summary": "Guaranteed pay calculation, attendance-carrier tracking, insurer hand-off."
+ },
+ {
+  "id": 16,
+  "section": "ops",
+  "name": "Uitzendkrachten en Flexi-jobs in de Loonverwerking",
+  "summary": "Processing rules and contribution schemes for both contract types."
+ },
+ {
+  "id": 17,
+  "section": "cli",
+  "name": "Klantinstructie [Retail Groep A] — Overwerk- en Weekendtoeslagen",
+  "summary": "Client premiums deviating from sector default; approval flow for overtime."
+ },
+ {
+  "id": 18,
+  "section": "cli",
+  "name": "Klantinstructie [ChemCo] — Ploegenarbeid en Shiftpremies",
+  "summary": "Shift definitions, rotation patterns, premium percentages per plant."
+ },
+ {
+  "id": 19,
+  "section": "cli",
+  "name": "Klantinstructie [LogiTrans] — Flexi-jobs en Interim-inzet",
+  "summary": "Rules for flexi-job students and agency workers in this client's warehouses."
+ },
+ {
+  "id": 20,
+  "section": "cli",
+  "name": "Klantinstructie [Holding Z] — Cafetariaplan en Mobiliteitsbudget",
+  "summary": "Which benefits employees may trade and how elections hit payroll."
+ },
+ {
+  "id": 21,
+  "section": "cli",
+  "name": "Klantinstructie [Ziekenhuis M] — Sectorale Eindejaarspremie",
+  "summary": "Payment date, pro-rata rules, correction handling for the end-of-year bonus."
+ },
+ {
+  "id": 22,
+  "section": "cli",
+  "name": "Klantinstructie [Bouwbedrijf B] — Bouwverlof en Slecht-Weervergoeding",
+  "summary": "How construction leave and bad-weather benefit are declared and paid."
+ },
+ {
+  "id": 23,
+  "section": "cli",
+  "name": "Klantinstructie [Voedingsbedrijf V] — Nacht- en Ploegenpremies",
+  "summary": "Night-shift window, premiums, client's own approval flow."
+ },
+ {
+  "id": 24,
+  "section": "cli",
+  "name": "Client Instruction (EN) [Shared Services Center] — International Payroll Coordination",
+  "summary": "English instruction: central contact and data cut-offs for six countries."
+ },
+ {
+  "id": 25,
+  "section": "cli",
+  "name": "Klantinstructie [Uitzendgroep U] — PC 322 Uitzendarbeid",
+  "summary": "Applying the temp-agency CBA: scales, premiums, end-of-assignment rules."
+ },
+ {
+  "id": 26,
+  "section": "cli",
+  "name": "Klantinstructie [Publieke Instelling P] — Overheidsspecifieke Verlofregelingen",
+  "summary": "Civil-servant leave types and their payroll coding."
+ },
+ {
+  "id": 27,
+  "section": "sec",
+  "name": "Sectorfiche PC 200 — Bedienden",
+  "summary": "White-collar committee: scales, CBAs, index, notice rules."
+ },
+ {
+  "id": 28,
+  "section": "sec",
+  "name": "Sectorfiche PC 116 — Chemische Nijverheid",
+  "summary": "Sector CBAs, shift and night premiums, sector funds."
+ },
+ {
+  "id": 29,
+  "section": "sec",
+  "name": "Sectorfiche PC 124 — Bouw",
+  "summary": "Construction: bad-weather benefit, construction leave, mobility, pension."
+ },
+ {
+  "id": 30,
+  "section": "sec",
+  "name": "Sectorfiche PC 302 — Horeca",
+  "summary": "Flexible hours, night premiums, student work, sector scales."
+ },
+ {
+  "id": 31,
+  "section": "sec",
+  "name": "Sectorfiche PC 322 — Uitzendarbeid",
+  "summary": "Temp sector: pay scales, premiums, end-of-assignment, joint fund."
+ },
+ {
+  "id": 32,
+  "section": "sec",
+  "name": "Overzicht Paritaire Comités en Toepassingsgebied",
+  "summary": "Which committee applies to which activity; overlap and exclusion rules."
+ },
+ {
+  "id": 33,
+  "section": "sec",
+  "name": "Sectorfondsen en Bestaanszekerheid — Overzicht",
+  "summary": "Sector funds, contributions and claimable benefits."
+ },
+ {
+  "id": 34,
+  "section": "sec",
+  "name": "Indexeringsmechanismen per Sector",
+  "summary": "Index- vs scale-based increases and their trigger dates."
+ },
+ {
+  "id": 35,
+  "section": "sec",
+  "name": "Aanvullende Sectorale Pensioenen — Overzicht",
+  "summary": "Sector pension schemes, contribution rates, reporting duties."
+ },
+ {
+  "id": 36,
+  "section": "leg",
+  "name": "Wetswijzigingenmonitor Q1 2026",
+  "summary": "Tracker: what changed, when it bites, which clients are affected."
+ },
+ {
+  "id": 37,
+  "section": "leg",
+  "name": "Eenheidsstatuut — Opzeggingstermijnen en Ontslagprocedure",
+  "summary": "Unified statute: notice calculation, seniority, outplacement link."
+ },
+ {
+  "id": 38,
+  "section": "leg",
+  "name": "Wet Werkbaar en Wendbaar Werk — Overuren en Recuperatie",
+  "summary": "Voluntary and agreed overtime, recovery rest, annual caps."
+ },
+ {
+  "id": 39,
+  "section": "leg",
+  "name": "Jaarlijkse Vakantie — Bedienden en Arbeiders",
+  "summary": "Entitlement, holiday services, vacation pay for both statuses."
+ },
+ {
+  "id": 40,
+  "section": "leg",
+  "name": "Dubbel Vakantiegeld — Berekening en Uitbetaling",
+  "summary": "Base, timing, indexation, partial years."
+ },
+ {
+  "id": 41,
+  "section": "leg",
+  "name": "Feestdagen en Vervangingsdagen",
+  "summary": "Public holidays, replacement days, recuperation, part-time impact."
+ },
+ {
+  "id": 42,
+  "section": "leg",
+  "name": "Tijdskrediet, Zorgkrediet en Thematisch Verlof",
+  "summary": "Schemes, RVA procedures, employer top-ups, payroll coding."
+ },
+ {
+  "id": 43,
+  "section": "leg",
+  "name": "Ouderschaps- en Geboorteverlof",
+  "summary": "Statutory entitlements plus which clients top up and how."
+ },
+ {
+  "id": 44,
+  "section": "leg",
+  "name": "Moederschapsbescherming en Risicoanalyse",
+  "summary": "Maternity protection, prenatal leave, employer obligations."
+ },
+ {
+  "id": 45,
+  "section": "leg",
+  "name": "Ziekte en Arbeidsongeschiktheid — Ziekenfonds en Werkgever",
+  "summary": "Certificates, waiting periods, employer/health-fund interaction."
+ },
+ {
+  "id": 46,
+  "section": "leg",
+  "name": "Arbeidsongevallen en Beroepsziekten",
+  "summary": "Insurer reporting, occupational disease, reintegration."
+ },
+ {
+  "id": 47,
+  "section": "leg",
+  "name": "SWT en Landingsbanen — Voorwaarden en Verwerking",
+  "summary": "End-of-career schemes: declarations, RVA conditions, payroll effects."
+ },
+ {
+  "id": 48,
+  "section": "leg",
+  "name": "Collectief Ontslag — Wet Renault in de Praktijk",
+  "summary": "Procedure, information/consultation, social plan scenarios."
+ },
+ {
+  "id": 49,
+  "section": "leg",
+  "name": "Outplacement — CAO 82 en Uitvoering",
+  "summary": "Obligations, providers, cost handling at termination."
+ },
+ {
+  "id": 50,
+  "section": "leg",
+  "name": "Telewerk — Fiscaal en Sociaal Kader",
+  "summary": "Home-office allowance, employer costs, cross-border limits."
+ },
+ {
+  "id": 51,
+  "section": "leg",
+  "name": "Interpretatienota — Aanpassing Vakantiegeldberekening",
+  "summary": "Internal legal reading of a recent ruling; advisory, not binding."
+ },
+ {
+  "id": 52,
+  "section": "leg",
+  "name": "Arbeidsreglement — Sjabloon en Wijzigingsprocedure",
+  "summary": "Model work rules and the works-council amendment procedure."
+ },
+ {
+  "id": 53,
+  "section": "xb",
+  "name": "Grensarbeiders NL-BE — Handboek",
+  "summary": "Dutch residents working in Belgium: tax, social security, home-office days."
+ },
+ {
+  "id": 54,
+  "section": "xb",
+  "name": "Grensarbeiders FR-BE — Handboek",
+  "summary": "French frontier workers: declarations, withholding, attestations."
+ },
+ {
+  "id": 55,
+  "section": "xb",
+  "name": "Het Drie-Landenmodel — Werkland, Werkgeversland, Woonland",
+  "summary": "Framework for deciding which country's rules apply."
+ },
+ {
+  "id": 56,
+  "section": "xb",
+  "name": "A1-aanvraag en Detachering — Procedure",
+  "summary": "Applying for and managing A1 certificates for posted workers."
+ },
+ {
+  "id": 57,
+  "section": "xb",
+  "name": "Limosa-melding — Werkwijze",
+  "summary": "When postings must be notified in Belgium and how to correct them."
+ },
+ {
+  "id": 58,
+  "section": "xb",
+  "name": "Multi-Country Payroll — Coördinatiemodel",
+  "summary": "Single point of contact, data flows, cut-offs between country teams."
+ },
+ {
+  "id": 59,
+  "section": "xb",
+  "name": "Landenpakketten — Overzicht en Roadmap",
+  "summary": "Which country packages exist, their versions, planned updates."
+ },
+ {
+  "id": 60,
+  "section": "xb",
+  "name": "Expat- en Impatriate-Regimes per Land",
+  "summary": "Country overview of special tax regimes relevant to payroll."
+ },
+ {
+  "id": 61,
+  "section": "xb",
+  "name": "Dubbelbelastingverdragen — Praktijkgids Loonadministratie",
+  "summary": "Treaty summaries, tie-breakers, documentation duties."
+ },
+ {
+  "id": 62,
+  "section": "decl",
+  "name": "DmfA — Handleiding en Correctiescenario's",
+  "summary": "Quarterly declaration: data prep, submission, corrections."
+ },
+ {
+  "id": 63,
+  "section": "decl",
+  "name": "Dimona — Aangifte en Wijzigingen",
+  "summary": "Immediate declarations: types, timing, error handling."
+ },
+ {
+  "id": 64,
+  "section": "decl",
+  "name": "Belcotax 281.10 / 281.11 / 281.50 — Handleiding",
+  "summary": "Preparing and filing Belcotax forms; deadlines, common rejects."
+ },
+ {
+  "id": 65,
+  "section": "decl",
+  "name": "Fiches — Voorbereiding en Controlechecklist",
+  "summary": "Year-end checklist for tax forms and client validation."
+ },
+ {
+  "id": 66,
+  "section": "decl",
+  "name": "Aangifte Bedrijfsvoorheffing — Maandelijks",
+  "summary": "Monthly withholding return: rates, special contributions, payment."
+ },
+ {
+  "id": 67,
+  "section": "decl",
+  "name": "RSZ-Kwartaalaangifte — Aansluiting met de Loonmotor",
+  "summary": "Reconciling declared amounts against calculated payroll."
+ },
+ {
+  "id": 68,
+  "section": "decl",
+  "name": "Sociale Balans en Jaarlijkse RSZ-verplichtingen",
+  "summary": "Annual social reporting duties and their data sources."
+ },
+ {
+  "id": 69,
+  "section": "decl",
+  "name": "Solidariteitsbijdrage Bedrijfswagens (CO2)",
+  "summary": "Calculating and declaring the car solidarity contribution incl. corrections."
+ },
+ {
+  "id": 70,
+  "section": "ben",
+  "name": "Maaltijd- en Ecocheques — Verwerking en Fiscale Kaders",
+  "summary": "Issuing, contribution limits, taxation per voucher type."
+ },
+ {
+  "id": 71,
+  "section": "ben",
+  "name": "Bedrijfswagen en Voordeel Alle Aard",
+  "summary": "Benefit-in-kind calculation, reference CO2, monthly declaration."
+ },
+ {
+  "id": 72,
+  "section": "ben",
+  "name": "Mobiliteitsbudget — Kader en Payrollverwerking",
+  "summary": "Pillars, budget conversion, reporting duties."
+ },
+ {
+  "id": 73,
+  "section": "ben",
+  "name": "Cafetariaplan — Opzet, Keuzemomenten en Loonimpact",
+  "summary": "Plan structure, election windows, payroll consequences."
+ },
+ {
+  "id": 74,
+  "section": "ben",
+  "name": "Bonusplannen, CAO 90 en Winstpremies",
+  "summary": "Non-recurring benefits and profit premiums: eligibility, tax, reporting."
+ },
+ {
+  "id": 75,
+  "section": "ben",
+  "name": "Groepsverzekering en Aanvullend Pensioen — Aangiften",
+  "summary": "Premium handling, tax treatment, reporting forms."
+ },
+ {
+  "id": 76,
+  "section": "ben",
+  "name": "Hospitalisatie- en Andere In-kind Voordelen",
+  "summary": "Taxability, valuation and reporting of in-kind benefits."
+ },
+ {
+  "id": 77,
+  "section": "sys",
+  "name": "Loonmotor Release Notes 2026 R1",
+  "summary": "Engine changes and which clients are affected."
+ },
+ {
+  "id": 78,
+  "section": "sys",
+  "name": "Interface-specificatie SAP HR → Loonmotor",
+  "summary": "Field-level mapping, validation, error handling."
+ },
+ {
+  "id": 79,
+  "section": "sys",
+  "name": "SuccessFactors-integratie — Werknemersdata Import",
+  "summary": "Inbound master data: format, timing, reconciliation."
+ },
+ {
+  "id": 80,
+  "section": "sys",
+  "name": "Tijdregistratie-import — Formaten en Validatieregels",
+  "summary": "Accepted T&A formats, mapping, rejection rules."
+ },
+ {
+  "id": 81,
+  "section": "sys",
+  "name": "mySDWorx API — Ontwikkelaarsgids",
+  "summary": "Endpoints for payslip retrieval and data submission."
+ },
+ {
+  "id": 82,
+  "section": "sys",
+  "name": "Datakwaliteitsregels Looninput",
+  "summary": "Blocking and warning rules applied before a run starts."
+ },
+ {
+  "id": 83,
+  "section": "sys",
+  "name": "Testpakket Jaarlijkse Parameterupdate",
+  "summary": "Regression cases to run after each yearly update."
+ },
+ {
+  "id": 84,
+  "section": "sys",
+  "name": "Release- en Changekalender Loonmotor",
+  "summary": "Release windows, freezes, communication duties."
+ },
+ {
+  "id": 85,
+  "section": "gov",
+  "name": "Dienstenmatrix per Klant — Wie Doet Wat",
+  "summary": "Responsibility split SD Worx / client / third party per process step."
+ },
+ {
+  "id": 86,
+  "section": "gov",
+  "name": "SLA en KPI's Payroll — Normen en Meting",
+  "summary": "Service levels, measurement, consequences of misses."
+ },
+ {
+  "id": 87,
+  "section": "gov",
+  "name": "Escalatiematrix Loonproblemen",
+  "summary": "Who to escalate to, at which severity, within which time."
+ },
+ {
+  "id": 88,
+  "section": "gov",
+  "name": "Klachtenprocedure en Service Credits",
+  "summary": "Complaint handling and service-credit calculation."
+ },
+ {
+  "id": 89,
+  "section": "gov",
+  "name": "Interne Kwaliteitscontrole — Steekproefdraaiboek",
+  "summary": "Sampling method, scoring, follow-up on payroll audits."
+ },
+ {
+  "id": 90,
+  "section": "gov",
+  "name": "GDPR in de Loonadministratie",
+  "summary": "Lawful bases, data-subject requests, processing limits."
+ },
+ {
+  "id": 91,
+  "section": "gov",
+  "name": "Verwerkingsregister en DPA-sjabloon",
+  "summary": "Processor agreement template and register maintenance."
+ },
+ {
+  "id": 92,
+  "section": "gov",
+  "name": "Bewaar- en Vernietigingstermijnen Loonstaten",
+  "summary": "Retention schedule per document type and legal basis."
+ },
+ {
+  "id": 93,
+  "section": "gov",
+  "name": "Noodplan Loonbetaling — Business Continuity",
+  "summary": "Fallback when system or payment channel fails."
+ },
+ {
+  "id": 94,
+  "section": "gov",
+  "name": "Opleidingsgids Nieuwe Payrollmedewerker — Module België Basis",
+  "summary": "Training path and reference material for onboarding."
+ },
+ {
+  "id": 95,
+  "section": "odd",
+  "name": "E-mail Klant — Wijziging Loonschalen per 1 april",
+  "summary": "Informal client notification; no formal document behind it yet."
+ },
+ {
+  "id": 96,
+  "section": "odd",
+  "name": "Notulen Ondernemingsraad [Klant] — Invoering Nieuwe Premieregeling",
+  "summary": "Works-council minutes changing a client's premium scheme; consultative."
+ },
+ {
+  "id": 97,
+  "section": "odd",
+  "name": "Tijdelijke Instructie — Vervroegde Uitbetaling Eindejaarspremie 2026",
+  "summary": "One-off, time-boxed deviation valid for a single pay period."
+ },
+ {
+  "id": 98,
+  "section": "odd",
+  "name": "Adviesnota — Impact van een Recent Arrest op de Vakantiegeldberekening",
+  "summary": "Legal opinion memo, internally advisory, may be superseded."
+ },
+ {
+  "id": 99,
+  "section": "odd",
+  "name": "Ticketoplossing #48213 — Foutieve RSZ-Inhouding bij Studenten",
+  "summary": "Root cause and workaround for a recurring production error."
+ },
+ {
+  "id": 100,
+  "section": "odd",
+  "name": "Werkinstructie (FR) — Traitement Mensuel de la Paie",
+  "summary": "French counterpart of doc 1; same scope, different language."
+ }
+]

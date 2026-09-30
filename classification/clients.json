@@ -1,0 +1,18 @@
+{
+  "note": "Fixture client master. pc_code/sector_agreement are INHERITED from here, never extracted from documents. Null means 'not yet maintained' and must surface as needs_review.",
+  "clients": {
+    "C1":  {"name": "Retail Groep A",         "country": "BE", "pc_code": null,   "sector_agreement": {"scheme": "be_pc", "code": null}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl", "fr"]},
+    "C2":  {"name": "ChemCo",                 "country": "BE", "pc_code": "116",  "sector_agreement": {"scheme": "be_pc", "code": "116"}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "C3":  {"name": "LogiTrans",              "country": "BE", "pc_code": null,   "sector_agreement": {"scheme": "be_pc", "code": null}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl", "fr"]},
+    "C4":  {"name": "Holding Z",              "country": "BE", "pc_code": "200",  "sector_agreement": {"scheme": "be_pc", "code": "200"}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "C5":  {"name": "Ziekenhuis M",           "country": "BE", "pc_code": "330",  "sector_agreement": {"scheme": "be_pc", "code": "330"}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "C6":  {"name": "Bouwbedrijf B",          "country": "BE", "pc_code": "124",  "sector_agreement": {"scheme": "be_pc", "code": "124"}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "C7":  {"name": "Voedingsbedrijf V",      "country": "BE", "pc_code": "118",  "sector_agreement": {"scheme": "be_pc", "code": "118"}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "C8":  {"name": "Shared Services Center", "country": "BE", "pc_code": null,   "sector_agreement": {"scheme": "be_pc", "code": null}, "coverage_tier": 1, "pack_status": "full", "langs": ["en"], "countries": ["BE", "NL", "FR", "DE", "PL", "IT"]},
+    "C9":  {"name": "Uitzendgroep U",         "country": "BE", "pc_code": "322",  "sector_agreement": {"scheme": "be_pc", "code": "322"}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "C10": {"name": "Publieke Instelling P",  "country": "BE", "pc_code": null,   "sector_agreement": {"scheme": "be_pc", "code": null}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "N1":  {"name": "Nordwind Logistics BV",  "country": "NL", "pc_code": null,   "sector_agreement": {"scheme": "nl_cao", "code": null}, "coverage_tier": 1, "pack_status": "full", "langs": ["nl"]},
+    "F1":  {"name": "Services Pro SARL",      "country": "FR", "pc_code": null,   "sector_agreement": {"scheme": "fr_idcc", "code": null}, "coverage_tier": 1, "pack_status": "full", "langs": ["fr"]},
+    "P1":  {"name": "PartnerCo Prague",       "country": "CZ", "pc_code": null,   "sector_agreement": null, "coverage_tier": 2, "pack_status": "none", "langs": ["en", "cs"]}
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "name": "client-first",
+  "status": "proposal - not yet applied; v2 remains the active schema until the corpus is re-tagged",
+  "principle": "Tag a document only with what varies BETWEEN documents. Anything constant per client moves to the client master and is joined at query time. Tagging cost is per document (millions); client attributes are per client (thousands).",
+  "rationale": [
+    "v2 grew to 30 fields because it tried to be a legal-knowledge schema AND a client schema. Retrieval, however, always starts from a client question.",
+    "8 of the 30 fields were computable from the client record (country, pc_code, sector_agreement, coverage, service_line, visibility default, languages, sub_jurisdiction). They were being re-derived per document - the expensive place to do it.",
+    "5 more were precedence machinery (legal_basis, rule_level, precedence, bindingness, instrument) that collapses into one human-readable authority value.",
+    "Result: 30 -> 13 required tags, and the agent's judgment surface shrinks from ~10 fields to 4. Cheaper, faster, and far more consistent, because most remaining fields are deterministic or inherited."
+  ],
+
+  "states": {
+    "<value>": "specific",
+    "*": "applies to all clients / unscoped (positive wildcard)",
+    "null": "not determinable - pipeline or human must fill",
+    "n/a": "structurally inapplicable"
+  },
+  "filter_rule": "match(doc, q) = (doc.client_id intersects q.client_ids) OR doc.client_scope = 'generic'; then filter on validity, then order by authority",
+  "join_rule": "country, pc_code/sector agreement, worker groups, coverage, team and language all resolve through the client master at query time",
+
+  "doc_tags": {
+    "doc_id":      {"t": "str", "required": true, "by": "rule"},
+    "title":       {"t": "str", "required": true, "by": "rule"},
+    "client_id":   {"t": "multi client id", "required": true, "wildcard": "*", "by": "path/metadata, else agent", "note": "the anchor of the whole schema"},
+    "client_scope":{"t": "enum", "v": ["generic", "per_client"], "required": true, "by": "derived from client_id"},
+    "applies_to_entity": {"t": "multi entity id", "required": "when the client has more than one entity/country", "by": "agent + client master", "note": "replaces doc-level country: it is what keeps a BE instruction away from the client's NL payroll"},
+    "doc_type":    {"t": "enum(5)", "v": ["client_instruction", "procedure", "rule_summary", "reference", "communication"], "required": true, "by": "agent", "changed": "v2 had 8; control/template/system fold into procedure/reference, which is how users actually ask for them"},
+    "process_domain": {"t": "multi enum(8)", "v": ["gross_to_net", "absence", "benefits", "termination", "declarations", "payment", "quality", "governance"], "required": true, "by": "agent", "changed": "v2 had 17; input/time_attendance/implementation/year_end fold into the step they belong to, compliance/systems/reporting fold into governance/declarations"},
+    "worker_category": {"t": "multi enum(6)", "v": ["bediende", "arbeider", "kader", "statutory", "temp", "all"], "required": true, "wildcard": "*", "by": "agent", "note": "kept as a DOC tag on purpose: it is the key that resolves which joint committee / sector agreement applies, and blue-vs-white collar rules differ materially in BE payroll"},
+    "authority":   {"t": "enum(5)", "v": ["law", "sector_agreement", "client_collective", "client_instruction", "internal"], "required": true, "by": "agent", "note": "replaces legal_basis.scheme + rule_level + precedence + bindingness. Precedence is derived from this order (most specific wins on conflict), never stored."},
+    "lang":        {"t": "ISO639", "required": true, "by": "rule"},
+    "visibility":  {"t": "enum", "v": ["all", "client", "team", "legal", "hr", "mgmt"], "required": true, "by": "rule from client scope, agent may narrow"},
+    "valid_from":  {"t": "date?", "required": true, "by": "rule (cue + date), else agent"},
+    "valid_to":    {"t": "date?", "required": true, "by": "rule, else null = still in force"},
+    "last_reviewed": {"t": "date", "required": "when valid_to is null", "by": "rule (file mtime)", "note": "a document with no end date must carry a review date, otherwise 'is this still valid' is unanswerable"},
+    "legal_ref":   {"t": "str?", "required": false, "by": "rule", "note": "OPTIONAL free-form exact-match key: 'CAO 82', 'IDCC 1486', 'PC 124'. No enum, no validation - it exists so literal lookups stay possible without maintaining 17 schemes."},
+    "supersedes":  {"t": "doc_id?", "required": false, "by": "rule/metadata", "note": "lineage only; validity windows answer 'what was in force'"}
+  },
+
+  "client_master": {
+    "note": "This is now half the schema. Maintained once per client, not once per document.",
+    "fields": {
+      "client_id": "str",
+      "name": "str",
+      "aliases": ["str", "..."],
+      "entities": [{"entity_id": "str", "country": "ISO3166", "legal_name": "str",
+                    "pc_code": "str?", "sector_agreement": "{scheme, code}?", "sub_jurisdiction": "str?"}],
+      "worker_groups": {"bediende": "pc_code?", "arbeider": "pc_code?", "kader": "pc_code?"},
+      "service_scope": ["pay", "hr", "staff", "reward"],
+      "coverage": {"coverage_tier": "1|2|3", "pack_status": "full|partial|none", "delivery_model": "own|partner|eor"},
+      "langs": ["nl", "fr"],
+      "servicing_team": "str",
+      "visibility_default": "all|client|team",
+      "contract_refs": ["sow_id"],
+      "active_from": "date",
+      "active_to": "date?"
+    }
+  },
+
+  "retrieval_model": [
+    {"query": "What applies to client X for the May 2026 payroll run?",
+     "plan": "client_scope=per_client AND client_id=X  UNION  client_scope=generic; valid_from <= 2026-05-31 AND (valid_to is null OR valid_to >= 2026-05-01); order by authority (client_instruction > client_collective > sector_agreement > law > internal); join client master for country/committee context"},
+    {"query": "Which clients does CAO 116 affect?",
+     "plan": "client master lookup on entities.sector_agreement.code = 116 -> client_ids -> their documents. No document tagging needed for this: the sector lives on the client."},
+    {"query": "What is new for client X this quarter?",
+     "plan": "client_id=X AND valid_from >= quarter start, all authorities, newest first"},
+    {"query": "Is this standard procedure still valid?",
+     "plan": "client_scope=generic AND client_id='*' AND last_reviewed older than the review threshold -> stale queue"},
+    {"query": "Can consultant Y send this to client X?",
+     "plan": "visibility in (all, client) AND (client_id=X OR client_scope=generic) AND servicing_team=Y"}
+  ],
+
+  "who_fills_what": {
+    "rule": ["doc_id", "title", "client_id (from path/folder/brackets)", "lang", "valid_from", "valid_to", "last_reviewed", "legal_ref"],
+    "inherit": ["client_scope", "visibility default", "everything in client_master"],
+    "agent_four_fields": ["doc_type", "process_domain", "worker_category", "authority"],
+    "human": ["client_id when the document does not name a client", "authority when the agent is under 0.7", "valid_from when a law change has no date in the text"]
+  },
+
+  "moved_to_client_master": {
+    "country": "per entity on the client",
+    "pc_code": "per entity / per worker group on the client",
+    "sector_agreement": "per entity on the client",
+    "sub_jurisdiction": "per entity on the client",
+    "coverage": "per client",
+    "service_line": "per client (service_scope)",
+    "owner_team / servicing_team": "per client",
+    "visibility default": "per client"
+  },
+
+  "dropped_from_v2": {
+    "legal_basis {scheme,id}": "17-value enum maintained per country -> replaced by authority (5) + optional free-form legal_ref",
+    "rule_level": "collapses into authority; the 8-level ladder was never used beyond 4 distinct values in practice",
+    "precedence": "derived from authority order at query time",
+    "bindingness": "folded into authority (a sector agreement IS binding; an internal procedure is binding on staff; the distinction the field drew was between legal force and internal force, which authority already encodes)",
+    "pay_component": "36% fill; 20-value open vocab per country; process_domain already routes these questions",
+    "output_channel": "25-value cross-country list; process_domain=declarations + legal_ref covers the real query shape ('DmfA for client X')",
+    "sub_jurisdiction": "never fired on the corpus (0%) and belongs to the client entity anyway",
+    "country": "belongs to the client entity",
+    "service_line": "belongs to the client",
+    "owner_team": "belongs to the client",
+    "source_system / uri": "infrastructure metadata, kept outside the tag record",
+    "version / translation_of / known_at": "nice-to-have lineage; add back only if the demo needs them (supersedes is the one exception kept optional)",
+    "coverage": "belongs to the client record"
+  },
+
+  "trade_offs": [
+    "LOST: 'show me every document about holiday pay' across all clients - pay_component was the only field that could answer that. Acceptable if the demo question is client-first.",
+    "LOST: cross-country legal drill-down (IDCC vs PC vs CCNL comparison) - legal_ref keeps the literal code but the scheme is no longer machine-typed. Recoverable later by re-adding ONE optional {scheme, id} field.",
+    "GAINED: the agent judges 4 fields instead of ~10, so per-document cost and variance both drop; more fields are deterministic or inherited, so the review queue gets shorter and more targeted.",
+    "GAINED: a client's attributes are fixed once and reused by every document - a wrong PC code is corrected in one place instead of thousands."
+  ],
+
+  "migration": {
+    "map": {"client_id": "client_id", "client_scope": "client_scope", "doc_type": "map 8 -> 5",
+            "process_domain": "map 17 -> 8", "worker_category": "map 11 -> 6",
+            "rule_level+legal_basis.scheme+bindingness": "authority", "temporal_type+valid_from+valid_to+last_reviewed": "valid_from/valid_to/last_reviewed",
+            "everything in moved_to_client_master": "client master"},
+    "effort": "one deterministic projection script over out/*.json; no re-inference needed for the dropped fields"
+  }
+}

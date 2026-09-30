@@ -1,0 +1,44 @@
+{
+  "dataset_name": "Proximus Client Continuity Mock Data Round 2",
+  "created_on": "2026-09-30",
+  "synthetic": true,
+  "disclaimer": "Synthetic data only. Not real Proximus, SD Worx, Microsoft Teams, Outlook, SharePoint, or OneDrive content.",
+  "client_id": "PROX-BE-001",
+  "source_counts": {
+    "sharepoint_onedrive_documents": 5,
+    "client_memory_files": 2,
+    "outlook_emails": 15,
+    "outlook_threads": 6,
+    "teams_messages": 100,
+    "teams_threads_or_chats": 10
+  },
+  "formats": {
+    "sharepoint_onedrive": [
+      "docx",
+      "xlsx",
+      "pdf"
+    ],
+    "outlook": "single JSON export",
+    "teams": "single JSON export",
+    "client_memory": [
+      "json",
+      "docx"
+    ]
+  },
+  "must_have_client_memory_sections": [
+    "standing_rules",
+    "exceptions",
+    "payroll_deadlines",
+    "decisions",
+    "open_issues",
+    "conflicting_information",
+    "recent_changes",
+    "people_owners"
+  ],
+  "teams_attachment_model": {
+    "note": "Teams shared files are represented as SharePoint/OneDrive-backed file references where applicable.",
+    "field": "messages[].attachments[]",
+    "sharepoint_reference_field": "sharepoint_document_id",
+    "also_available_as": "messages[].referenced_documents"
+  }
+}

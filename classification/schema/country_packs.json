@@ -1,0 +1,117 @@
+{
+  "design": "Generic core + country packs. The SLOTS are generic (same field name, same query shape everywhere). The VOCABULARIES/identifiers are per-country pack data. This is what makes one schema serve 24 countries without 24 schemas, while still encoding industry knowledge Copilot cannot reason about.",
+  "decision_rule": [
+    "Query pattern exists in >=2 countries -> generic core slot (sector_agreement, worker_status, reporting_channel, ...).",
+    "Value set only meaningful inside one legal system -> pack data (be_pc codes, de_lohnsteuerklasse, nl_30pct_ruling).",
+    "Retrieval mechanics (doc_type, process_domain, valid_from/to, visibility, lang) -> always core, never pack."
+  ],
+  "identifier_pattern": "{scheme, code, label} with scheme namespaced by country; filter is (scheme = X AND code = Y). Same shape for BE paritair comite and FR IDCC.",
+  "core_slots": {
+    "jurisdiction":            ["country", "sub_jurisdiction"],
+    "sector_agreement":        ["scheme", "code", "label"],
+    "worker_status":           ["scheme", "code"],
+    "pay_component":           ["semantic_key", "local_code?", "label"],
+    "social_security_scheme":  ["scheme"],
+    "tax_withholding_scheme":  ["scheme"],
+    "statutory_instrument":    ["type", "scheme", "ref"],
+    "reporting_channel":       ["scheme", "code"],
+    "coverage":                ["coverage_tier", "pack_status", "country_role"]
+  },
+  "packs": {
+    "BE": {
+      "status": "full",
+      "sector_agreement":   {"scheme": "be_pc", "code": "200|116|124|302|322|330|...", "plus": "be_cao (national/sector CAO number, e.g. CAO 82, CAO 90)", "note": "a client usually sits in 2-4 committees (blue + white collar + establishment)"},
+      "worker_status":      {"scheme": "be_status", "code": ["bediende", "arbeider", "kader", "executive", "statutair", "flexi", "jobstudent", "uitzendkracht"]},
+      "sub_jurisdiction":   ["vlaanderen", "wallonie", "brussel"],
+      "social_security":    "rsz_nsso (+ doelgroepverminderingen, region-scoped)",
+      "tax_withholding":    "bedrijfsvoorheffing / precompte professionnel",
+      "reporting_channel":  ["dmfa (quarterly)", "dimona (immediate)", "belcotax_281_10_11_50", "rsz_quarterly"],
+      "instrument_types":   ["wet", "kb", "mb", "cao", "arbeidsreglement", "arbeidsovereenkomst"],
+      "pack_only_attributes": ["pc_code", "sector_fund (bestaanszekerheid)", "spilindex", "indexation_mechanism", "bouwverlof", "slecht_weer", "swt_landingsbaan", "eenheidsstatuut_notice_ladder"],
+      "why_pack": "PC/CAO numbers, spilindex and sector funds have no equivalent elsewhere and are the highest-value exact-match keys for Belgian payroll questions."
+    },
+    "FR": {
+      "status": "full",
+      "sector_agreement":   {"scheme": "fr_idcc", "code": "4-digit IDCC (e.g. 1486, 1090)", "plus": "accords d'entreprise / d'etablissement"},
+      "worker_status":      {"scheme": "fr_statut", "code": ["cadre", "non-cadre", "ETAM", "ouvrier", "employe"]},
+      "sub_jurisdiction":   ["alsace-moselle (local law: extra holidays, sick pay)"],
+      "social_security":    "securite_sociale / URSSAF",
+      "tax_withholding":    "prelevement a la source (PAS)",
+      "reporting_channel":  ["dsn (monthly)"],
+      "pack_only_attributes": ["idcc", "cse", "titres_restaurant", "mutuelle_obligatoire", "forfait_jours", "prime_de_vacances"],
+      "why_pack": "IDCC replaces the BE joint-committee concept; one field, different vocabulary."
+    },
+    "DE": {
+      "status": "full",
+      "sector_agreement":   {"scheme": "de_tarif", "code": "Tarifvertrag + Tarifgebiet", "plus": "Betriebsvereinbarung (company level)"},
+      "worker_status":      {"scheme": "de_personengruppe", "code": ["Arbeiter", "Angestellter", "Azubi", "Minijob", "Midijob", "Werkstudent", "freier Mitarbeiter"]},
+      "sub_jurisdiction":   ["16 Bundeslaender"],
+      "social_security":    "Sozialversicherung (KV/RV/AV/PV) + DEUEV reporting",
+      "tax_withholding":    "Lohnsteuer via ELStAM",
+      "reporting_channel":  ["deuev", "lohnnachweis"],
+      "pack_only_attributes": ["lohnsteuerklasse", "kirchensteuer", "kurzarbeitergeld", "tarifgebiet", "minijob_pauschale"],
+      "why_pack": "Wage-tax class and Tarifgebiet are German-only filter keys."
+    },
+    "NL": {
+      "status": "full",
+      "sector_agreement":   {"scheme": "nl_cao", "code": "name + SZW register id", "plus": "algemeen verbindend verklaring (AVV) yes/no changes applicability"},
+      "worker_status":      {"scheme": "nl_contract", "code": ["werknemer", "uitzendkracht", "payroll_uitlener", "zzp", "oproep"]},
+      "sub_jurisdiction":   [],
+      "social_security":    "UWV + loonaangifte",
+      "tax_withholding":    "loonheffing",
+      "reporting_channel":  ["loonaangifte (per period)", "UPA"],
+      "pack_only_attributes": ["awv_status", "wkr_vrije_ruimte", "30pct_regeling", "transitievergoeding", "ketenregeling"],
+      "why_pack": "AVV status decides whether a CAO applies at all - a filter no other country needs."
+    },
+    "ES": {
+      "status": "full",
+      "sector_agreement":   {"scheme": "es_convenio", "code": "convenio code + scope (state/provincial/company)"},
+      "worker_status":      {"scheme": "es_contrato", "code": ["indefinido", "temporal", "fijo-discontinuo", "autonomo"]},
+      "sub_jurisdiction":   ["bizkaia", "gipuzkoa", "araba", "navarra", "regimen_comun"],
+      "social_security":    "TGSS (sistema RED / SILTRA)",
+      "tax_withholding":    "IRPF retenciones",
+      "reporting_channel":  ["siltra", "certifica"],
+      "pack_only_attributes": ["convenio_code", "pagas_extras", "plus_transporte", "IT", "ERE_ERTE", "finiquito"],
+      "why_pack": "Foral regimes change tax and benefit rules inside one country - the only place sub_jurisdiction is truly load-bearing."
+    },
+    "IT": {
+      "status": "full",
+      "sector_agreement":   {"scheme": "it_ccnl", "code": "CCNL code/name (e.g. Commercio-Terziario)"},
+      "worker_status":      {"scheme": "it_inquadramento", "code": ["operaio", "impiegato", "quadro", "dirigente", "apprendista", "interinale"]},
+      "social_security":    "INPS",
+      "tax_withholding":    "IRPEF + addizionale regionale/comunale",
+      "reporting_channel":  ["uniemens", "cu"],
+      "pack_only_attributes": ["ccnl_code", "livello", "tredicesima", "quattordicesima", "TFR", "CIG_CIGS"],
+      "why_pack": "CCNL + livello (grade) is the Italian equivalent of BE worker status + scale."
+    },
+    "GB": {
+      "status": "full",
+      "sector_agreement":   {"scheme": "uk_collective_agreement", "code": "by name; rare, opt-in"},
+      "worker_status":      {"scheme": "uk_status", "code": ["employee", "worker", "self_employed", "director", "umbrella", "agency"]},
+      "sub_jurisdiction":   ["england", "scotland", "wales", "northern_ireland"],
+      "social_security":    "National Insurance (letter categories)",
+      "tax_withholding":    "PAYE (Scottish/Welsh rates differ)",
+      "reporting_channel":  ["rti_fps", "p11d", "p60"],
+      "pack_only_attributes": ["ni_category", "ir35_off_payroll", "auto_enrolment", "holiday_pay_12_07", "umbrella_rule"],
+      "why_pack": "No sectoral agreement layer in the BE sense - the pack must be allowed to say 'mostly absent' instead of forcing a value."
+    },
+    "IE":  {"status": "full",    "sector_agreement": {"scheme": "ie_rea_ero", "note": "rare"}, "worker_status": {"scheme": "ie_status", "code": ["employee", "contractor"]}, "social_security": "PRSI", "tax_withholding": "PAYE + USC", "reporting_channel": ["revenue_payroll_submission"]},
+    "LU":  {"status": "full",    "sector_agreement": {"scheme": "lu_cct", "note": "often extended erga omnes"}, "worker_status": {"scheme": "lu_status", "code": ["employe", "ouvrier", "cadre"]}, "social_security": "CCSS", "tax_withholding": "retenue d'impot (tax card)", "pack_only_attributes": ["indexation_automatique"], "reporting_channel": ["ccss_monthly"]},
+    "AT":  {"status": "partial", "sector_agreement": {"scheme": "at_kv", "note": "Kollektivvertrag is legally binding - strong analogue of BE CAO"}, "social_security": "OeGK", "tax_withholding": "Lohnsteuer", "reporting_channel": ["elda"]},
+    "CH":  {"status": "partial", "sector_agreement": {"scheme": "ch_gav", "note": "often cantonal"}, "sub_jurisdiction": ["26 cantons"], "social_security": "AHV/AVS + BVG/LPP + UVG/LAA", "tax_withholding": "Quellensteuer (permit-dependent)", "reporting_channel": ["ahv_ausgleichskasse"]},
+    "PL":  {"status": "partial", "sector_agreement": {"scheme": "pl_uklad|regulamin", "note": "sector-wide collective agreements are rare"}, "worker_status": {"scheme": "pl_contract", "code": ["umowa_o_prace", "zlecenie", "dzielo", "b2b"]}, "social_security": "ZUS", "tax_withholding": "PIT", "pack_only_attributes": ["ppk", "zfs_s", "urlop_20_26"]},
+    "FI":  {"status": "partial", "sector_agreement": {"scheme": "fi_tye", "note": "collective agreements are generally binding"}, "social_security": "Kela/ETK", "reporting_channel": ["incomes_register"]},
+    "SE":  {"status": "partial", "sector_agreement": {"scheme": "se_kollektivavtal"}, "social_security": "Forsakringskassan", "reporting_channel": ["agi"]},
+    "NO":  {"status": "partial", "sector_agreement": {"scheme": "no_tariffavtale"}, "social_security": "NAV", "reporting_channel": ["a-melding"]},
+    "HR":  {"status": "partial", "note": "small market; verify before trusting"}, 
+    "AL":  {"status": "none", "role": "delivery_centre", "note": "ops documents only - no client legislation corpus expected"},
+    "MU":  {"status": "none", "role": "delivery_centre", "note": "largest non-EU site (843 FTE); payroll processing for other markets, not a payroll market"},
+    "RO":  {"status": "none", "role": "delivery_centre"},
+    "HU":  {"status": "none", "role": "entity_only"},
+    "DK":  {"status": "none", "role": "entity_only"},
+    "RS":  {"status": "none", "role": "entity_only"},
+    "SI":  {"status": "none", "role": "entity_only"},
+    "EE":  {"status": "none", "role": "entity_only"}
+  },
+  "hackathon_cut": "Core slots + BE pack complete. FR/DE/NL/ES/IT/GB stubbed with the identifier scheme only (enough to route and filter). Everything else pack_status=null -> answers carry a low-confidence caveat instead of inventing rules."
+}

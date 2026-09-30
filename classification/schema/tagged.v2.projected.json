@@ -1,0 +1,1486 @@
+[
+ {
+  "id": 1,
+  "doc_type": "procedure",
+  "process_domain": [
+   "gross_to_net",
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 2,
+  "doc_type": "reference",
+  "process_domain": [
+   "payment",
+   "declarations"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 3,
+  "doc_type": "control",
+  "process_domain": [
+   "quality"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 4,
+  "doc_type": "procedure",
+  "process_domain": [
+   "gross_to_net",
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 5,
+  "doc_type": "procedure",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 6,
+  "doc_type": "procedure",
+  "process_domain": [
+   "implementation"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 7,
+  "doc_type": "procedure",
+  "process_domain": [
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 8,
+  "doc_type": "procedure",
+  "process_domain": [
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 9,
+  "doc_type": "procedure",
+  "process_domain": [
+   "reporting"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 10,
+  "doc_type": "procedure",
+  "process_domain": [
+   "year_end"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 11,
+  "doc_type": "procedure",
+  "process_domain": [
+   "implementation"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 12,
+  "doc_type": "procedure",
+  "process_domain": [
+   "input",
+   "systems"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 13,
+  "doc_type": "procedure",
+  "process_domain": [
+   "termination"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 14,
+  "doc_type": "procedure",
+  "process_domain": [
+   "deductions"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 15,
+  "doc_type": "procedure",
+  "process_domain": [
+   "absence",
+   "deductions"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 16,
+  "doc_type": "procedure",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 17,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 18,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "gross_to_net",
+   "time_attendance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 19,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "gross_to_net",
+   "time_attendance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 20,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "benefits",
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 21,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "gross_to_net",
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 22,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "absence",
+   "payment"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 23,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "gross_to_net",
+   "time_attendance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 24,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "implementation",
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 25,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "gross_to_net",
+   "termination"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 26,
+  "doc_type": "client_instruction",
+  "process_domain": [
+   "absence",
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 27,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net",
+   "termination"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 28,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 29,
+  "doc_type": "reference",
+  "process_domain": [
+   "absence",
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 30,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 31,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net",
+   "termination"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 32,
+  "doc_type": "reference",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "p",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 33,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 34,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 35,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "sector"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 36,
+  "doc_type": "reference",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "p",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 37,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "termination"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 38,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 39,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 40,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence",
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 41,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 42,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 43,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 44,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 45,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence",
+   "deductions"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 46,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 47,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "absence",
+   "termination"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed",
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 48,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "termination"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 49,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "termination"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed",
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 50,
+  "doc_type": "legal_summary",
+  "process_domain": [
+   "gross_to_net",
+   "benefits"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed",
+   "eu"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 51,
+  "doc_type": "comms",
+  "process_domain": [
+   "absence",
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 52,
+  "doc_type": "template",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "company"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 53,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed",
+   "eu"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 54,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed",
+   "eu"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 55,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "eu",
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 56,
+  "doc_type": "procedure",
+  "process_domain": [
+   "immigration"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "eu"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 57,
+  "doc_type": "procedure",
+  "process_domain": [
+   "immigration"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 58,
+  "doc_type": "reference",
+  "process_domain": [
+   "implementation",
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 59,
+  "doc_type": "reference",
+  "process_domain": [
+   "systems",
+   "gross_to_net"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 60,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [
+   "multi"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 61,
+  "doc_type": "reference",
+  "process_domain": [
+   "gross_to_net",
+   "deductions"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed",
+   "eu"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 62,
+  "doc_type": "reference",
+  "process_domain": [
+   "declarations",
+   "reporting"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 63,
+  "doc_type": "reference",
+  "process_domain": [
+   "declarations"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 64,
+  "doc_type": "reference",
+  "process_domain": [
+   "declarations"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 65,
+  "doc_type": "control",
+  "process_domain": [
+   "declarations",
+   "year_end"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 66,
+  "doc_type": "reference",
+  "process_domain": [
+   "declarations",
+   "deductions"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 67,
+  "doc_type": "control",
+  "process_domain": [
+   "declarations",
+   "reporting"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 68,
+  "doc_type": "reference",
+  "process_domain": [
+   "declarations",
+   "reporting"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 69,
+  "doc_type": "reference",
+  "process_domain": [
+   "deductions",
+   "declarations"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 70,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits",
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 71,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits",
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 72,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits",
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 73,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits",
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 74,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits",
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed",
+   "sector"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 75,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits",
+   "declarations"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 76,
+  "doc_type": "reference",
+  "process_domain": [
+   "benefits",
+   "gross_to_net"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 77,
+  "doc_type": "system",
+  "process_domain": [
+   "systems"
+  ],
+  "temporal_type": "release",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 78,
+  "doc_type": "system",
+  "process_domain": [
+   "systems",
+   "input"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 79,
+  "doc_type": "system",
+  "process_domain": [
+   "systems",
+   "input"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 80,
+  "doc_type": "system",
+  "process_domain": [
+   "time_attendance",
+   "input"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 81,
+  "doc_type": "system",
+  "process_domain": [
+   "systems",
+   "reporting"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 82,
+  "doc_type": "control",
+  "process_domain": [
+   "input",
+   "quality"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 83,
+  "doc_type": "control",
+  "process_domain": [
+   "quality",
+   "implementation"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 84,
+  "doc_type": "reference",
+  "process_domain": [
+   "systems"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 85,
+  "doc_type": "reference",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": false
+ },
+ {
+  "id": 86,
+  "doc_type": "reference",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "per_client",
+  "client_known": false
+ },
+ {
+  "id": 87,
+  "doc_type": "reference",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 88,
+  "doc_type": "procedure",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 89,
+  "doc_type": "control",
+  "process_domain": [
+   "quality",
+   "governance"
+  ],
+  "temporal_type": "periodic",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 90,
+  "doc_type": "reference",
+  "process_domain": [
+   "compliance"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "eu",
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 91,
+  "doc_type": "template",
+  "process_domain": [
+   "compliance"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "eu",
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 92,
+  "doc_type": "reference",
+  "process_domain": [
+   "compliance"
+  ],
+  "temporal_type": "law_window",
+  "rule_level": [
+   "eu",
+   "fed"
+  ],
+  "has_legal_basis": true,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 93,
+  "doc_type": "procedure",
+  "process_domain": [
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 94,
+  "doc_type": "reference",
+  "process_domain": [
+   "governance"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 95,
+  "doc_type": "comms",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "one_off",
+  "rule_level": [
+   "client"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "?",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 96,
+  "doc_type": "comms",
+  "process_domain": [
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "company"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "n",
+  "instantiation": "per_client",
+  "client_known": true
+ },
+ {
+  "id": 97,
+  "doc_type": "procedure",
+  "process_domain": [
+   "gross_to_net",
+   "payment"
+  ],
+  "temporal_type": "one_off",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 98,
+  "doc_type": "comms",
+  "process_domain": [
+   "absence",
+   "gross_to_net"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [
+   "fed"
+  ],
+  "has_legal_basis": false,
+  "bindingness": "a",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 99,
+  "doc_type": "comms",
+  "process_domain": [
+   "declarations",
+   "deductions"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ },
+ {
+  "id": 100,
+  "doc_type": "procedure",
+  "process_domain": [
+   "gross_to_net",
+   "payment"
+  ],
+  "temporal_type": "evergreen",
+  "rule_level": [],
+  "has_legal_basis": false,
+  "bindingness": "b",
+  "instantiation": "generic",
+  "client_known": true
+ }
+]

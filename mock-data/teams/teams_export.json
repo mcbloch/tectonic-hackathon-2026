@@ -1,0 +1,4013 @@
+{
+  "export_id": "teams-export-proximus-2026-09-round2",
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "format_note": "Single-file mock Teams export. Direct messages are excluded. Every message has sent_at timestamp and container metadata.",
+  "message_count": 100,
+  "thread_or_chat_count": 10,
+  "container_types": [
+    "channel",
+    "group_chat",
+    "meeting_chat"
+  ],
+  "threads": [
+    {
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "message_count": 12,
+      "first_message_at": "2026-08-18T15:50:00+02:00",
+      "last_message_at": "2026-08-19T12:25:00+02:00",
+      "topics": [
+        "customer_confirmation",
+        "exception",
+        "exception_log",
+        "file_received",
+        "handover",
+        "import_success",
+        "integration",
+        "late_input",
+        "one_off_exception",
+        "payroll_cutoff",
+        "retail",
+        "trust_signal",
+        "validation_needed"
+      ],
+      "referenced_documents": [
+        "SP-PROX-002",
+        "SP-PROX-005"
+      ]
+    },
+    {
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "message_count": 10,
+      "first_message_at": "2026-09-21T09:05:00+02:00",
+      "last_message_at": "2026-09-21T11:15:00+02:00",
+      "topics": [
+        "governance",
+        "handover",
+        "hr_validation",
+        "owner_missing",
+        "payment_approval",
+        "procedure_update",
+        "sepa",
+        "stale_document",
+        "trust_signal",
+        "validation_queue"
+      ],
+      "referenced_documents": [
+        "SP-PROX-003",
+        "SP-PROX-005"
+      ]
+    },
+    {
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "message_count": 12,
+      "first_message_at": "2026-09-03T10:54:00+02:00",
+      "last_message_at": "2026-09-03T13:42:00+02:00",
+      "topics": [
+        "allowance_code",
+        "allowances",
+        "configuration",
+        "country_scope",
+        "customer_commitment",
+        "effective_date",
+        "emergency_intervention",
+        "field_technicians",
+        "handover",
+        "legal_review",
+        "payslip_correction",
+        "risk",
+        "trust_signal",
+        "validation_needed",
+        "validation_queue"
+      ],
+      "referenced_documents": [
+        "SP-PROX-004",
+        "SP-PROX-005"
+      ]
+    },
+    {
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "message_count": 10,
+      "first_message_at": "2026-09-26T08:39:00+02:00",
+      "last_message_at": "2026-09-26T11:05:00+02:00",
+      "topics": [
+        "allowance_code",
+        "allowances",
+        "continuity_risk",
+        "customer_confirmation",
+        "data_protection",
+        "handover",
+        "legal_review",
+        "off_cycle",
+        "ownership",
+        "payslip_correction",
+        "threshold",
+        "trust_signal",
+        "validation_queue"
+      ],
+      "referenced_documents": [
+        "SP-PROX-001",
+        "SP-PROX-005"
+      ]
+    },
+    {
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "message_count": 12,
+      "first_message_at": "2026-09-19T08:58:00+02:00",
+      "last_message_at": "2026-09-19T11:48:00+02:00",
+      "topics": [
+        "continuity",
+        "continuity_pack",
+        "customer_confirmation",
+        "data_protection",
+        "evidence",
+        "handover",
+        "import_rejection",
+        "import_success",
+        "integration",
+        "ownership",
+        "retail",
+        "risk",
+        "temporary_mapping"
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ]
+    },
+    {
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "message_count": 10,
+      "first_message_at": "2026-09-05T09:20:00+02:00",
+      "last_message_at": "2026-09-05T11:55:00+02:00",
+      "topics": [
+        "continuity_pack",
+        "country_scope",
+        "customer_confirmation",
+        "document_metadata",
+        "documentation",
+        "field_technicians",
+        "legal_review",
+        "ownership",
+        "trust_signal",
+        "validation_queue"
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ]
+    },
+    {
+      "thread_id": "teams-thread-handover-2026-07",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "message_count": 12,
+      "first_message_at": "2026-07-29T08:49:00+02:00",
+      "last_message_at": "2026-07-29T11:49:00+02:00",
+      "topics": [
+        "consultant_notes",
+        "contacts",
+        "continuity_pack",
+        "documentation",
+        "handover",
+        "integration",
+        "legal_review",
+        "ownership",
+        "payroll_cutoff",
+        "trust_signal",
+        "validation_needed",
+        "validation_queue"
+      ],
+      "referenced_documents": [
+        "SP-PROX-002",
+        "SP-PROX-005"
+      ]
+    },
+    {
+      "thread_id": "teams-chat-september-war-room-2026",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "message_count": 10,
+      "first_message_at": "2026-09-23T08:30:00+02:00",
+      "last_message_at": "2026-09-23T13:41:00+02:00",
+      "topics": [
+        "allowance_code",
+        "allowances",
+        "continuity_pack",
+        "effective_date",
+        "governance",
+        "hr_validation",
+        "integration",
+        "legal_review",
+        "payment_approval",
+        "payroll_run",
+        "sepa",
+        "temporary_mapping",
+        "trust_signal",
+        "war_room"
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ]
+    },
+    {
+      "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+      "container_type": "meeting_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": null,
+      "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+      "message_count": 6,
+      "first_message_at": "2026-09-18T15:00:00+02:00",
+      "last_message_at": "2026-09-18T16:02:00+02:00",
+      "topics": [
+        "action_item",
+        "audit",
+        "continuity_pack",
+        "country_scope",
+        "governance",
+        "legal_review",
+        "meeting_chat",
+        "payment_approval",
+        "source_label",
+        "trust_signal",
+        "validation_queue"
+      ],
+      "referenced_documents": [
+        "SP-PROX-003",
+        "SP-PROX-004"
+      ]
+    },
+    {
+      "thread_id": "teams-chat-field-allowance-review-2026",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus Field Technician Allowance Review",
+      "meeting_title": null,
+      "message_count": 6,
+      "first_message_at": "2026-09-04T08:35:00+02:00",
+      "last_message_at": "2026-09-04T09:44:00+02:00",
+      "topics": [
+        "allowances",
+        "audit",
+        "continuity_risk",
+        "effective_date",
+        "field_technicians",
+        "governance",
+        "integration",
+        "ownership",
+        "validation_needed"
+      ],
+      "referenced_documents": []
+    }
+  ],
+  "messages": [
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0001",
+      "source_type": "channel_post",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": null,
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-18T15:50:00+02:00",
+      "body": "Opening August cutoff thread. Standard freeze is today at 17:00. Retail has warned us about a possible roster export delay, so please keep the exception log ready.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+          "sharepoint_document_id": "SP-PROX-002",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-002"
+      ],
+      "topics": [
+        "payroll_cutoff",
+        "retail"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_cutoff",
+        "retail"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0002",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-18T15:57:00+02:00",
+      "body": "Reminder from the calendar: D-4 noon is the standing retail exception. Anything later needs service lead approval and should be marked one-off.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+          "sharepoint_document_id": "SP-PROX-002",
+          "relationship": "referenced_source"
+        },
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-002",
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "payroll_cutoff",
+        "retail",
+        "exception"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_cutoff",
+        "retail",
+        "exception"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0003",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Sarah Van den Berghe",
+      "sender_org": "Proximus",
+      "sent_at": "2026-08-18T16:12:00+02:00",
+      "body": "We may have 42 Belgian retail employees in the corrected store file. The source issue is limited to two regions, not all stores.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "retail",
+        "late_input"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "retail",
+        "late_input"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0004",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-18T16:24:00+02:00",
+      "body": "I can check file feasibility if the corrected roster arrives before noon tomorrow. Please mark final version in the file name.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "retail",
+        "late_input"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "retail",
+        "late_input"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0005",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-18T17:31:00+02:00",
+      "body": "Approved as a one-off for August only. This does not change the standing D-4 rule.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+          "sharepoint_document_id": "SP-PROX-002",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-002"
+      ],
+      "topics": [
+        "payroll_cutoff",
+        "one_off_exception"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_cutoff",
+        "one_off_exception"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0006",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-08-18T17:37:00+02:00",
+      "body": "Acknowledged. We will not communicate D-3 as standard internally.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payroll_cutoff",
+        "customer_confirmation"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_cutoff",
+        "customer_confirmation"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0007",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-19T09:04:00+02:00",
+      "body": "Technical reminder: late file must use the same columns as the first August roster export. No new cost center values after D-3.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "integration",
+        "retail"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "retail"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0008",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Sarah Van den Berghe",
+      "sender_org": "Proximus",
+      "sent_at": "2026-08-19T11:26:00+02:00",
+      "body": "Corrected file uploaded. It has 42 rows and no contract changes.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "retail",
+        "file_received"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "retail",
+        "file_received"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0009",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-19T11:44:00+02:00",
+      "body": "Imported cleanly. I added the exception to the August control log.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "import_success",
+        "exception_log"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "import_success",
+        "exception_log"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0010",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-19T12:07:00+02:00",
+      "body": "This is a good continuity example: email approval says one-off, handover notes mention precedent, calendar says D-4. Keep all three linked.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+          "sharepoint_document_id": "SP-PROX-002",
+          "relationship": "referenced_source"
+        },
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-002",
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "trust_signal"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "trust_signal"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0011",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-19T12:18:00+02:00",
+      "body": "Please do not promote D-3 to client knowledge unless Anne confirms it as a policy change.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "trust_signal",
+        "validation_needed"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "validation_needed"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0012",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-cutoff-2026-08",
+      "reply_to_id": "teams-msg-0001",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-08-19T12:25:00+02:00",
+      "body": "Logged as: August-only retail roster exception, 42 employees, approved by service lead, customer acknowledged no standing change.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "exception_log",
+        "retail"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "exception_log",
+        "retail"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0013",
+      "source_type": "channel_post",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": null,
+      "sender": "Pieter Claes",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-21T09:05:00+02:00",
+      "body": "For September payment approval, Finance Operations will again approve the SEPA total. Please do not wait for HR Shared Services as final payment approver.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payment_approval",
+        "sepa"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "sepa"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0014",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-21T09:17:00+02:00",
+      "body": "Thanks Pieter. SP-PROX-003 still says HR Shared Services. I will flag it stale in the continuity pack.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Payment Approval and SEPA Release Procedure",
+          "sharepoint_document_id": "SP-PROX-003",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-003"
+      ],
+      "topics": [
+        "payment_approval",
+        "stale_document"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "stale_document"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0015",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-21T09:28:00+02:00",
+      "body": "Correct: HR validates input content, Finance approves payment release.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payment_approval",
+        "hr_validation"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "hr_validation"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0016",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-21T09:39:00+02:00",
+      "body": "This is an example where customer email beats the old unowned procedure. We still need a SharePoint update.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Payment Approval and SEPA Release Procedure",
+          "sharepoint_document_id": "SP-PROX-003",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-003"
+      ],
+      "topics": [
+        "trust_signal",
+        "owner_missing"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "owner_missing"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0017",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Elise Lambert",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-21T10:03:00+02:00",
+      "body": "Who should own the procedure update? It has no owner in SharePoint metadata.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Payment Approval and SEPA Release Procedure",
+          "sharepoint_document_id": "SP-PROX-003",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-003"
+      ],
+      "topics": [
+        "owner_missing",
+        "governance"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "owner_missing",
+        "governance"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0018",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Pieter Claes",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-21T10:16:00+02:00",
+      "body": "Finance Operations can validate the text but SD Worx should own the procedure document.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "governance",
+        "payment_approval"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "governance",
+        "payment_approval"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0019",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-21T10:31:00+02:00",
+      "body": "I will draft the change after September close and route it to Jonas.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "procedure_update",
+        "payment_approval"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "procedure_update",
+        "payment_approval"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0020",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-21T10:45:00+02:00",
+      "body": "This was already happening since May, see my handover note. Good to finally formalize it.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "payment_approval"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "payment_approval"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0021",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-21T11:02:00+02:00",
+      "body": "Until the procedure is updated, continuity answer should say: current practice confirmed by customer email; SharePoint doc stale.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "trust_signal",
+        "payment_approval"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "payment_approval"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0022",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payments and Banking",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payment-owner-2026-09",
+      "reply_to_id": "teams-msg-0013",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-21T11:15:00+02:00",
+      "body": "Added review task: update owner, approver wording, and escalation path after close.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "validation_queue",
+        "procedure_update"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "validation_queue",
+        "procedure_update"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0023",
+      "source_type": "channel_post",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": null,
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T10:54:00+02:00",
+      "body": "Opening field technician allowance review. SP-PROX-004 is not clean enough: it mixes Belgium and Luxembourg notes.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "allowances",
+        "field_technicians",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "allowances",
+        "field_technicians",
+        "country_scope"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0024",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Olivier Janssens",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-03T11:01:00+02:00",
+      "body": "For Belgian Network Operations, night intervention needs to be separated from regular standby from September.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "allowances",
+        "field_technicians"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "allowances",
+        "field_technicians"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0025",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Nadia Leclercq",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-03T11:17:00+02:00",
+      "body": "The July-August test was a pilot. Please do not backdate code 5413 unless Labour Relations sends a signed request.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "allowance_code",
+        "effective_date"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "allowance_code",
+        "effective_date"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0026",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T11:31:00+02:00",
+      "body": "So for September payroll: wait for signed change request before configuration. Until then the matrix remains under review.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "allowance_code",
+        "validation_needed"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "allowance_code",
+        "validation_needed"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0027",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T11:48:00+02:00",
+      "body": "Correct. Also do not apply this to Luxembourg. The file title says Proximus Group, which is misleading for payroll.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "country_scope",
+        "trust_signal"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "country_scope",
+        "trust_signal"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0028",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T12:04:00+02:00",
+      "body": "Configuration lead time is one working day once the signed change request is available.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "configuration",
+        "allowance_code"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "configuration",
+        "allowance_code"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0029",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Olivier Janssens",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-03T12:15:00+02:00",
+      "body": "Network Operations can provide event references for emergency interventions. The EUR 95 line should remain approval-only.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "field_technicians",
+        "emergency_intervention"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "field_technicians",
+        "emergency_intervention"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0030",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T12:28:00+02:00",
+      "body": "My handover note mentions EUR 95 because people ask about it often. It is not blanket entitlement.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "allowances"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "allowances"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0031",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Nadia Leclercq",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-03T13:02:00+02:00",
+      "body": "I will send the signed request today. Wording should be Belgium only.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "customer_commitment",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "customer_commitment",
+        "country_scope"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0032",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T13:17:00+02:00",
+      "body": "Continuity pack should flag: official matrix under review, customer email provides current direction, signed request still pending.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "trust_signal",
+        "validation_queue"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "validation_queue"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0033",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T13:29:00+02:00",
+      "body": "Please route any payslip correction caused by standby code confusion to me before promising off-cycle handling.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payslip_correction",
+        "legal_review"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payslip_correction",
+        "legal_review"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0034",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Time and Absence",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-standby-code-2026-09",
+      "reply_to_id": "teams-msg-0023",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-03T13:42:00+02:00",
+      "body": "Noted. This is one of the top handover risks for Proximus September.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "handover",
+        "risk"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "risk"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0035",
+      "source_type": "channel_post",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": null,
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-26T08:39:00+02:00",
+      "body": "We are seeing missing weekend premium on 14 September payslips. Employees are already calling HR Shared Services.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payslip_correction",
+        "allowances"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payslip_correction",
+        "allowances"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0036",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-26T08:51:00+02:00",
+      "body": "Can you share affected employee IDs through the secure channel? Please do not paste IDs here.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "data_protection",
+        "payslip_correction"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "data_protection",
+        "payslip_correction"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0037",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-26T09:04:00+02:00",
+      "body": "Secure file uploaded. Net impact ranges from EUR 72 to EUR 118.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payslip_correction",
+        "off_cycle"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payslip_correction",
+        "off_cycle"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0038",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-26T09:22:00+02:00",
+      "body": "Manual threshold is EUR 100 for urgent off-cycle. Marie's EUR 75 note is precedent, not policy.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium Payroll Operating Manual 2026",
+          "sharepoint_document_id": "SP-PROX-001",
+          "relationship": "referenced_source"
+        },
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-001",
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "off_cycle",
+        "threshold"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "off_cycle",
+        "threshold"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0039",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-26T09:36:00+02:00",
+      "body": "Yes, EUR 75 happened once because of a large group and client escalation. I should have marked that more clearly.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "trust_signal"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "trust_signal"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0040",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-26T09:49:00+02:00",
+      "body": "If the error is caused by wrong allowance interpretation, confirm code first before running corrections.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "legal_review",
+        "allowance_code"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "legal_review",
+        "allowance_code"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0041",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-26T10:12:00+02:00",
+      "body": "Proposal: off-cycle for employees above EUR 100; review lower impact cases with Proximus before committing.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "off_cycle",
+        "payslip_correction"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "off_cycle",
+        "payslip_correction"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0042",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-26T10:24:00+02:00",
+      "body": "Accepted. Please send communication wording for HR Shared Services.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "customer_confirmation",
+        "payslip_correction"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "customer_confirmation",
+        "payslip_correction"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0043",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-26T10:41:00+02:00",
+      "body": "Add to continuity risks: threshold confusion between manual and handover notes.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium Payroll Operating Manual 2026",
+          "sharepoint_document_id": "SP-PROX-001",
+          "relationship": "referenced_source"
+        },
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-001",
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "continuity_risk",
+        "trust_signal"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "continuity_risk",
+        "trust_signal"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0044",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Payroll Operations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-payslip-corrections-2026-09",
+      "reply_to_id": "teams-msg-0035",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-26T11:05:00+02:00",
+      "body": "Logged in validation queue. Owner: Jonas for policy wording, Amina for allowance cause.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "validation_queue",
+        "ownership"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "validation_queue",
+        "ownership"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0045",
+      "source_type": "channel_post",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": null,
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T08:58:00+02:00",
+      "body": "September HRIS import rejected 37 rows for PXS-RET-OLD cost center. Looks like retail only.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "integration",
+        "import_rejection",
+        "retail"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "import_rejection",
+        "retail"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0046",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T09:04:00+02:00",
+      "body": "Is this the same old cost center issue Marie mentioned in handover?",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "integration"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "integration"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0047",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T09:11:00+02:00",
+      "body": "Yes. Last time we mapped PXS-RET-OLD to PXS-RET-BE for the month only. Ask Anne to confirm before applying.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "integration",
+        "temporary_mapping"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "temporary_mapping"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0048",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T09:24:00+02:00",
+      "body": "I sent the rejection report by email. No employee IDs in Teams.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "data_protection",
+        "import_rejection"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "data_protection",
+        "import_rejection"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0049",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-19T10:13:00+02:00",
+      "body": "Confirmed by email: map for September only. Source HRIS will be fixed before October.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "customer_confirmation",
+        "temporary_mapping"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "customer_confirmation",
+        "temporary_mapping"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0050",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Sarah Van den Berghe",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-19T10:22:00+02:00",
+      "body": "Retail owns the source cleanup. I will follow up with our HRIS admin.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "ownership",
+        "retail"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "ownership",
+        "retail"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0051",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T10:41:00+02:00",
+      "body": "Applied temporary mapping in test import. All 37 rows accepted.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "import_success",
+        "integration"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "import_success",
+        "integration"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0052",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T10:58:00+02:00",
+      "body": "Please attach the import validation report to the ticket and link it from the continuity pack.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "evidence",
+        "integration"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "evidence",
+        "integration"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0053",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T11:07:00+02:00",
+      "body": "Done. File name: import_validation_report_2026-09-19.pdf.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "evidence",
+        "integration"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "evidence",
+        "integration"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0054",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T11:15:00+02:00",
+      "body": "This is not a permanent mapping. Add expiry before October payroll.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "temporary_mapping",
+        "risk"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "temporary_mapping",
+        "risk"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0055",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T11:33:00+02:00",
+      "body": "Continuity item created: September-only retail cost center mapping, expires after September payroll.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "continuity_pack",
+        "temporary_mapping"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "continuity_pack",
+        "temporary_mapping"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0056",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Integrations",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-import-rejections-2026-09",
+      "reply_to_id": "teams-msg-0045",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-19T11:48:00+02:00",
+      "body": "Good. This is exactly the type of hidden knowledge that used to get lost between consultants.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "handover",
+        "continuity"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "continuity"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0057",
+      "source_type": "channel_post",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": null,
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T09:20:00+02:00",
+      "body": "Legal scope check: SP-PROX-004 includes Luxembourg notes. Do not apply the September 5413 decision outside Belgium.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "legal_review",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "legal_review",
+        "country_scope"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0058",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Nadia Leclercq",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-05T09:44:00+02:00",
+      "body": "Agreed. The Labour Relations confirmation is for Belgian employees only.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "country_scope",
+        "customer_confirmation"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "country_scope",
+        "customer_confirmation"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0059",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T10:05:00+02:00",
+      "body": "Should the old matrix be split into BE and LU documents?",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "documentation",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "documentation",
+        "country_scope"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0060",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T10:17:00+02:00",
+      "body": "Yes. For now, continuity answer should warn: source may apply to another country.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "trust_signal",
+        "documentation"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "documentation"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0061",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T10:38:00+02:00",
+      "body": "Assigning Amina as validation owner for the BE allowance interpretation.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "ownership",
+        "legal_review"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "ownership",
+        "legal_review"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0062",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Elise Lambert",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T10:51:00+02:00",
+      "body": "I will mark SP-PROX-004 as under review in the document index.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "document_metadata",
+        "validation_queue"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "document_metadata",
+        "validation_queue"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0063",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Olivier Janssens",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-05T11:08:00+02:00",
+      "body": "Network Operations only needs Belgium for this payroll run. LU is out of scope.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "field_technicians",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "field_technicians",
+        "country_scope"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0064",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T11:19:00+02:00",
+      "body": "Thanks. That is enough for the September Belgian payroll, not enough for a group-wide answer.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "legal_review",
+        "trust_signal"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "legal_review",
+        "trust_signal"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0065",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T11:37:00+02:00",
+      "body": "Continuity pack wording: 'Belgium confirmed; group matrix remains ambiguous.'",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "continuity_pack",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "continuity_pack",
+        "country_scope"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0066",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Legal and Compliance",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-country-scope-2026-09",
+      "reply_to_id": "teams-msg-0057",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-05T11:55:00+02:00",
+      "body": "Good. This will help the demo because the system should not blindly trust the document title.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "trust_signal",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "country_scope"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0067",
+      "source_type": "channel_post",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": null,
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T08:49:00+02:00",
+      "body": "I uploaded my Proximus handover notes. Please treat them as practical notes, not official procedure.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "consultant_notes"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "consultant_notes"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0068",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T09:02:00+02:00",
+      "body": "Thanks Marie. I will use them to identify questions for Jonas and Amina.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "validation_queue"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "validation_queue"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0069",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T09:15:00+02:00",
+      "body": "Top items to validate: payment approver, D-3 retail precedent, standby code 5413, off-cycle threshold.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "handover",
+        "validation_needed"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "validation_needed"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0070",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T09:32:00+02:00",
+      "body": "I can validate standby and country-scope items. Payment approval should go through customer confirmation.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "ownership",
+        "legal_review"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "ownership",
+        "legal_review"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0071",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Elise Lambert",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T09:47:00+02:00",
+      "body": "Calendar already includes D-4 retail exception. It does not include D-3.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+          "sharepoint_document_id": "SP-PROX-002",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-002"
+      ],
+      "topics": [
+        "payroll_cutoff",
+        "documentation"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_cutoff",
+        "documentation"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0072",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T10:01:00+02:00",
+      "body": "Exactly. D-3 happened twice, but both were emergency exceptions.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payroll_cutoff",
+        "handover"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_cutoff",
+        "handover"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0073",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T10:18:00+02:00",
+      "body": "Integration watch-out: old retail cost centers may still appear in files.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "integration",
+        "handover"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "handover"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0074",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T10:35:00+02:00",
+      "body": "I will turn these into validation tasks rather than copying them into official knowledge.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "validation_queue",
+        "handover"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "validation_queue",
+        "handover"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0075",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T10:54:00+02:00",
+      "body": "Good. The point is continuity without spreading unverified facts.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "trust_signal",
+        "handover"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "handover"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0076",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Marie Dubois",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T11:12:00+02:00",
+      "body": "Customer contacts in my note are current as of July. Please refresh after September governance meeting.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+          "sharepoint_document_id": "SP-PROX-005",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "topics": [
+        "contacts",
+        "handover"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "contacts",
+        "handover"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0077",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T11:36:00+02:00",
+      "body": "Added first-week checklist for takeover.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "handover",
+        "continuity_pack"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "handover",
+        "continuity_pack"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0078",
+      "source_type": "channel_reply",
+      "container_type": "channel",
+      "team": "SD Worx - Proximus Account",
+      "channel": "Client Handover",
+      "chat_name": null,
+      "meeting_title": null,
+      "thread_id": "teams-thread-handover-2026-07",
+      "reply_to_id": "teams-msg-0067",
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-07-29T11:49:00+02:00",
+      "body": "This thread should be linked to the Client Continuity Pack as source context, not as final truth.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "trust_signal",
+        "continuity_pack"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "continuity_pack"
+      ],
+      "visibility": "client_account_team",
+      "confidence_hint": "operational_context"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0079",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-23T08:30:00+02:00",
+      "body": "September payroll war room open. Current blockers: payment approval owner confirmation, standby code, 37 import rows now resolved.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payroll_run",
+        "war_room"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_run",
+        "war_room"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0080",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-23T08:42:00+02:00",
+      "body": "Import side clear. Temporary mapping is documented and expires after September.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "integration",
+        "temporary_mapping"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "temporary_mapping"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0081",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-23T09:03:00+02:00",
+      "body": "No code 5413 until signed change request lands. If not received by 14:00, use old code and correct next month.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "allowance_code",
+        "legal_review"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "allowance_code",
+        "legal_review"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0082",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Pieter Claes",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-23T09:19:00+02:00",
+      "body": "Finance Operations will be available for payment approval until 17:00.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payment_approval",
+        "sepa"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "sepa"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0083",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-23T09:27:00+02:00",
+      "body": "HR Shared Services validation is planned for 13:00.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "hr_validation",
+        "payroll_run"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "hr_validation",
+        "payroll_run"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0084",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-23T10:02:00+02:00",
+      "body": "Please keep decisions in this chat short and then mirror them to email or ticket if they affect procedure.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "governance",
+        "trust_signal"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "governance",
+        "trust_signal"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0085",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-23T12:47:00+02:00",
+      "body": "Gross totals validated. Waiting on final standby decision.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payroll_run",
+        "allowances"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payroll_run",
+        "allowances"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0086",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Nadia Leclercq",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-23T13:12:00+02:00",
+      "body": "Signed request for 5413 will not arrive today. Use old code for September; change starts October if signed this week.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "allowance_code",
+        "effective_date"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "allowance_code",
+        "effective_date"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0087",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-23T13:20:00+02:00",
+      "body": "Confirmed. September stays old code. Add October follow-up.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "legal_review",
+        "allowance_code"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "legal_review",
+        "allowance_code"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0088",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus September Payroll Run - War Room",
+      "meeting_title": null,
+      "thread_id": "teams-chat-september-war-room-2026",
+      "reply_to_id": null,
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-23T13:41:00+02:00",
+      "body": "Continuity note updated: September payroll uses old matrix; 5413 is planned but not active without signed request.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "continuity_pack",
+        "allowance_code"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "continuity_pack",
+        "allowance_code"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0089",
+      "source_type": "meeting_chat_message",
+      "container_type": "meeting_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": null,
+      "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+      "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+      "reply_to_id": null,
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-18T15:00:00+02:00",
+      "body": "Meeting chat open for Proximus payroll governance. Agenda: continuity gaps, payment approval owner, September risks.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "governance",
+        "meeting_chat"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "governance",
+        "meeting_chat"
+      ],
+      "visibility": "proximus_joint_governance",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0090",
+      "source_type": "meeting_chat_message",
+      "container_type": "meeting_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": null,
+      "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+      "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+      "reply_to_id": null,
+      "sender": "Anne Peeters",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-18T15:12:00+02:00",
+      "body": "HR wants one page showing what is official, what is recent email decision, and what is only Teams context.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "trust_signal",
+        "continuity_pack"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "trust_signal",
+        "continuity_pack"
+      ],
+      "visibility": "proximus_joint_governance",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0091",
+      "source_type": "meeting_chat_message",
+      "container_type": "meeting_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": null,
+      "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+      "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+      "reply_to_id": null,
+      "sender": "Pieter Claes",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-18T15:23:00+02:00",
+      "body": "Please separate payment approval from HR payroll input validation. That distinction matters for audit.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "payment_approval",
+        "audit"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "audit"
+      ],
+      "visibility": "proximus_joint_governance",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0092",
+      "source_type": "meeting_chat_message",
+      "container_type": "meeting_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": null,
+      "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+      "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+      "reply_to_id": null,
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-18T15:36:00+02:00",
+      "body": "I will add source labels: official doc, customer email, Teams, handover note.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "continuity_pack",
+        "source_label"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "continuity_pack",
+        "source_label"
+      ],
+      "visibility": "proximus_joint_governance",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0093",
+      "source_type": "meeting_chat_message",
+      "container_type": "meeting_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": null,
+      "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+      "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+      "reply_to_id": null,
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-18T15:51:00+02:00",
+      "body": "Legal items should show country and effective date. No generic Proximus Group answers.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "legal_review",
+        "country_scope"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "legal_review",
+        "country_scope"
+      ],
+      "visibility": "proximus_joint_governance",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0094",
+      "source_type": "meeting_chat_message",
+      "container_type": "meeting_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": null,
+      "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+      "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+      "reply_to_id": null,
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-18T16:02:00+02:00",
+      "body": "Action items: update payment procedure owner, split allowance matrix by country, validate off-cycle threshold.",
+      "mentions": [],
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Payment Approval and SEPA Release Procedure",
+          "sharepoint_document_id": "SP-PROX-003",
+          "relationship": "referenced_source"
+        },
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix",
+          "sharepoint_document_id": "SP-PROX-004",
+          "relationship": "referenced_source"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-003",
+        "SP-PROX-004"
+      ],
+      "topics": [
+        "action_item",
+        "validation_queue"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "action_item",
+        "validation_queue"
+      ],
+      "visibility": "proximus_joint_governance",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0095",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus Field Technician Allowance Review",
+      "meeting_title": null,
+      "thread_id": "teams-chat-field-allowance-review-2026",
+      "reply_to_id": null,
+      "sender": "Olivier Janssens",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-04T08:35:00+02:00",
+      "body": "For field technicians, the night intervention event reference is the best audit key. Roster alone is not enough.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "field_technicians",
+        "audit"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "field_technicians",
+        "audit"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0096",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus Field Technician Allowance Review",
+      "meeting_title": null,
+      "thread_id": "teams-chat-field-allowance-review-2026",
+      "reply_to_id": null,
+      "sender": "Tom De Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-04T08:48:00+02:00",
+      "body": "Can the event reference be included in the monthly allowance file?",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "integration",
+        "allowances"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "allowances"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0097",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus Field Technician Allowance Review",
+      "meeting_title": null,
+      "thread_id": "teams-chat-field-allowance-review-2026",
+      "reply_to_id": null,
+      "sender": "Olivier Janssens",
+      "sender_org": "Proximus",
+      "sent_at": "2026-09-04T09:02:00+02:00",
+      "body": "Yes, from October. September file may still require manual reference lookup.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "integration",
+        "effective_date"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "effective_date"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0098",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus Field Technician Allowance Review",
+      "meeting_title": null,
+      "thread_id": "teams-chat-field-allowance-review-2026",
+      "reply_to_id": null,
+      "sender": "Lina Smet",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-04T09:17:00+02:00",
+      "body": "Manual lookup in September should be listed as a continuity risk.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "continuity_risk",
+        "allowances"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "continuity_risk",
+        "allowances"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0099",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus Field Technician Allowance Review",
+      "meeting_title": null,
+      "thread_id": "teams-chat-field-allowance-review-2026",
+      "reply_to_id": null,
+      "sender": "Amina Rahman",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-04T09:31:00+02:00",
+      "body": "And it needs owner validation. I do not want manual lookup to become hidden process.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "validation_needed",
+        "governance"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "validation_needed",
+        "governance"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    },
+    {
+      "source_system": "microsoft_teams",
+      "synthetic": true,
+      "client_id": "PROX-BE-001",
+      "tenant_context": "synthetic-sdworx-tenant",
+      "message_id": "teams-msg-0100",
+      "source_type": "group_chat_message",
+      "container_type": "group_chat",
+      "team": null,
+      "channel": null,
+      "chat_name": "Proximus Field Technician Allowance Review",
+      "meeting_title": null,
+      "thread_id": "teams-chat-field-allowance-review-2026",
+      "reply_to_id": null,
+      "sender": "Jonas Vermeulen",
+      "sender_org": "SD Worx",
+      "sent_at": "2026-09-04T09:44:00+02:00",
+      "body": "Agreed. Add owner: Network Operations for event references, SD Worx integration for file layout.",
+      "mentions": [],
+      "attachments": [],
+      "referenced_documents": [],
+      "topics": [
+        "ownership",
+        "integration"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "ownership",
+        "integration"
+      ],
+      "visibility": "proximus_joint_working_group",
+      "confidence_hint": "collaborative_discussion"
+    }
+  ]
+}

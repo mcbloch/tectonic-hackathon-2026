@@ -1,0 +1,1616 @@
+{
+  "export_id": "outlook-export-proximus-2026-09-round2",
+  "source_system": "outlook",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "format_note": "Single-file mock Outlook export. Messages are grouped by conversation and also flattened for ingestion.",
+  "message_count": 15,
+  "thread_count": 6,
+  "threads": [
+    {
+      "conversation_id": "outlook-conv-cutoff-2026-08",
+      "subject": "August retail roster cutoff exception",
+      "source_system": "outlook",
+      "message_count": 3,
+      "participants": [
+        "anne.peeters@proximus.example",
+        "jonas.vermeulen@sdworx.example",
+        "marie.dubois@sdworx.example",
+        "sarah.vandenberghe@proximus.example"
+      ],
+      "messages": [
+        {
+          "message_id": "outlook-msg-0001",
+          "conversation_id": "outlook-conv-cutoff-2026-08",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payroll Operations",
+          "subject": "August retail roster cutoff exception",
+          "from": {
+            "name": "Sarah Van den Berghe",
+            "email": "sarah.vandenberghe@proximus.example",
+            "org": "Proximus"
+          },
+          "to": [
+            {
+              "name": "Marie Dubois",
+              "email": "marie.dubois@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Jonas Vermeulen",
+              "email": "jonas.vermeulen@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-08-18T16:08:00+02:00",
+          "importance": "high",
+          "body": "We have a late retail roster correction for August. The store export failed this morning and 42 employees are affected. Can SD Worx accept a corrected file tomorrow by 12:00? This concerns Belgian retail stores only, not corporate or Network Operations.",
+          "attachments": [
+            {
+              "attachment_type": "uploaded_file",
+              "name": "PXS_retail_roster_delta_august.xlsx",
+              "content_summary": "Synthetic roster correction file, 42 employees, Belgian retail stores."
+            }
+          ],
+          "referenced_documents": [
+            "SP-PROX-002"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "retail",
+            "cutoff"
+          ],
+          "confidence_hint": "customer_request",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0002",
+          "conversation_id": "outlook-conv-cutoff-2026-08",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payroll Operations",
+          "subject": "RE: August retail roster cutoff exception",
+          "from": {
+            "name": "Marie Dubois",
+            "email": "marie.dubois@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Sarah Van den Berghe",
+              "email": "sarah.vandenberghe@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Jonas Vermeulen",
+              "email": "jonas.vermeulen@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-08-18T17:02:00+02:00",
+          "importance": "normal",
+          "body": "The official standing exception is D-4 at 12:00 for retail corrections. Tomorrow noon is D-3 for August, so we need to treat this as a one-off exception. Jonas, can you confirm capacity before we reply with acceptance?",
+          "attachments": [
+            {
+              "attachment_type": "sharepoint_file",
+              "name": "2026 Payroll Calendar and Cutoff Exceptions.md",
+              "sharepoint_document_id": "SP-PROX-002"
+            }
+          ],
+          "referenced_documents": [
+            "SP-PROX-002",
+            "SP-PROX-005"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "retail",
+            "cutoff",
+            "exception"
+          ],
+          "confidence_hint": "sd_worx_response",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0003",
+          "conversation_id": "outlook-conv-cutoff-2026-08",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payroll Operations",
+          "subject": "RE: August retail roster cutoff exception",
+          "from": {
+            "name": "Jonas Vermeulen",
+            "email": "jonas.vermeulen@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Sarah Van den Berghe",
+              "email": "sarah.vandenberghe@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Marie Dubois",
+              "email": "marie.dubois@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "sent_at": "2026-08-18T17:28:00+02:00",
+          "importance": "high",
+          "body": "Accepted for August only. Please send the corrected file by 2026-08-19 12:00 and mark it as final. This does not change the standing D-4 retail cutoff in the calendar.",
+          "attachments": [],
+          "referenced_documents": [
+            "SP-PROX-002"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "retail",
+            "cutoff",
+            "one_off_exception"
+          ],
+          "confidence_hint": "service_lead_confirmation",
+          "source_system": "outlook",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "conversation_id": "outlook-conv-payment-owner-2026-05",
+      "subject": "May payroll payment approval owner",
+      "source_system": "outlook",
+      "message_count": 3,
+      "participants": [
+        "anne.peeters@proximus.example",
+        "jonas.vermeulen@sdworx.example",
+        "marie.dubois@sdworx.example",
+        "pieter.claes@proximus.example"
+      ],
+      "messages": [
+        {
+          "message_id": "outlook-msg-0004",
+          "conversation_id": "outlook-conv-payment-owner-2026-05",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payments",
+          "subject": "May payroll payment approval owner",
+          "from": {
+            "name": "Pieter Claes",
+            "email": "pieter.claes@proximus.example",
+            "org": "Proximus"
+          },
+          "to": [
+            {
+              "name": "Jonas Vermeulen",
+              "email": "jonas.vermeulen@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Marie Dubois",
+              "email": "marie.dubois@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-05-22T09:41:00+02:00",
+          "importance": "high",
+          "body": "Starting with the May 2026 payroll, Finance Operations is the final approver for the SEPA payment total. HR Shared Services remains responsible for HR content validation, but payment release approval must come from Finance Operations.",
+          "attachments": [],
+          "referenced_documents": [
+            "SP-PROX-003"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "payment_approval",
+            "sepa"
+          ],
+          "confidence_hint": "customer_decision",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0005",
+          "conversation_id": "outlook-conv-payment-owner-2026-05",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payments",
+          "subject": "RE: May payroll payment approval owner",
+          "from": {
+            "name": "Jonas Vermeulen",
+            "email": "jonas.vermeulen@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Pieter Claes",
+              "email": "pieter.claes@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Marie Dubois",
+              "email": "marie.dubois@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-05-22T10:03:00+02:00",
+          "importance": "normal",
+          "body": "Confirmed. We will treat Finance Operations approval as mandatory before SEPA release. I will ask our team to update the SharePoint procedure because it still lists HR Shared Services as final approver.",
+          "attachments": [
+            {
+              "attachment_type": "sharepoint_file",
+              "name": "Payment Approval and SEPA Release Procedure.md",
+              "sharepoint_document_id": "SP-PROX-003"
+            }
+          ],
+          "referenced_documents": [
+            "SP-PROX-003"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "payment_approval",
+            "procedure_update"
+          ],
+          "confidence_hint": "sd_worx_acknowledgement",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0006",
+          "conversation_id": "outlook-conv-payment-owner-2026-05",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payments",
+          "subject": "RE: May payroll payment approval owner",
+          "from": {
+            "name": "Anne Peeters",
+            "email": "anne.peeters@proximus.example",
+            "org": "Proximus"
+          },
+          "to": [
+            {
+              "name": "Jonas Vermeulen",
+              "email": "jonas.vermeulen@sdworx.example",
+              "org": "SD Worx"
+            },
+            {
+              "name": "Pieter Claes",
+              "email": "pieter.claes@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Marie Dubois",
+              "email": "marie.dubois@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-05-22T10:19:00+02:00",
+          "importance": "normal",
+          "body": "Agreed from HR side. HR Shared Services validates the HR input and payroll exceptions, but Finance Operations gives the release approval for the payment file.",
+          "attachments": [],
+          "referenced_documents": [
+            "SP-PROX-003"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "payment_approval",
+            "hr_validation"
+          ],
+          "confidence_hint": "customer_confirmation",
+          "source_system": "outlook",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "conversation_id": "outlook-conv-standby-code-2026-09",
+      "subject": "Field technician night intervention code from September",
+      "source_system": "outlook",
+      "message_count": 3,
+      "participants": [
+        "amina.rahman@sdworx.example",
+        "lina.smet@sdworx.example",
+        "nadia.leclercq@proximus.example",
+        "olivier.janssens@proximus.example"
+      ],
+      "messages": [
+        {
+          "message_id": "outlook-msg-0007",
+          "conversation_id": "outlook-conv-standby-code-2026-09",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Allowances",
+          "subject": "Field technician night intervention code from September",
+          "from": {
+            "name": "Amina Rahman",
+            "email": "amina.rahman@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Nadia Leclercq",
+              "email": "nadia.leclercq@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Olivier Janssens",
+              "email": "olivier.janssens@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Lina Smet",
+              "email": "lina.smet@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-09-03T11:12:00+02:00",
+          "importance": "normal",
+          "body": "Can you confirm whether the new night intervention code 5413 is effective for Belgium from the September 2026 payroll, or whether we should continue with the current matrix until a signed change request is available?",
+          "attachments": [
+            {
+              "attachment_type": "sharepoint_file",
+              "name": "Field Technician Standby and Intervention Allowance Matrix.md",
+              "sharepoint_document_id": "SP-PROX-004"
+            }
+          ],
+          "referenced_documents": [
+            "SP-PROX-004"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "field_technicians",
+            "allowance_code"
+          ],
+          "confidence_hint": "legal_question",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0008",
+          "conversation_id": "outlook-conv-standby-code-2026-09",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Allowances",
+          "subject": "RE: Field technician night intervention code from September",
+          "from": {
+            "name": "Nadia Leclercq",
+            "email": "nadia.leclercq@proximus.example",
+            "org": "Proximus"
+          },
+          "to": [
+            {
+              "name": "Amina Rahman",
+              "email": "amina.rahman@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Olivier Janssens",
+              "email": "olivier.janssens@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Lina Smet",
+              "email": "lina.smet@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-09-03T14:37:00+02:00",
+          "importance": "normal",
+          "body": "The July-August use was a pilot only. Please configure code 5413 for Belgian night intervention premiums from the September 2026 payroll, after the signed change request is uploaded. Do not apply it to Luxembourg entities.",
+          "attachments": [],
+          "referenced_documents": [
+            "SP-PROX-004"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "field_technicians",
+            "allowance_code",
+            "country_scope"
+          ],
+          "confidence_hint": "customer_policy_confirmation",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0009",
+          "conversation_id": "outlook-conv-standby-code-2026-09",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Allowances",
+          "subject": "RE: Field technician night intervention code from September",
+          "from": {
+            "name": "Lina Smet",
+            "email": "lina.smet@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Nadia Leclercq",
+              "email": "nadia.leclercq@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Amina Rahman",
+              "email": "amina.rahman@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Olivier Janssens",
+              "email": "olivier.janssens@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "sent_at": "2026-09-03T15:05:00+02:00",
+          "importance": "normal",
+          "body": "Understood. We will wait for the signed change request before changing configuration. I will flag SP-PROX-004 as under review because the current matrix still points to code 5419 for night intervention.",
+          "attachments": [],
+          "referenced_documents": [
+            "SP-PROX-004"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "field_technicians",
+            "change_request"
+          ],
+          "confidence_hint": "sd_worx_acknowledgement",
+          "source_system": "outlook",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "conversation_id": "outlook-conv-payslip-correction-2026-09",
+      "subject": "September payslip correction - weekend premium missing",
+      "source_system": "outlook",
+      "message_count": 2,
+      "participants": [
+        "anne.peeters@proximus.example",
+        "jonas.vermeulen@sdworx.example",
+        "lina.smet@sdworx.example"
+      ],
+      "messages": [
+        {
+          "message_id": "outlook-msg-0010",
+          "conversation_id": "outlook-conv-payslip-correction-2026-09",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payslips",
+          "subject": "September payslip correction - weekend premium missing",
+          "from": {
+            "name": "Anne Peeters",
+            "email": "anne.peeters@proximus.example",
+            "org": "Proximus"
+          },
+          "to": [
+            {
+              "name": "Lina Smet",
+              "email": "lina.smet@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Jonas Vermeulen",
+              "email": "jonas.vermeulen@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-09-26T08:47:00+02:00",
+          "importance": "high",
+          "body": "We have 14 employees whose weekend intervention premium is missing from the September payslip. The approximate net impact is between EUR 72 and EUR 118 per employee. Can this be corrected off-cycle?",
+          "attachments": [
+            {
+              "attachment_type": "uploaded_file",
+              "name": "missing_weekend_premium_cases_sep.xlsx",
+              "content_summary": "Synthetic list of 14 affected employee IDs with net impact estimate."
+            }
+          ],
+          "referenced_documents": [
+            "SP-PROX-001",
+            "SP-PROX-005"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "payslip_correction",
+            "off_cycle"
+          ],
+          "confidence_hint": "customer_escalation",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0011",
+          "conversation_id": "outlook-conv-payslip-correction-2026-09",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Payslips",
+          "subject": "RE: September payslip correction - weekend premium missing",
+          "from": {
+            "name": "Jonas Vermeulen",
+            "email": "jonas.vermeulen@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Lina Smet",
+              "email": "lina.smet@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-09-26T10:05:00+02:00",
+          "importance": "high",
+          "body": "We can prepare an off-cycle correction for employees with net impact above EUR 100 and review the EUR 72-EUR 99 cases separately. The manual says EUR 100; the lower threshold in old handover notes is precedent only, not policy.",
+          "attachments": [
+            {
+              "attachment_type": "sharepoint_file",
+              "name": "Proximus Belgium Payroll Operating Manual 2026.md",
+              "sharepoint_document_id": "SP-PROX-001"
+            }
+          ],
+          "referenced_documents": [
+            "SP-PROX-001",
+            "SP-PROX-005"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "payslip_correction",
+            "off_cycle",
+            "threshold"
+          ],
+          "confidence_hint": "service_lead_decision",
+          "source_system": "outlook",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "conversation_id": "outlook-conv-import-rejection-2026-09",
+      "subject": "September HRIS import rejected rows - cost center mapping",
+      "source_system": "outlook",
+      "message_count": 2,
+      "participants": [
+        "anne.peeters@proximus.example",
+        "lina.smet@sdworx.example",
+        "sarah.vandenberghe@proximus.example",
+        "tom.desmet@sdworx.example"
+      ],
+      "messages": [
+        {
+          "message_id": "outlook-msg-0012",
+          "conversation_id": "outlook-conv-import-rejection-2026-09",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Integrations",
+          "subject": "September HRIS import rejected rows - cost center mapping",
+          "from": {
+            "name": "Tom De Smet",
+            "email": "tom.desmet@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Lina Smet",
+              "email": "lina.smet@sdworx.example",
+              "org": "SD Worx"
+            },
+            {
+              "name": "Sarah Van den Berghe",
+              "email": "sarah.vandenberghe@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "sent_at": "2026-09-19T09:27:00+02:00",
+          "importance": "high",
+          "body": "The September HRIS import rejected 37 rows because cost center PXS-RET-OLD is not mapped in the current interface table. The rows appear to be retail employees. Please confirm whether we should map PXS-RET-OLD to PXS-RET-BE for this payroll month.",
+          "attachments": [
+            {
+              "attachment_type": "uploaded_file",
+              "name": "import_rejection_report_2026-09-19.csv",
+              "content_summary": "Synthetic validation export with rejected cost center values."
+            }
+          ],
+          "referenced_documents": [
+            "SP-PROX-005"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "integration",
+            "import_rejection",
+            "retail"
+          ],
+          "confidence_hint": "technical_incident",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0013",
+          "conversation_id": "outlook-conv-import-rejection-2026-09",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Integrations",
+          "subject": "RE: September HRIS import rejected rows - cost center mapping",
+          "from": {
+            "name": "Anne Peeters",
+            "email": "anne.peeters@proximus.example",
+            "org": "Proximus"
+          },
+          "to": [
+            {
+              "name": "Tom De Smet",
+              "email": "tom.desmet@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Lina Smet",
+              "email": "lina.smet@sdworx.example",
+              "org": "SD Worx"
+            },
+            {
+              "name": "Sarah Van den Berghe",
+              "email": "sarah.vandenberghe@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "sent_at": "2026-09-19T10:11:00+02:00",
+          "importance": "high",
+          "body": "Confirmed. For September payroll only, map PXS-RET-OLD to PXS-RET-BE for the 37 rejected rows. We will clean the HRIS source before October.",
+          "attachments": [],
+          "referenced_documents": [],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "integration",
+            "temporary_mapping"
+          ],
+          "confidence_hint": "customer_confirmation",
+          "source_system": "outlook",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "conversation_id": "outlook-conv-year-end-2026",
+      "subject": "Year-end payroll and tax preparation milestones",
+      "source_system": "outlook",
+      "message_count": 2,
+      "participants": [
+        "anne.peeters@proximus.example",
+        "jonas.vermeulen@sdworx.example",
+        "lina.smet@sdworx.example",
+        "pieter.claes@proximus.example"
+      ],
+      "messages": [
+        {
+          "message_id": "outlook-msg-0014",
+          "conversation_id": "outlook-conv-year-end-2026",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Year End",
+          "subject": "Year-end payroll and tax preparation milestones",
+          "from": {
+            "name": "Lina Smet",
+            "email": "lina.smet@sdworx.example",
+            "org": "SD Worx"
+          },
+          "to": [
+            {
+              "name": "Anne Peeters",
+              "email": "anne.peeters@proximus.example",
+              "org": "Proximus"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Pieter Claes",
+              "email": "pieter.claes@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Jonas Vermeulen",
+              "email": "jonas.vermeulen@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-09-29T13:30:00+02:00",
+          "importance": "normal",
+          "body": "To prepare year-end, we propose validating benefit corrections by 2026-11-30, exceptional taxable benefits by 2026-12-07, and Belcotax control totals in January. Please confirm the Proximus owner for year-end tax review.",
+          "attachments": [],
+          "referenced_documents": [
+            "SP-PROX-001",
+            "SP-PROX-002"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "year_end",
+            "tax"
+          ],
+          "confidence_hint": "planning_request",
+          "source_system": "outlook",
+          "synthetic": true
+        },
+        {
+          "message_id": "outlook-msg-0015",
+          "conversation_id": "outlook-conv-year-end-2026",
+          "source_type": "email",
+          "mailbox": "proximus-account@sdworx.example",
+          "folder": "Shared Mailbox/Proximus/Year End",
+          "subject": "RE: Year-end payroll and tax preparation milestones",
+          "from": {
+            "name": "Anne Peeters",
+            "email": "anne.peeters@proximus.example",
+            "org": "Proximus"
+          },
+          "to": [
+            {
+              "name": "Lina Smet",
+              "email": "lina.smet@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "cc": [
+            {
+              "name": "Pieter Claes",
+              "email": "pieter.claes@proximus.example",
+              "org": "Proximus"
+            },
+            {
+              "name": "Jonas Vermeulen",
+              "email": "jonas.vermeulen@sdworx.example",
+              "org": "SD Worx"
+            }
+          ],
+          "sent_at": "2026-09-29T15:18:00+02:00",
+          "importance": "normal",
+          "body": "Confirmed. HR Shared Services owns benefit correction completeness. Finance Operations owns payment and accounting control totals. Please include Pieter on the January Belcotax control review.",
+          "attachments": [],
+          "referenced_documents": [
+            "SP-PROX-001"
+          ],
+          "client_tags": [
+            "Proximus",
+            "Belgium",
+            "year_end",
+            "tax",
+            "ownership"
+          ],
+          "confidence_hint": "customer_confirmation",
+          "source_system": "outlook",
+          "synthetic": true
+        }
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "message_id": "outlook-msg-0001",
+      "conversation_id": "outlook-conv-cutoff-2026-08",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payroll Operations",
+      "subject": "August retail roster cutoff exception",
+      "from": {
+        "name": "Sarah Van den Berghe",
+        "email": "sarah.vandenberghe@proximus.example",
+        "org": "Proximus"
+      },
+      "to": [
+        {
+          "name": "Marie Dubois",
+          "email": "marie.dubois@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Jonas Vermeulen",
+          "email": "jonas.vermeulen@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-08-18T16:08:00+02:00",
+      "importance": "high",
+      "body": "We have a late retail roster correction for August. The store export failed this morning and 42 employees are affected. Can SD Worx accept a corrected file tomorrow by 12:00? This concerns Belgian retail stores only, not corporate or Network Operations.",
+      "attachments": [
+        {
+          "attachment_type": "uploaded_file",
+          "name": "PXS_retail_roster_delta_august.xlsx",
+          "content_summary": "Synthetic roster correction file, 42 employees, Belgian retail stores."
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-002"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "retail",
+        "cutoff"
+      ],
+      "confidence_hint": "customer_request",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0002",
+      "conversation_id": "outlook-conv-cutoff-2026-08",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payroll Operations",
+      "subject": "RE: August retail roster cutoff exception",
+      "from": {
+        "name": "Marie Dubois",
+        "email": "marie.dubois@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Sarah Van den Berghe",
+          "email": "sarah.vandenberghe@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Jonas Vermeulen",
+          "email": "jonas.vermeulen@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-08-18T17:02:00+02:00",
+      "importance": "normal",
+      "body": "The official standing exception is D-4 at 12:00 for retail corrections. Tomorrow noon is D-3 for August, so we need to treat this as a one-off exception. Jonas, can you confirm capacity before we reply with acceptance?",
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "2026 Payroll Calendar and Cutoff Exceptions.md",
+          "sharepoint_document_id": "SP-PROX-002"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-002",
+        "SP-PROX-005"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "retail",
+        "cutoff",
+        "exception"
+      ],
+      "confidence_hint": "sd_worx_response",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0003",
+      "conversation_id": "outlook-conv-cutoff-2026-08",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payroll Operations",
+      "subject": "RE: August retail roster cutoff exception",
+      "from": {
+        "name": "Jonas Vermeulen",
+        "email": "jonas.vermeulen@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Sarah Van den Berghe",
+          "email": "sarah.vandenberghe@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Marie Dubois",
+          "email": "marie.dubois@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "sent_at": "2026-08-18T17:28:00+02:00",
+      "importance": "high",
+      "body": "Accepted for August only. Please send the corrected file by 2026-08-19 12:00 and mark it as final. This does not change the standing D-4 retail cutoff in the calendar.",
+      "attachments": [],
+      "referenced_documents": [
+        "SP-PROX-002"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "retail",
+        "cutoff",
+        "one_off_exception"
+      ],
+      "confidence_hint": "service_lead_confirmation",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0004",
+      "conversation_id": "outlook-conv-payment-owner-2026-05",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payments",
+      "subject": "May payroll payment approval owner",
+      "from": {
+        "name": "Pieter Claes",
+        "email": "pieter.claes@proximus.example",
+        "org": "Proximus"
+      },
+      "to": [
+        {
+          "name": "Jonas Vermeulen",
+          "email": "jonas.vermeulen@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Marie Dubois",
+          "email": "marie.dubois@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-05-22T09:41:00+02:00",
+      "importance": "high",
+      "body": "Starting with the May 2026 payroll, Finance Operations is the final approver for the SEPA payment total. HR Shared Services remains responsible for HR content validation, but payment release approval must come from Finance Operations.",
+      "attachments": [],
+      "referenced_documents": [
+        "SP-PROX-003"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "sepa"
+      ],
+      "confidence_hint": "customer_decision",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0005",
+      "conversation_id": "outlook-conv-payment-owner-2026-05",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payments",
+      "subject": "RE: May payroll payment approval owner",
+      "from": {
+        "name": "Jonas Vermeulen",
+        "email": "jonas.vermeulen@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Pieter Claes",
+          "email": "pieter.claes@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Marie Dubois",
+          "email": "marie.dubois@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-05-22T10:03:00+02:00",
+      "importance": "normal",
+      "body": "Confirmed. We will treat Finance Operations approval as mandatory before SEPA release. I will ask our team to update the SharePoint procedure because it still lists HR Shared Services as final approver.",
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Payment Approval and SEPA Release Procedure.md",
+          "sharepoint_document_id": "SP-PROX-003"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-003"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "procedure_update"
+      ],
+      "confidence_hint": "sd_worx_acknowledgement",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0006",
+      "conversation_id": "outlook-conv-payment-owner-2026-05",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payments",
+      "subject": "RE: May payroll payment approval owner",
+      "from": {
+        "name": "Anne Peeters",
+        "email": "anne.peeters@proximus.example",
+        "org": "Proximus"
+      },
+      "to": [
+        {
+          "name": "Jonas Vermeulen",
+          "email": "jonas.vermeulen@sdworx.example",
+          "org": "SD Worx"
+        },
+        {
+          "name": "Pieter Claes",
+          "email": "pieter.claes@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Marie Dubois",
+          "email": "marie.dubois@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-05-22T10:19:00+02:00",
+      "importance": "normal",
+      "body": "Agreed from HR side. HR Shared Services validates the HR input and payroll exceptions, but Finance Operations gives the release approval for the payment file.",
+      "attachments": [],
+      "referenced_documents": [
+        "SP-PROX-003"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payment_approval",
+        "hr_validation"
+      ],
+      "confidence_hint": "customer_confirmation",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0007",
+      "conversation_id": "outlook-conv-standby-code-2026-09",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Allowances",
+      "subject": "Field technician night intervention code from September",
+      "from": {
+        "name": "Amina Rahman",
+        "email": "amina.rahman@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Nadia Leclercq",
+          "email": "nadia.leclercq@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Olivier Janssens",
+          "email": "olivier.janssens@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Lina Smet",
+          "email": "lina.smet@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-09-03T11:12:00+02:00",
+      "importance": "normal",
+      "body": "Can you confirm whether the new night intervention code 5413 is effective for Belgium from the September 2026 payroll, or whether we should continue with the current matrix until a signed change request is available?",
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Field Technician Standby and Intervention Allowance Matrix.md",
+          "sharepoint_document_id": "SP-PROX-004"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "field_technicians",
+        "allowance_code"
+      ],
+      "confidence_hint": "legal_question",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0008",
+      "conversation_id": "outlook-conv-standby-code-2026-09",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Allowances",
+      "subject": "RE: Field technician night intervention code from September",
+      "from": {
+        "name": "Nadia Leclercq",
+        "email": "nadia.leclercq@proximus.example",
+        "org": "Proximus"
+      },
+      "to": [
+        {
+          "name": "Amina Rahman",
+          "email": "amina.rahman@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Olivier Janssens",
+          "email": "olivier.janssens@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Lina Smet",
+          "email": "lina.smet@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-09-03T14:37:00+02:00",
+      "importance": "normal",
+      "body": "The July-August use was a pilot only. Please configure code 5413 for Belgian night intervention premiums from the September 2026 payroll, after the signed change request is uploaded. Do not apply it to Luxembourg entities.",
+      "attachments": [],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "field_technicians",
+        "allowance_code",
+        "country_scope"
+      ],
+      "confidence_hint": "customer_policy_confirmation",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0009",
+      "conversation_id": "outlook-conv-standby-code-2026-09",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Allowances",
+      "subject": "RE: Field technician night intervention code from September",
+      "from": {
+        "name": "Lina Smet",
+        "email": "lina.smet@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Nadia Leclercq",
+          "email": "nadia.leclercq@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Amina Rahman",
+          "email": "amina.rahman@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Olivier Janssens",
+          "email": "olivier.janssens@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "sent_at": "2026-09-03T15:05:00+02:00",
+      "importance": "normal",
+      "body": "Understood. We will wait for the signed change request before changing configuration. I will flag SP-PROX-004 as under review because the current matrix still points to code 5419 for night intervention.",
+      "attachments": [],
+      "referenced_documents": [
+        "SP-PROX-004"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "field_technicians",
+        "change_request"
+      ],
+      "confidence_hint": "sd_worx_acknowledgement",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0010",
+      "conversation_id": "outlook-conv-payslip-correction-2026-09",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payslips",
+      "subject": "September payslip correction - weekend premium missing",
+      "from": {
+        "name": "Anne Peeters",
+        "email": "anne.peeters@proximus.example",
+        "org": "Proximus"
+      },
+      "to": [
+        {
+          "name": "Lina Smet",
+          "email": "lina.smet@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Jonas Vermeulen",
+          "email": "jonas.vermeulen@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-09-26T08:47:00+02:00",
+      "importance": "high",
+      "body": "We have 14 employees whose weekend intervention premium is missing from the September payslip. The approximate net impact is between EUR 72 and EUR 118 per employee. Can this be corrected off-cycle?",
+      "attachments": [
+        {
+          "attachment_type": "uploaded_file",
+          "name": "missing_weekend_premium_cases_sep.xlsx",
+          "content_summary": "Synthetic list of 14 affected employee IDs with net impact estimate."
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-001",
+        "SP-PROX-005"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payslip_correction",
+        "off_cycle"
+      ],
+      "confidence_hint": "customer_escalation",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0011",
+      "conversation_id": "outlook-conv-payslip-correction-2026-09",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Payslips",
+      "subject": "RE: September payslip correction - weekend premium missing",
+      "from": {
+        "name": "Jonas Vermeulen",
+        "email": "jonas.vermeulen@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Lina Smet",
+          "email": "lina.smet@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-09-26T10:05:00+02:00",
+      "importance": "high",
+      "body": "We can prepare an off-cycle correction for employees with net impact above EUR 100 and review the EUR 72-EUR 99 cases separately. The manual says EUR 100; the lower threshold in old handover notes is precedent only, not policy.",
+      "attachments": [
+        {
+          "attachment_type": "sharepoint_file",
+          "name": "Proximus Belgium Payroll Operating Manual 2026.md",
+          "sharepoint_document_id": "SP-PROX-001"
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-001",
+        "SP-PROX-005"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "payslip_correction",
+        "off_cycle",
+        "threshold"
+      ],
+      "confidence_hint": "service_lead_decision",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0012",
+      "conversation_id": "outlook-conv-import-rejection-2026-09",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Integrations",
+      "subject": "September HRIS import rejected rows - cost center mapping",
+      "from": {
+        "name": "Tom De Smet",
+        "email": "tom.desmet@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Lina Smet",
+          "email": "lina.smet@sdworx.example",
+          "org": "SD Worx"
+        },
+        {
+          "name": "Sarah Van den Berghe",
+          "email": "sarah.vandenberghe@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "sent_at": "2026-09-19T09:27:00+02:00",
+      "importance": "high",
+      "body": "The September HRIS import rejected 37 rows because cost center PXS-RET-OLD is not mapped in the current interface table. The rows appear to be retail employees. Please confirm whether we should map PXS-RET-OLD to PXS-RET-BE for this payroll month.",
+      "attachments": [
+        {
+          "attachment_type": "uploaded_file",
+          "name": "import_rejection_report_2026-09-19.csv",
+          "content_summary": "Synthetic validation export with rejected cost center values."
+        }
+      ],
+      "referenced_documents": [
+        "SP-PROX-005"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "import_rejection",
+        "retail"
+      ],
+      "confidence_hint": "technical_incident",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0013",
+      "conversation_id": "outlook-conv-import-rejection-2026-09",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Integrations",
+      "subject": "RE: September HRIS import rejected rows - cost center mapping",
+      "from": {
+        "name": "Anne Peeters",
+        "email": "anne.peeters@proximus.example",
+        "org": "Proximus"
+      },
+      "to": [
+        {
+          "name": "Tom De Smet",
+          "email": "tom.desmet@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Lina Smet",
+          "email": "lina.smet@sdworx.example",
+          "org": "SD Worx"
+        },
+        {
+          "name": "Sarah Van den Berghe",
+          "email": "sarah.vandenberghe@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "sent_at": "2026-09-19T10:11:00+02:00",
+      "importance": "high",
+      "body": "Confirmed. For September payroll only, map PXS-RET-OLD to PXS-RET-BE for the 37 rejected rows. We will clean the HRIS source before October.",
+      "attachments": [],
+      "referenced_documents": [],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "integration",
+        "temporary_mapping"
+      ],
+      "confidence_hint": "customer_confirmation",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0014",
+      "conversation_id": "outlook-conv-year-end-2026",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Year End",
+      "subject": "Year-end payroll and tax preparation milestones",
+      "from": {
+        "name": "Lina Smet",
+        "email": "lina.smet@sdworx.example",
+        "org": "SD Worx"
+      },
+      "to": [
+        {
+          "name": "Anne Peeters",
+          "email": "anne.peeters@proximus.example",
+          "org": "Proximus"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Pieter Claes",
+          "email": "pieter.claes@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Jonas Vermeulen",
+          "email": "jonas.vermeulen@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-09-29T13:30:00+02:00",
+      "importance": "normal",
+      "body": "To prepare year-end, we propose validating benefit corrections by 2026-11-30, exceptional taxable benefits by 2026-12-07, and Belcotax control totals in January. Please confirm the Proximus owner for year-end tax review.",
+      "attachments": [],
+      "referenced_documents": [
+        "SP-PROX-001",
+        "SP-PROX-002"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "year_end",
+        "tax"
+      ],
+      "confidence_hint": "planning_request",
+      "source_system": "outlook",
+      "synthetic": true
+    },
+    {
+      "message_id": "outlook-msg-0015",
+      "conversation_id": "outlook-conv-year-end-2026",
+      "source_type": "email",
+      "mailbox": "proximus-account@sdworx.example",
+      "folder": "Shared Mailbox/Proximus/Year End",
+      "subject": "RE: Year-end payroll and tax preparation milestones",
+      "from": {
+        "name": "Anne Peeters",
+        "email": "anne.peeters@proximus.example",
+        "org": "Proximus"
+      },
+      "to": [
+        {
+          "name": "Lina Smet",
+          "email": "lina.smet@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "cc": [
+        {
+          "name": "Pieter Claes",
+          "email": "pieter.claes@proximus.example",
+          "org": "Proximus"
+        },
+        {
+          "name": "Jonas Vermeulen",
+          "email": "jonas.vermeulen@sdworx.example",
+          "org": "SD Worx"
+        }
+      ],
+      "sent_at": "2026-09-29T15:18:00+02:00",
+      "importance": "normal",
+      "body": "Confirmed. HR Shared Services owns benefit correction completeness. Finance Operations owns payment and accounting control totals. Please include Pieter on the January Belcotax control review.",
+      "attachments": [],
+      "referenced_documents": [
+        "SP-PROX-001"
+      ],
+      "client_tags": [
+        "Proximus",
+        "Belgium",
+        "year_end",
+        "tax",
+        "ownership"
+      ],
+      "confidence_hint": "customer_confirmation",
+      "source_system": "outlook",
+      "synthetic": true
+    }
+  ]
+}
