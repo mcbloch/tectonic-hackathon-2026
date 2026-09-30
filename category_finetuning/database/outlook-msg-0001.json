@@ -1,0 +1,56 @@
+{
+  "message_id": "outlook-msg-0001",
+  "conversation_id": "outlook-conv-cutoff-2026-08",
+  "source_type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "folder": "Shared Mailbox/Proximus/Payroll Operations",
+  "subject": "August retail roster cutoff exception",
+  "from": {
+    "name": "Sarah Van den Berghe",
+    "email": "sarah.vandenberghe@proximus.example",
+    "org": "Proximus"
+  },
+  "to": [
+    {
+      "name": "Marie Dubois",
+      "email": "marie.dubois@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Anne Peeters",
+      "email": "anne.peeters@proximus.example",
+      "org": "Proximus"
+    },
+    {
+      "name": "Jonas Vermeulen",
+      "email": "jonas.vermeulen@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "sent_at": "2026-08-18T16:08:00+02:00",
+  "importance": "high",
+  "body": "We have a late retail roster correction for August. The store export failed this morning and 42 employees are affected. Can SD Worx accept a corrected file tomorrow by 12:00? This concerns Belgian retail stores only, not corporate or Network Operations.",
+  "attachments": [
+    {
+      "attachment_type": "uploaded_file",
+      "name": "PXS_retail_roster_delta_august.xlsx",
+      "content_summary": "Synthetic roster correction file, 42 employees, Belgian retail stores."
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-002"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "retail",
+    "cutoff"
+  ],
+  "confidence_hint": "customer_request",
+  "source_system": "outlook",
+  "synthetic": true,
+  "source": "outlook",
+  "type": "email"
+}

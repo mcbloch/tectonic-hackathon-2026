@@ -1,0 +1,18 @@
+{
+  "source": "microsoft_teams",
+  "type": "channel_message",
+  "team": "SD Worx - Randstad Account",
+  "channel": "Payroll Operations",
+  "channel_type": "standard",
+  "thread_id": "teams-thread-2026-07-randstad",
+  "message_id": "teams-msg-005",
+  "reply_to_id": null,
+  "sender": "Lisa Bakker",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-07-18T14:45:00+02:00",
+  "body": "Randstad Netherlands keeps the payroll cutoff at D-3 for July as well.",
+  "mentions": [],
+  "attachments": [],
+  "client_tags": ["Randstad", "Netherlands", "payroll cutoff"],
+  "confidence_hint": "informal_operational"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-retail-cutoff-2026-08",
+  "message_id": "outlook-msg-004",
+  "subject": "Proximus August retail cutoff exceptions",
+  "from": "sofie.janssens@sdworx.example",
+  "to": ["marie.dubois@sdworx.example"],
+  "cc": ["retail-payroll@sdworx.example"],
+  "sent_at": "2026-08-14T17:05:00+02:00",
+  "body": "The validated store corrections from Proximus Belgium retail can move the payroll cutoff by one day; flag it in the payment approval note.",
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "retail", "store corrections", "payroll cutoff"],
+  "confidence_hint": "internal_preparation"
+}

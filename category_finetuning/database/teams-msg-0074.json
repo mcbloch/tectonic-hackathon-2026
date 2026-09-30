@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0074",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Client Handover",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-handover-2026-07",
+  "reply_to_id": "teams-msg-0067",
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-07-29T10:35:00+02:00",
+  "body": "I will turn these into validation tasks rather than copying them into official knowledge.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "validation_queue",
+    "handover"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "validation_queue",
+    "handover"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

@@ -1,0 +1,22 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-payroll-input-2026-08",
+  "message_id": "outlook-msg-003",
+  "subject": "Proximus August payroll input checklist",
+  "from": "marie.dubois@sdworx.example",
+  "to": ["anne.peeters@proximus.example"],
+  "cc": ["payroll-ops@sdworx.example"],
+  "sent_at": "2026-08-10T08:55:00+02:00",
+  "body": "Checklist for Proximus Belgium payroll input, including the bank file control before the cutoff.",
+  "attachments": [
+    {
+      "name": "Payroll_input_checklist_2026-08.xlsx",
+      "type": "excel",
+      "linked_source": "sharepoint"
+    }
+  ],
+  "client_tags": ["Proximus", "Belgium", "payroll input"],
+  "confidence_hint": "internal_preparation"
+}

@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0012",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-cutoff-2026-08",
+  "reply_to_id": "teams-msg-0001",
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-08-19T12:25:00+02:00",
+  "body": "Logged as: August-only retail roster exception, 42 employees, approved by service lead, customer acknowledged no standing change.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "exception_log",
+    "retail"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "exception_log",
+    "retail"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

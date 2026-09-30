@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0022",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payments and Banking",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-payment-owner-2026-09",
+  "reply_to_id": "teams-msg-0013",
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-21T11:15:00+02:00",
+  "body": "Added review task: update owner, approver wording, and escalation path after close.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "validation_queue",
+    "procedure_update"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "validation_queue",
+    "procedure_update"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

@@ -1,0 +1,45 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0071",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Client Handover",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-handover-2026-07",
+  "reply_to_id": "teams-msg-0067",
+  "sender": "Elise Lambert",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-07-29T09:47:00+02:00",
+  "body": "Calendar already includes D-4 retail exception. It does not include D-3.",
+  "mentions": [],
+  "attachments": [
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+      "sharepoint_document_id": "SP-PROX-002",
+      "relationship": "referenced_source"
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-002"
+  ],
+  "topics": [
+    "payroll_cutoff",
+    "documentation"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "payroll_cutoff",
+    "documentation"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

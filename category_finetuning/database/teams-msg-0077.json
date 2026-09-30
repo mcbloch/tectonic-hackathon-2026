@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0077",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Client Handover",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-handover-2026-07",
+  "reply_to_id": "teams-msg-0067",
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-07-29T11:36:00+02:00",
+  "body": "Added first-week checklist for takeover.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "handover",
+    "continuity_pack"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "handover",
+    "continuity_pack"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

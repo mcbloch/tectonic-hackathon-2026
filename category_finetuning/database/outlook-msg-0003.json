@@ -1,0 +1,51 @@
+{
+  "message_id": "outlook-msg-0003",
+  "conversation_id": "outlook-conv-cutoff-2026-08",
+  "source_type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "folder": "Shared Mailbox/Proximus/Payroll Operations",
+  "subject": "RE: August retail roster cutoff exception",
+  "from": {
+    "name": "Jonas Vermeulen",
+    "email": "jonas.vermeulen@sdworx.example",
+    "org": "SD Worx"
+  },
+  "to": [
+    {
+      "name": "Sarah Van den Berghe",
+      "email": "sarah.vandenberghe@proximus.example",
+      "org": "Proximus"
+    },
+    {
+      "name": "Marie Dubois",
+      "email": "marie.dubois@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Anne Peeters",
+      "email": "anne.peeters@proximus.example",
+      "org": "Proximus"
+    }
+  ],
+  "sent_at": "2026-08-18T17:28:00+02:00",
+  "importance": "high",
+  "body": "Accepted for August only. Please send the corrected file by 2026-08-19 12:00 and mark it as final. This does not change the standing D-4 retail cutoff in the calendar.",
+  "attachments": [],
+  "referenced_documents": [
+    "SP-PROX-002"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "retail",
+    "cutoff",
+    "one_off_exception"
+  ],
+  "confidence_hint": "service_lead_confirmation",
+  "source_system": "outlook",
+  "synthetic": true,
+  "source": "outlook",
+  "type": "email"
+}

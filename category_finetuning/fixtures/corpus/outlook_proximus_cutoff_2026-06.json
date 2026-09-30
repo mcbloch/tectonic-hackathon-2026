@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-payment-approval-2026-06",
+  "message_id": "outlook-msg-001",
+  "subject": "Proximus June payroll payment approval",
+  "from": "anne.peeters@proximus.example",
+  "to": ["marie.dubois@sdworx.example"],
+  "cc": ["payroll-ops@sdworx.example"],
+  "sent_at": "2026-06-18T10:12:00+02:00",
+  "body": "For the June cycle, payment approval for Proximus Belgium stays with Finance Operations before the payroll cutoff.",
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "payroll cutoff", "payment approval"],
+  "confidence_hint": "customer_confirmation"
+}

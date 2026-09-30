@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0066",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Legal and Compliance",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-country-scope-2026-09",
+  "reply_to_id": "teams-msg-0057",
+  "sender": "Jonas Vermeulen",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-05T11:55:00+02:00",
+  "body": "Good. This will help the demo because the system should not blindly trust the document title.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "trust_signal",
+    "country_scope"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "trust_signal",
+    "country_scope"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

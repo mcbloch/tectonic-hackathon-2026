@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0041",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-payslip-corrections-2026-09",
+  "reply_to_id": "teams-msg-0035",
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-26T10:12:00+02:00",
+  "body": "Proposal: off-cycle for employees above EUR 100; review lower impact cases with Proximus before committing.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "off_cycle",
+    "payslip_correction"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "off_cycle",
+    "payslip_correction"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

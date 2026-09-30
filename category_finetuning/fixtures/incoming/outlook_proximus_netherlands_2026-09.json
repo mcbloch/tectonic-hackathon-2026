@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-retention-2026-09",
+  "message_id": "outlook-msg-103",
+  "subject": "Proximus retention scope question",
+  "from": "compliance@proximus.example",
+  "to": ["marie.dubois@sdworx.example"],
+  "cc": [],
+  "sent_at": "2026-09-29T14:10:00+02:00",
+  "body": "Does the data retention schedule for Proximus also cover the Netherlands payroll exports, or only Belgium?",
+  "attachments": [],
+  "client_tags": ["Proximus", "Netherlands", "data retention"],
+  "confidence_hint": "customer_question"
+}

@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0092",
+  "source_type": "meeting_chat_message",
+  "container_type": "meeting_chat",
+  "team": null,
+  "channel": null,
+  "chat_name": null,
+  "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+  "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+  "reply_to_id": null,
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-18T15:36:00+02:00",
+  "body": "I will add source labels: official doc, customer email, Teams, handover note.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "continuity_pack",
+    "source_label"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "continuity_pack",
+    "source_label"
+  ],
+  "visibility": "proximus_joint_governance",
+  "confidence_hint": "collaborative_discussion",
+  "source": "microsoft_teams",
+  "type": "meeting_chat_message"
+}

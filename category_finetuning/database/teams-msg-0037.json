@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0037",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-payslip-corrections-2026-09",
+  "reply_to_id": "teams-msg-0035",
+  "sender": "Anne Peeters",
+  "sender_org": "Proximus",
+  "sent_at": "2026-09-26T09:04:00+02:00",
+  "body": "Secure file uploaded. Net impact ranges from EUR 72 to EUR 118.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "payslip_correction",
+    "off_cycle"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "payslip_correction",
+    "off_cycle"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

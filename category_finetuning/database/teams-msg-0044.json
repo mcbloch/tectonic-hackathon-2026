@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0044",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-payslip-corrections-2026-09",
+  "reply_to_id": "teams-msg-0035",
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-26T11:05:00+02:00",
+  "body": "Logged in validation queue. Owner: Jonas for policy wording, Amina for allowance cause.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "validation_queue",
+    "ownership"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "validation_queue",
+    "ownership"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

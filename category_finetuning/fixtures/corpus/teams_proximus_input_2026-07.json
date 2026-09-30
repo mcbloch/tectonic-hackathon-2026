@@ -1,0 +1,18 @@
+{
+  "source": "microsoft_teams",
+  "type": "channel_message",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "channel_type": "standard",
+  "thread_id": "teams-thread-2026-07-input",
+  "message_id": "teams-msg-002",
+  "reply_to_id": "teams-msg-001",
+  "sender": "Jonas Vermeulen",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-07-21T11:40:00+02:00",
+  "body": "Payroll input files for Proximus Belgium arrive via the secure drop before the cutoff; nothing changes for July.",
+  "mentions": [],
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "payroll input", "payroll cutoff"],
+  "confidence_hint": "informal_operational"
+}

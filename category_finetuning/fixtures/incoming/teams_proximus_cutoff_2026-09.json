@@ -1,0 +1,18 @@
+{
+  "source": "microsoft_teams",
+  "type": "channel_message",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "channel_type": "standard",
+  "thread_id": "teams-thread-2026-09-cutoff",
+  "message_id": "teams-msg-101",
+  "reply_to_id": null,
+  "sender": "Marie Dubois",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-28T09:05:00+02:00",
+  "body": "September cycle: Proximus Belgium payroll cutoff stays at D-4, no exceptions reported.",
+  "mentions": [],
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "payroll cutoff"],
+  "confidence_hint": "informal_operational"
+}

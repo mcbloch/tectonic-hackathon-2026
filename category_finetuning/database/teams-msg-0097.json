@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0097",
+  "source_type": "group_chat_message",
+  "container_type": "group_chat",
+  "team": null,
+  "channel": null,
+  "chat_name": "Proximus Field Technician Allowance Review",
+  "meeting_title": null,
+  "thread_id": "teams-chat-field-allowance-review-2026",
+  "reply_to_id": null,
+  "sender": "Olivier Janssens",
+  "sender_org": "Proximus",
+  "sent_at": "2026-09-04T09:02:00+02:00",
+  "body": "Yes, from October. September file may still require manual reference lookup.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "integration",
+    "effective_date"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "integration",
+    "effective_date"
+  ],
+  "visibility": "proximus_joint_working_group",
+  "confidence_hint": "collaborative_discussion",
+  "source": "microsoft_teams",
+  "type": "group_chat_message"
+}

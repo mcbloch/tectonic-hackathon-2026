@@ -1,0 +1,45 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0081",
+  "source_type": "group_chat_message",
+  "container_type": "group_chat",
+  "team": null,
+  "channel": null,
+  "chat_name": "Proximus September Payroll Run - War Room",
+  "meeting_title": null,
+  "thread_id": "teams-chat-september-war-room-2026",
+  "reply_to_id": null,
+  "sender": "Amina Rahman",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-23T09:03:00+02:00",
+  "body": "No code 5413 until signed change request lands. If not received by 14:00, use old code and correct next month.",
+  "mentions": [],
+  "attachments": [
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Field Technician Standby and Intervention Allowance Matrix",
+      "sharepoint_document_id": "SP-PROX-004",
+      "relationship": "referenced_source"
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-004"
+  ],
+  "topics": [
+    "allowance_code",
+    "legal_review"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "allowance_code",
+    "legal_review"
+  ],
+  "visibility": "proximus_joint_working_group",
+  "confidence_hint": "collaborative_discussion",
+  "source": "microsoft_teams",
+  "type": "group_chat_message"
+}

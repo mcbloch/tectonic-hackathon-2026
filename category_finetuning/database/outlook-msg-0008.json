@@ -1,0 +1,51 @@
+{
+  "message_id": "outlook-msg-0008",
+  "conversation_id": "outlook-conv-standby-code-2026-09",
+  "source_type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "folder": "Shared Mailbox/Proximus/Allowances",
+  "subject": "RE: Field technician night intervention code from September",
+  "from": {
+    "name": "Nadia Leclercq",
+    "email": "nadia.leclercq@proximus.example",
+    "org": "Proximus"
+  },
+  "to": [
+    {
+      "name": "Amina Rahman",
+      "email": "amina.rahman@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Olivier Janssens",
+      "email": "olivier.janssens@proximus.example",
+      "org": "Proximus"
+    },
+    {
+      "name": "Lina Smet",
+      "email": "lina.smet@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "sent_at": "2026-09-03T14:37:00+02:00",
+  "importance": "normal",
+  "body": "The July-August use was a pilot only. Please configure code 5413 for Belgian night intervention premiums from the September 2026 payroll, after the signed change request is uploaded. Do not apply it to Luxembourg entities.",
+  "attachments": [],
+  "referenced_documents": [
+    "SP-PROX-004"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "field_technicians",
+    "allowance_code",
+    "country_scope"
+  ],
+  "confidence_hint": "customer_policy_confirmation",
+  "source_system": "outlook",
+  "synthetic": true,
+  "source": "outlook",
+  "type": "email"
+}

@@ -1,5 +1,7 @@
 /* Teams Copilot demo: dependency-free mock of Teams + Copilot for the SD Worx workspace.
-   Copilot is the only real behavior; Files and Mail are read-only mock surfaces. */
+   Copilot is the only real behavior; Files is a read-only mock surface and Mail adds a
+   compose window that only pretends to send. When the demo is started through serve.py,
+   a sent mail is also stored in the category_finetuning database. */
 
 const VIEW_TABS = [
   { id: "copilot", label: "Copilot", icon: "copilot" },
@@ -65,6 +67,14 @@ const MAIL_FOLDERS = [
 const MAIL_READING_BODY =
   "Hi team, please confirm the October payroll cut-off and approvers before Friday. I\u2019ve linked the shared calendar for context.";
 
+/* The compose window opens prefilled with this generic draft so the demo can go
+   straight to Send; sending resets the window to this same draft. */
+const COMPOSE_DRAFT = {
+  to: "sarah.desmet@sdworx.example",
+  subject: "Proximus electricity bill payment",
+  body: "Hi Sarah,\n\nQuick update on the Proximus account: the October electricity bill payment is ready for approval. Could you check the amount and confirm it before Friday?\n\nBest regards,\nSD Worx Client Team",
+};
+
 const COPILOT_PROMPTS = [
   "What should I know about this client?",
   "What is the payroll deadline?",
@@ -82,6 +92,8 @@ const state = {
   activeView: "copilot",
   selectedTeamId: "sd-worx",
   selectedChannelId: "shared",
+  composeOpen: true,
+  toast: "",
   messages: [
     {
       id: "welcome",
@@ -92,6 +104,7 @@ const state = {
 };
 
 let messageSeq = 0;
+let toastTimer = 0;
 
 /* ---------- small helpers ---------- */
 
@@ -118,6 +131,8 @@ const ICON_PATHS = {
   file: '<path d="M7.2 3.8h5.9l4.7 4.7v11.7H7.2Z"/><path d="M12.9 3.8v4.9h4.9"/>',
   mail: '<rect x="3.8" y="6.2" width="16.4" height="11.6" rx="2"/><path d="M4.7 7.4 12 12.7l7.3-5.3"/>',
   send: '<path d="M4.6 11.6 19.4 4.6l-7 14.8-1.6-6.2Z"/><path d="M10.8 13.2 19.4 4.6"/>',
+  check: '<path d="M5.4 12.6 9.9 17.1 18.6 7.6"/>',
+  edit: '<path d="M5 19.3h3.3L19.4 8.2a1.9 1.9 0 0 0-2.7-2.7L5.6 16.6Z"/><path d="M14.8 6.7l2.6 2.6"/>',
 };
 
 function icon(name, label) {
@@ -286,6 +301,7 @@ function renderMailView() {
         <h2 class="view-title">Outlook</h2>
         <p class="mail-subtitle">Outlook inside Teams</p>
       </div>
+      <button type="button" class="new-message" data-compose-open>${icon("edit")}<span>New message</span></button>
     </header>
     <div class="mail-panes">
       <nav class="folder-rail" aria-label="Mail folders">
@@ -321,7 +337,42 @@ function renderMailView() {
         <p class="reading-note">Read-only demo message</p>
       </article>
     </div>
+    ${renderCompose()}
   </section>`;
+}
+
+/* The compose window is a mock: the fields are editable and prefilled with a generic
+   draft, but Send never reaches a server. */
+
+function renderCompose() {
+  if (!state.composeOpen) return "";
+  return `<form class="compose" data-mail-form aria-label="New message draft">
+    <div class="compose-head">
+      <h3 class="compose-title">New message</h3>
+      <span class="compose-tag">Draft</span>
+    </div>
+    <label class="compose-field">
+      <span class="compose-label">To</span>
+      <input id="mail-to" name="to" type="text" autocomplete="off" value="${esc(COMPOSE_DRAFT.to)}" />
+    </label>
+    <label class="compose-field">
+      <span class="compose-label">Subject</span>
+      <input id="mail-subject" name="subject" type="text" autocomplete="off" value="${esc(COMPOSE_DRAFT.subject)}" />
+    </label>
+    <label class="compose-field compose-field-body">
+      <span class="sr-only">Message</span>
+      <textarea id="mail-body" name="body" rows="5">${esc(COMPOSE_DRAFT.body)}</textarea>
+    </label>
+    <div class="compose-foot">
+      <button type="submit" class="compose-send">${icon("send")}<span>Send</span></button>
+      <span class="compose-note">Saved as draft</span>
+    </div>
+  </form>`;
+}
+
+function renderToast() {
+  if (!state.toast) return "";
+  return `<div class="toast" role="status">${icon("check")}<span>${esc(state.toast)}</span></div>`;
 }
 
 function renderActiveView() {
@@ -340,7 +391,8 @@ function renderApp() {
       ${renderWorkspaceHeader()}
       ${renderActiveView()}
     </main>
-  </div>`;
+  </div>
+  ${renderToast()}`;
   bindEvents(root);
 }
 
@@ -430,6 +482,7 @@ function handleHashChange() {
 function init() {
   applyRoute(resolveRoute(parseRoute(window.location.hash)), { force: true });
   window.addEventListener("hashchange", handleHashChange);
+  watchNotifications();
 }
 
 /* ---------- Copilot behavior ---------- */
@@ -463,6 +516,92 @@ function scrollMessagesToEnd() {
   if (list) list.scrollTop = list.scrollHeight;
 }
 
+/* ---------- Mail mock send ---------- */
+
+/* Stores the sent draft through the local mock server (teams/serve.py). When the
+   mock is opened without that server the request fails and the demo keeps working. */
+function publishSentMail(payload) {
+  if (window.location.protocol === "file:") return;
+  fetch("/api/outlook-message", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    })
+    .catch(() => {
+      console.warn("Mail mock: local server not reachable; the message was only pretend-sent.");
+    });
+}
+
+/* Pretends to send the compose draft: the window closes and a toast plays a success
+   message. No mail is transmitted; the draft is handed to the local server only. */
+function sendMailDraft(form) {
+  const toField = form ? form.querySelector("#mail-to") : null;
+  const subjectField = form ? form.querySelector("#mail-subject") : null;
+  const bodyField = form ? form.querySelector("#mail-body") : null;
+  const to = toField ? toField.value.trim() : "";
+  publishSentMail({
+    to: toField ? toField.value : "",
+    subject: subjectField ? subjectField.value : "",
+    body: bodyField ? bodyField.value : "",
+  });
+  state.composeOpen = false;
+  state.toast = to ? `Message sent to ${to}` : "Message sent";
+  renderApp();
+  window.clearTimeout(toastTimer);
+  toastTimer = window.setTimeout(() => {
+    state.toast = "";
+    renderApp();
+  }, 3200);
+  const newMessage = document.querySelector("[data-compose-open]");
+  if (newMessage) newMessage.focus();
+}
+
+/* ---------- categorisation notifications ---------- */
+
+/* serve.py hands over the content of category_finetuning/notif once per write.
+   The popup is a plain overlay on <body>, so app re-renders do not remove it and
+   both answers only close it. */
+
+const NOTIFICATION_POLL_MS = 2500;
+
+function pollNotification() {
+  if (document.querySelector("[data-notification]")) return;
+  fetch("/api/notification")
+    .then((response) => (response.ok ? response.json() : null))
+    .then((data) => {
+      if (data && data.category) showNotification(data.category);
+    })
+    .catch(() => {});
+}
+
+function showNotification(category) {
+  if (document.querySelector("[data-notification]")) return;
+  const node = document.createElement("div");
+  node.className = "notification";
+  node.dataset.notification = "";
+  node.setAttribute("role", "dialog");
+  node.setAttribute("aria-label", "Categorisation check");
+  node.innerHTML = `<p class="notification-title">Categorisation check</p>
+    <p class="notification-text">This mail was categorised as <strong>${esc(category)}</strong>, is that correct?</p>
+    <div class="notification-actions">
+      <button type="button" class="notification-answer notification-yes" data-notification-dismiss>Yes</button>
+      <button type="button" class="notification-answer notification-no" data-notification-dismiss>No</button>
+    </div>`;
+  node.addEventListener("click", (event) => {
+    if (event.target.closest("[data-notification-dismiss]")) node.remove();
+  });
+  document.body.appendChild(node);
+}
+
+function watchNotifications() {
+  if (window.location.protocol === "file:") return;
+  window.setInterval(pollNotification, NOTIFICATION_POLL_MS);
+  pollNotification();
+}
+
 /* ---------- events ---------- */
 
 function handleClick(event) {
@@ -472,10 +611,28 @@ function handleClick(event) {
     return;
   }
   const tab = event.target.closest("[data-view]");
-  if (tab) setActiveView(tab.dataset.view);
+  if (tab) {
+    setActiveView(tab.dataset.view);
+    return;
+  }
+  const composeButton = event.target.closest("[data-compose-open]");
+  if (composeButton) {
+    if (!state.composeOpen) {
+      state.composeOpen = true;
+      renderApp();
+    }
+    const to = document.getElementById("mail-to");
+    if (to) to.focus();
+  }
 }
 
 function handleSubmit(event) {
+  const mailForm = event.target.closest("form[data-mail-form]");
+  if (mailForm) {
+    event.preventDefault();
+    sendMailDraft(mailForm);
+    return;
+  }
   const form = event.target.closest("form[data-copilot-form]");
   if (!form) return;
   event.preventDefault();

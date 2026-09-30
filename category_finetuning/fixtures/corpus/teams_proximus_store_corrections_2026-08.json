@@ -1,0 +1,18 @@
+{
+  "source": "microsoft_teams",
+  "type": "channel_message",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Retail Payroll",
+  "channel_type": "standard",
+  "thread_id": "teams-thread-2026-08-corrections",
+  "message_id": "teams-msg-004",
+  "reply_to_id": "teams-msg-003",
+  "sender": "Sofie Janssens",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-08-18T10:02:00+02:00",
+  "body": "Second batch of Proximus Belgium store corrections is validated and ready for payroll.",
+  "mentions": ["Jonas Vermeulen"],
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "store corrections"],
+  "confidence_hint": "informal_operational"
+}

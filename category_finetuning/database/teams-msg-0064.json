@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0064",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Legal and Compliance",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-country-scope-2026-09",
+  "reply_to_id": "teams-msg-0057",
+  "sender": "Amina Rahman",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-05T11:19:00+02:00",
+  "body": "Thanks. That is enough for the September Belgian payroll, not enough for a group-wide answer.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "legal_review",
+    "trust_signal"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "legal_review",
+    "trust_signal"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

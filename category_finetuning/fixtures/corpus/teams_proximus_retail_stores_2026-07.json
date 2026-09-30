@@ -1,0 +1,18 @@
+{
+  "source": "microsoft_teams",
+  "type": "channel_message",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Retail Payroll",
+  "channel_type": "standard",
+  "thread_id": "teams-thread-2026-07-retail",
+  "message_id": "teams-msg-003",
+  "reply_to_id": null,
+  "sender": "Sofie Janssens",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-07-24T13:20:00+02:00",
+  "body": "Retail stores for Proximus Belgium sent their store corrections; we forward the validated batch to payroll.",
+  "mentions": [],
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "retail", "store corrections"],
+  "confidence_hint": "informal_operational"
+}

@@ -1,0 +1,52 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0043",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-payslip-corrections-2026-09",
+  "reply_to_id": "teams-msg-0035",
+  "sender": "Jonas Vermeulen",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-26T10:41:00+02:00",
+  "body": "Add to continuity risks: threshold confusion between manual and handover notes.",
+  "mentions": [],
+  "attachments": [
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Proximus Belgium Payroll Operating Manual 2026",
+      "sharepoint_document_id": "SP-PROX-001",
+      "relationship": "referenced_source"
+    },
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+      "sharepoint_document_id": "SP-PROX-005",
+      "relationship": "referenced_source"
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-001",
+    "SP-PROX-005"
+  ],
+  "topics": [
+    "continuity_risk",
+    "trust_signal"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "continuity_risk",
+    "trust_signal"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

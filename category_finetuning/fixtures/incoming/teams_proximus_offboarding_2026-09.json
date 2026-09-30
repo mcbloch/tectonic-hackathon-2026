@@ -1,0 +1,18 @@
+{
+  "source": "microsoft_teams",
+  "type": "channel_message",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "channel_type": "standard",
+  "thread_id": "teams-thread-2026-09-offboarding",
+  "message_id": "teams-msg-104",
+  "reply_to_id": null,
+  "sender": "Jonas Vermeulen",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-29T16:25:00+02:00",
+  "body": "New topic for Proximus Belgium: offboarding runs start next month. We have no prior thread tags for this yet.",
+  "mentions": ["Marie Dubois"],
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "offboarding"],
+  "confidence_hint": "informal_operational"
+}

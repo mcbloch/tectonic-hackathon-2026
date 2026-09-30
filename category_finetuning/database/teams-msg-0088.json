@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0088",
+  "source_type": "group_chat_message",
+  "container_type": "group_chat",
+  "team": null,
+  "channel": null,
+  "chat_name": "Proximus September Payroll Run - War Room",
+  "meeting_title": null,
+  "thread_id": "teams-chat-september-war-room-2026",
+  "reply_to_id": null,
+  "sender": "Lina Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-23T13:41:00+02:00",
+  "body": "Continuity note updated: September payroll uses old matrix; 5413 is planned but not active without signed request.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "continuity_pack",
+    "allowance_code"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "continuity_pack",
+    "allowance_code"
+  ],
+  "visibility": "proximus_joint_working_group",
+  "confidence_hint": "collaborative_discussion",
+  "source": "microsoft_teams",
+  "type": "group_chat_message"
+}

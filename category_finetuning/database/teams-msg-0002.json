@@ -1,0 +1,54 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0002",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payroll Operations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-cutoff-2026-08",
+  "reply_to_id": "teams-msg-0001",
+  "sender": "Marie Dubois",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-08-18T15:57:00+02:00",
+  "body": "Reminder from the calendar: D-4 noon is the standing retail exception. Anything later needs service lead approval and should be marked one-off.",
+  "mentions": [],
+  "attachments": [
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Proximus Belgium 2026 Payroll Calendar and Cutoff Exceptions",
+      "sharepoint_document_id": "SP-PROX-002",
+      "relationship": "referenced_source"
+    },
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Consultant Handover Notes - Proximus Belgium - Marie Dubois - July 2026",
+      "sharepoint_document_id": "SP-PROX-005",
+      "relationship": "referenced_source"
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-002",
+    "SP-PROX-005"
+  ],
+  "topics": [
+    "payroll_cutoff",
+    "retail",
+    "exception"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "payroll_cutoff",
+    "retail",
+    "exception"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

@@ -1,0 +1,56 @@
+{
+  "message_id": "outlook-msg-0007",
+  "conversation_id": "outlook-conv-standby-code-2026-09",
+  "source_type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "folder": "Shared Mailbox/Proximus/Allowances",
+  "subject": "Field technician night intervention code from September",
+  "from": {
+    "name": "Amina Rahman",
+    "email": "amina.rahman@sdworx.example",
+    "org": "SD Worx"
+  },
+  "to": [
+    {
+      "name": "Nadia Leclercq",
+      "email": "nadia.leclercq@proximus.example",
+      "org": "Proximus"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Olivier Janssens",
+      "email": "olivier.janssens@proximus.example",
+      "org": "Proximus"
+    },
+    {
+      "name": "Lina Smet",
+      "email": "lina.smet@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "sent_at": "2026-09-03T11:12:00+02:00",
+  "importance": "normal",
+  "body": "Can you confirm whether the new night intervention code 5413 is effective for Belgium from the September 2026 payroll, or whether we should continue with the current matrix until a signed change request is available?",
+  "attachments": [
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Field Technician Standby and Intervention Allowance Matrix.md",
+      "sharepoint_document_id": "SP-PROX-004"
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-004"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "field_technicians",
+    "allowance_code"
+  ],
+  "confidence_hint": "legal_question",
+  "source_system": "outlook",
+  "synthetic": true,
+  "source": "outlook",
+  "type": "email"
+}

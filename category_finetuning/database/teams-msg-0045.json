@@ -1,0 +1,38 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0045",
+  "source_type": "channel_post",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Integrations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-import-rejections-2026-09",
+  "reply_to_id": null,
+  "sender": "Tom De Smet",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-19T08:58:00+02:00",
+  "body": "September HRIS import rejected 37 rows for PXS-RET-OLD cost center. Looks like retail only.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "integration",
+    "import_rejection",
+    "retail"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "integration",
+    "import_rejection",
+    "retail"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_post"
+}

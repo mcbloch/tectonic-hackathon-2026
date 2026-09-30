@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0021",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payments and Banking",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-payment-owner-2026-09",
+  "reply_to_id": "teams-msg-0013",
+  "sender": "Jonas Vermeulen",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-21T11:02:00+02:00",
+  "body": "Until the procedure is updated, continuity answer should say: current practice confirmed by customer email; SharePoint doc stale.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "trust_signal",
+    "payment_approval"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "trust_signal",
+    "payment_approval"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

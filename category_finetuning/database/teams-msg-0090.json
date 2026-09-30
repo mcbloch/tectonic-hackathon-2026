@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0090",
+  "source_type": "meeting_chat_message",
+  "container_type": "meeting_chat",
+  "team": null,
+  "channel": null,
+  "chat_name": null,
+  "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+  "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+  "reply_to_id": null,
+  "sender": "Anne Peeters",
+  "sender_org": "Proximus",
+  "sent_at": "2026-09-18T15:12:00+02:00",
+  "body": "HR wants one page showing what is official, what is recent email decision, and what is only Teams context.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "trust_signal",
+    "continuity_pack"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "trust_signal",
+    "continuity_pack"
+  ],
+  "visibility": "proximus_joint_governance",
+  "confidence_hint": "collaborative_discussion",
+  "source": "microsoft_teams",
+  "type": "meeting_chat_message"
+}

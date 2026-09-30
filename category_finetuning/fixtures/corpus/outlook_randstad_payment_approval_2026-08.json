@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "randstad-account@sdworx.example",
+  "conversation_id": "outlook-conv-randstad-approval-2026-08",
+  "message_id": "outlook-msg-006",
+  "subject": "Randstad August payment approval and input window",
+  "from": "finance@randstad.example",
+  "to": ["lisa.bakker@sdworx.example"],
+  "cc": ["payroll-ops@sdworx.example"],
+  "sent_at": "2026-08-05T11:15:00+02:00",
+  "body": "Payment approval for Randstad Netherlands stays with central finance; payroll input closes one day earlier.",
+  "attachments": [],
+  "client_tags": ["Randstad", "Netherlands", "payment approval", "payroll input"],
+  "confidence_hint": "customer_confirmation"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "randstad-account@sdworx.example",
+  "conversation_id": "outlook-conv-randstad-be-2026-09",
+  "message_id": "outlook-msg-102",
+  "subject": "Randstad Belgium payroll cutoff exception",
+  "from": "hans.de.vries@randstad.example",
+  "to": ["lisa.bakker@sdworx.example"],
+  "cc": [],
+  "sent_at": "2026-09-29T08:40:00+02:00",
+  "body": "One Randstad Belgium entity needs the payroll cutoff moved to D-2 this month; please confirm the impact.",
+  "attachments": [],
+  "client_tags": ["Randstad", "Belgium", "payroll cutoff"],
+  "confidence_hint": "customer_request"
+}

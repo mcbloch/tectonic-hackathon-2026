@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-payment-approval-2026-07",
+  "message_id": "outlook-msg-002",
+  "subject": "RE: Proximus July payment approval routing",
+  "from": "finance.ops@proximus.example",
+  "to": ["marie.dubois@sdworx.example"],
+  "cc": [],
+  "sent_at": "2026-07-22T15:03:00+02:00",
+  "body": "Confirmed: July payment approval for Proximus Belgium remains with Finance Operations.",
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "payment approval"],
+  "confidence_hint": "customer_confirmation"
+}

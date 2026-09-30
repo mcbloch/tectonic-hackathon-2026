@@ -1,0 +1,22 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-payroll-coordination-for-october",
+  "message_id": "outlook-msg-0017",
+  "subject": "Re: Payroll coordination for October",
+  "from": "marie.dubois@sdworx.example",
+  "to": [
+    "sarah.desmet@sdworx.example"
+  ],
+  "cc": [],
+  "sent_at": "2026-09-30T22:41:28+02:00",
+  "body": "Hi Sarah,\n\nThanks for the note. We will confirm the October payroll cut-off and approvers before Friday and share the updated calendar with the team.\n\nBest regards,\nSD Worx Client Team",
+  "attachments": [],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "electricity"
+  ],
+  "confidence_hint": "sd_worx_response"
+}

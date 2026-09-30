@@ -1,0 +1,52 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0094",
+  "source_type": "meeting_chat_message",
+  "container_type": "meeting_chat",
+  "team": null,
+  "channel": null,
+  "chat_name": null,
+  "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+  "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+  "reply_to_id": null,
+  "sender": "Jonas Vermeulen",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-18T16:02:00+02:00",
+  "body": "Action items: update payment procedure owner, split allowance matrix by country, validate off-cycle threshold.",
+  "mentions": [],
+  "attachments": [
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Payment Approval and SEPA Release Procedure",
+      "sharepoint_document_id": "SP-PROX-003",
+      "relationship": "referenced_source"
+    },
+    {
+      "attachment_type": "sharepoint_file",
+      "name": "Field Technician Standby and Intervention Allowance Matrix",
+      "sharepoint_document_id": "SP-PROX-004",
+      "relationship": "referenced_source"
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-003",
+    "SP-PROX-004"
+  ],
+  "topics": [
+    "action_item",
+    "validation_queue"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "action_item",
+    "validation_queue"
+  ],
+  "visibility": "proximus_joint_governance",
+  "confidence_hint": "collaborative_discussion",
+  "source": "microsoft_teams",
+  "type": "meeting_chat_message"
+}

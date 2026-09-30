@@ -1,0 +1,18 @@
+{
+  "source": "microsoft_teams",
+  "type": "channel_message",
+  "team": "SD Worx - Randstad Account",
+  "channel": "Compliance",
+  "channel_type": "standard",
+  "thread_id": "teams-thread-2026-08-randstad-gdpr",
+  "message_id": "teams-msg-007",
+  "reply_to_id": null,
+  "sender": "Pieter Claes",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-08-13T16:30:00+02:00",
+  "body": "Same GDPR data retention rule applies to Randstad Netherlands payroll exports before archiving.",
+  "mentions": ["Lisa Bakker"],
+  "attachments": [],
+  "client_tags": ["Randstad", "Netherlands", "GDPR", "data retention"],
+  "confidence_hint": "internal_policy"
+}

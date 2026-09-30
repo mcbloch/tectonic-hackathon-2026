@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0013",
+  "source_type": "channel_post",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Payments and Banking",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-payment-owner-2026-09",
+  "reply_to_id": null,
+  "sender": "Pieter Claes",
+  "sender_org": "Proximus",
+  "sent_at": "2026-09-21T09:05:00+02:00",
+  "body": "For September payment approval, Finance Operations will again approve the SEPA total. Please do not wait for HR Shared Services as final payment approver.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "payment_approval",
+    "sepa"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "payment_approval",
+    "sepa"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_post"
+}

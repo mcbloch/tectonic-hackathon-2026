@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-gdpr-2026-08",
+  "message_id": "outlook-msg-007",
+  "subject": "Proximus data retention reminder for payroll exports",
+  "from": "compliance@sdworx.example",
+  "to": ["marie.dubois@sdworx.example"],
+  "cc": ["dpo@sdworx.example"],
+  "sent_at": "2026-08-12T09:00:00+02:00",
+  "body": "GDPR reminder: payroll exports for Proximus Belgium fall under the 7-year data retention schedule.",
+  "attachments": [],
+  "client_tags": ["Proximus", "Belgium", "GDPR", "data retention"],
+  "confidence_hint": "internal_policy"
+}

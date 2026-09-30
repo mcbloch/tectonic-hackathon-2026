@@ -1,0 +1,22 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-payment-approval-2026-08",
+  "message_id": "outlook-msg-004",
+  "subject": "RE: Proximus August payroll payment approval",
+  "from": "anne.peeters@proximus.example",
+  "to": ["marie.dubois@sdworx.example"],
+  "cc": ["payroll-ops@sdworx.example"],
+  "sent_at": "2026-08-23T16:42:00+02:00",
+  "body": "Confirmed. For August, payment approval remains with Finance Operations, not HR Shared Services.",
+  "attachments": [
+    {
+      "name": "August_payment_control.xlsx",
+      "type": "excel",
+      "linked_source": "sharepoint"
+    }
+  ],
+  "client_tags": ["Proximus", "Belgium", "payment approval"],
+  "confidence_hint": "customer_confirmation"
+}

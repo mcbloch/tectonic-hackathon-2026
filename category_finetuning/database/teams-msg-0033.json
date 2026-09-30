@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0033",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Time and Absence",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-standby-code-2026-09",
+  "reply_to_id": "teams-msg-0023",
+  "sender": "Amina Rahman",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-03T13:29:00+02:00",
+  "body": "Please route any payslip correction caused by standby code confusion to me before promising off-cycle handling.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "payslip_correction",
+    "legal_review"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "payslip_correction",
+    "legal_review"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0050",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Integrations",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-import-rejections-2026-09",
+  "reply_to_id": "teams-msg-0045",
+  "sender": "Sarah Van den Berghe",
+  "sender_org": "Proximus",
+  "sent_at": "2026-09-19T10:22:00+02:00",
+  "body": "Retail owns the source cleanup. I will follow up with our HRIS admin.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "ownership",
+    "retail"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "ownership",
+    "retail"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

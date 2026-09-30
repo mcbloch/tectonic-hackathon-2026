@@ -1,0 +1,16 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "randstad-account@sdworx.example",
+  "conversation_id": "outlook-conv-randstad-cutoff-2026-06",
+  "message_id": "outlook-msg-005",
+  "subject": "Randstad June payroll cutoff and payment approval",
+  "from": "hans.de.vries@randstad.example",
+  "to": ["lisa.bakker@sdworx.example"],
+  "cc": [],
+  "sent_at": "2026-06-20T09:30:00+02:00",
+  "body": "Randstad Netherlands confirms the payroll cutoff at D-3 and payment approval with the central finance team.",
+  "attachments": [],
+  "client_tags": ["Randstad", "Netherlands", "payroll cutoff", "payment approval"],
+  "confidence_hint": "customer_confirmation"
+}

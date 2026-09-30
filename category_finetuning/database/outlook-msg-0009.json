@@ -1,0 +1,50 @@
+{
+  "message_id": "outlook-msg-0009",
+  "conversation_id": "outlook-conv-standby-code-2026-09",
+  "source_type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "folder": "Shared Mailbox/Proximus/Allowances",
+  "subject": "RE: Field technician night intervention code from September",
+  "from": {
+    "name": "Lina Smet",
+    "email": "lina.smet@sdworx.example",
+    "org": "SD Worx"
+  },
+  "to": [
+    {
+      "name": "Nadia Leclercq",
+      "email": "nadia.leclercq@proximus.example",
+      "org": "Proximus"
+    },
+    {
+      "name": "Amina Rahman",
+      "email": "amina.rahman@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Olivier Janssens",
+      "email": "olivier.janssens@proximus.example",
+      "org": "Proximus"
+    }
+  ],
+  "sent_at": "2026-09-03T15:05:00+02:00",
+  "importance": "normal",
+  "body": "Understood. We will wait for the signed change request before changing configuration. I will flag SP-PROX-004 as under review because the current matrix still points to code 5419 for night intervention.",
+  "attachments": [],
+  "referenced_documents": [
+    "SP-PROX-004"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "field_technicians",
+    "change_request"
+  ],
+  "confidence_hint": "sd_worx_acknowledgement",
+  "source_system": "outlook",
+  "synthetic": true,
+  "source": "outlook",
+  "type": "email"
+}

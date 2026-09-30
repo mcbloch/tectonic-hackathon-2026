@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0089",
+  "source_type": "meeting_chat_message",
+  "container_type": "meeting_chat",
+  "team": null,
+  "channel": null,
+  "chat_name": null,
+  "meeting_title": "Proximus Payroll Governance Meeting - 2026-09-18",
+  "thread_id": "teams-meeting-payroll-governance-2026-09-18",
+  "reply_to_id": null,
+  "sender": "Jonas Vermeulen",
+  "sender_org": "SD Worx",
+  "sent_at": "2026-09-18T15:00:00+02:00",
+  "body": "Meeting chat open for Proximus payroll governance. Agenda: continuity gaps, payment approval owner, September risks.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "governance",
+    "meeting_chat"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "governance",
+    "meeting_chat"
+  ],
+  "visibility": "proximus_joint_governance",
+  "confidence_hint": "collaborative_discussion",
+  "source": "microsoft_teams",
+  "type": "meeting_chat_message"
+}

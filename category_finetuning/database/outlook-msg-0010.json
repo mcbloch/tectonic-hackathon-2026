@@ -1,0 +1,52 @@
+{
+  "message_id": "outlook-msg-0010",
+  "conversation_id": "outlook-conv-payslip-correction-2026-09",
+  "source_type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "folder": "Shared Mailbox/Proximus/Payslips",
+  "subject": "September payslip correction - weekend premium missing",
+  "from": {
+    "name": "Anne Peeters",
+    "email": "anne.peeters@proximus.example",
+    "org": "Proximus"
+  },
+  "to": [
+    {
+      "name": "Lina Smet",
+      "email": "lina.smet@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Jonas Vermeulen",
+      "email": "jonas.vermeulen@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "sent_at": "2026-09-26T08:47:00+02:00",
+  "importance": "high",
+  "body": "We have 14 employees whose weekend intervention premium is missing from the September payslip. The approximate net impact is between EUR 72 and EUR 118 per employee. Can this be corrected off-cycle?",
+  "attachments": [
+    {
+      "attachment_type": "uploaded_file",
+      "name": "missing_weekend_premium_cases_sep.xlsx",
+      "content_summary": "Synthetic list of 14 affected employee IDs with net impact estimate."
+    }
+  ],
+  "referenced_documents": [
+    "SP-PROX-001",
+    "SP-PROX-005"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "payslip_correction",
+    "off_cycle"
+  ],
+  "confidence_hint": "customer_escalation",
+  "source_system": "outlook",
+  "synthetic": true,
+  "source": "outlook",
+  "type": "email"
+}

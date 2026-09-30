@@ -1,0 +1,51 @@
+{
+  "message_id": "outlook-msg-0014",
+  "conversation_id": "outlook-conv-year-end-2026",
+  "source_type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "folder": "Shared Mailbox/Proximus/Year End",
+  "subject": "Year-end payroll and tax preparation milestones",
+  "from": {
+    "name": "Lina Smet",
+    "email": "lina.smet@sdworx.example",
+    "org": "SD Worx"
+  },
+  "to": [
+    {
+      "name": "Anne Peeters",
+      "email": "anne.peeters@proximus.example",
+      "org": "Proximus"
+    }
+  ],
+  "cc": [
+    {
+      "name": "Pieter Claes",
+      "email": "pieter.claes@proximus.example",
+      "org": "Proximus"
+    },
+    {
+      "name": "Jonas Vermeulen",
+      "email": "jonas.vermeulen@sdworx.example",
+      "org": "SD Worx"
+    }
+  ],
+  "sent_at": "2026-09-29T13:30:00+02:00",
+  "importance": "normal",
+  "body": "To prepare year-end, we propose validating benefit corrections by 2026-11-30, exceptional taxable benefits by 2026-12-07, and Belcotax control totals in January. Please confirm the Proximus owner for year-end tax review.",
+  "attachments": [],
+  "referenced_documents": [
+    "SP-PROX-001",
+    "SP-PROX-002"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "year_end",
+    "tax"
+  ],
+  "confidence_hint": "planning_request",
+  "source_system": "outlook",
+  "synthetic": true,
+  "source": "outlook",
+  "type": "email"
+}

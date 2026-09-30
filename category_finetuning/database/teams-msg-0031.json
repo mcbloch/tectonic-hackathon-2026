@@ -1,0 +1,36 @@
+{
+  "source_system": "microsoft_teams",
+  "synthetic": true,
+  "client_id": "PROX-BE-001",
+  "tenant_context": "synthetic-sdworx-tenant",
+  "message_id": "teams-msg-0031",
+  "source_type": "channel_reply",
+  "container_type": "channel",
+  "team": "SD Worx - Proximus Account",
+  "channel": "Time and Absence",
+  "chat_name": null,
+  "meeting_title": null,
+  "thread_id": "teams-thread-standby-code-2026-09",
+  "reply_to_id": "teams-msg-0023",
+  "sender": "Nadia Leclercq",
+  "sender_org": "Proximus",
+  "sent_at": "2026-09-03T13:02:00+02:00",
+  "body": "I will send the signed request today. Wording should be Belgium only.",
+  "mentions": [],
+  "attachments": [],
+  "referenced_documents": [],
+  "topics": [
+    "customer_commitment",
+    "country_scope"
+  ],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "customer_commitment",
+    "country_scope"
+  ],
+  "visibility": "client_account_team",
+  "confidence_hint": "operational_context",
+  "source": "microsoft_teams",
+  "type": "channel_reply"
+}

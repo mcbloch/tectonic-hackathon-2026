@@ -1,0 +1,22 @@
+{
+  "source": "outlook",
+  "type": "email",
+  "mailbox": "proximus-account@sdworx.example",
+  "conversation_id": "outlook-conv-proximus-electricity-bill-payment",
+  "message_id": "outlook-msg-0021",
+  "subject": "Proximus electricity bill payment",
+  "from": "marie.dubois@sdworx.example",
+  "to": [
+    "sarah.desmet@sdworx.example"
+  ],
+  "cc": [],
+  "sent_at": "2026-09-30T22:57:56+02:00",
+  "body": "Hi Sarah,\n\nQuick update on the Proximus account: the October electricity bill payment is ready for approval. Could you check the amount and confirm it before Friday?\n\nBest regards,\nSD Worx Client Team",
+  "attachments": [],
+  "client_tags": [
+    "Proximus",
+    "Belgium",
+    "payment_approval"
+  ],
+  "confidence_hint": "sd_worx_response"
+}
