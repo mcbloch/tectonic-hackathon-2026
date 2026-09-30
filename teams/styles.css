@@ -442,8 +442,10 @@ ol {
 
 /* ---------- Files view ---------- */
 
-.view-files,
-.view-mail {
+.view-files {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   overflow: auto;
 }
 
@@ -466,49 +468,173 @@ ol {
   color: var(--muted);
 }
 
-.file-scroll {
+.files-panes {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow-x: auto;
+  overflow: hidden;
 }
 
-.file-table {
-  width: 100%;
-  min-width: 620px;
-  border-collapse: collapse;
+.file-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
 }
 
-.file-table th {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface-muted);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: left;
-  color: var(--muted);
+.file-item + .file-item {
+  border-top: 1px solid var(--border-soft);
 }
 
-.file-table td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border-soft);
-  vertical-align: middle;
-}
-
-.file-table tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-.file-table tbody tr:hover {
-  background: var(--surface-muted);
-}
-
-.file-name {
+.file-item-main {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.file-item-main:hover {
+  background: var(--surface-muted);
+}
+
+.file-item.is-selected .file-item-main {
+  background: #f2f2fc;
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.file-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.file-item-name {
+  font-size: 13px;
   font-weight: 600;
+}
+
+.file-item-meta,
+.file-item-time {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.file-item-time {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.file-detail {
+  padding: 14px 16px;
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.file-detail-title {
+  font-size: 15px;
+}
+
+.file-detail-file {
+  margin: 2px 0 12px;
+  font-size: 11px;
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.file-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+  margin: 0 0 12px;
+}
+
+.file-facts dt {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.file-facts dd {
+  margin: 2px 0 0;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-chip {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--accent-strong);
+  font-size: 11px;
+}
+
+.file-detail-sub {
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.mention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.mention {
+  padding: 8px 10px;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  background: var(--surface-muted);
+}
+
+.mention-head {
+  margin-bottom: 2px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.mention-snippet {
+  font-size: 12px;
+}
+
+.file-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+.file-open:hover {
+  text-decoration: underline;
+}
+
+.file-detail-empty {
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .file-badge {
@@ -535,16 +661,6 @@ ol {
 
 .file-badge-pdf {
   background: #b3271e;
-}
-
-.file-owner,
-.file-modified {
-  color: var(--muted);
-}
-
-.file-size {
-  text-align: right;
-  white-space: nowrap;
 }
 
 /* ---------- Mail view ---------- */
@@ -760,5 +876,16 @@ ol {
   .mail-list {
     border-right: 0;
     border-bottom: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 640px) {
+  .files-panes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .file-detail {
+    border-left: 0;
+    border-top: 1px solid var(--border);
   }
 }

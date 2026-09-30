@@ -77,6 +77,7 @@ const state = {
   selectedTeamId: "sd-worx",
   selectedChannelId: "shared",
   pending: false,
+  selectedFileId: "",
   messages: [
     {
       id: "welcome",
@@ -243,43 +244,89 @@ function renderCopilotView() {
   </section>`;
 }
 
+function fileKey(file) {
+  return file.documentId || file.name;
+}
+
+function selectedFile() {
+  return MOCK_FILES.find((file) => fileKey(file) === state.selectedFileId) ?? MOCK_FILES[0] ?? null;
+}
+
+function referenceLabel(file) {
+  const teams = file.teamsReferences ?? 0;
+  const mail = file.mailReferences ?? 0;
+  if (!teams && !mail) return "No references yet";
+  const parts = [];
+  if (teams) parts.push(`${teams} Teams post${teams === 1 ? "" : "s"}`);
+  if (mail) parts.push(`${mail} email${mail === 1 ? "" : "s"}`);
+  return `Cited in ${parts.join(" and ")}`;
+}
+
+function renderFileDetail(file) {
+  if (!file) {
+    return `<article class="file-detail" aria-label="Document details"><p class="file-detail-empty">No documents in this folder.</p></article>`;
+  }
+  const topics = (file.topics ?? []).map((topic) => `<li class="topic-chip">${esc(topic)}</li>`).join("");
+  const mentions = (file.mentions ?? [])
+    .map(
+      (mention) => `<li class="mention">
+        <p class="mention-head">${esc(mention.source)} \u00b7 ${esc(mention.who)}${mention.where ? ` \u00b7 ${esc(mention.where)}` : ""} \u00b7 ${esc(mention.when)}</p>
+        <p class="mention-snippet">${esc(mention.snippet)}</p>
+      </li>`,
+    )
+    .join("");
+
+  return `<article class="file-detail" aria-label="Document details">
+      <h3 class="file-detail-title">${esc(file.title || file.name)}</h3>
+      <p class="file-detail-file">${esc(file.name)}</p>
+      <dl class="file-facts">
+        <div><dt>Owner</dt><dd>${esc(file.owner)}</dd></div>
+        <div><dt>Status</dt><dd>${esc(file.status || "\u2014")}</dd></div>
+        <div><dt>Size</dt><dd>${esc(file.size)}</dd></div>
+        <div><dt>Modified</dt><dd>${esc(file.modified)}</dd></div>
+        <div><dt>Source</dt><dd>${esc(file.sourceSystem || "sharepoint")} \u00b7 ${esc(file.relativePath || "")}</dd></div>
+        <div><dt>References</dt><dd>${esc(referenceLabel(file))}</dd></div>
+      </dl>
+      ${topics ? `<ul class="topic-list" aria-label="Topics">${topics}</ul>` : ""}
+      ${mentions ? `<h4 class="file-detail-sub">Where this document is used</h4><ul class="mention-list">${mentions}</ul>` : ""}
+      ${file.openUrl ? `<a class="file-open" href="${esc(file.openUrl)}" target="_blank" rel="noopener">${icon("file")}<span>Open document</span></a>` : ""}
+    </article>`;
+}
+
 function renderFilesView() {
   const path = `Teams / ${currentTeam().name} / ${currentChannel().name} / Files`;
+  const selected = selectedFile();
+  const rows = MOCK_FILES.map((file) => {
+    const isSelected = Boolean(selected) && fileKey(file) === fileKey(selected);
+    return `<li class="file-item${isSelected ? " is-selected" : ""}">
+        <button type="button" class="file-item-main" data-file="${esc(fileKey(file))}"${isSelected ? ' aria-current="true"' : ""}>
+          <span class="file-badge file-badge-${esc(String(file.type).toLowerCase())}" aria-hidden="true">${esc(file.type)}</span>
+          <span class="file-item-text">
+            <span class="file-item-name">${esc(file.title || file.name)}</span>
+            <span class="file-item-meta">${esc(file.owner)} \u00b7 ${esc(file.status || "\u2014")} \u00b7 ${esc(referenceLabel(file))}</span>
+          </span>
+          <span class="file-item-time">${esc(file.modified)}</span>
+        </button>
+      </li>`;
+  }).join("");
+
   return `<section class="view view-files" aria-label="Files">
-    <div class="files-toolbar">
-      <h2 class="view-title">${icon("folder")}<span>Files</span></h2>
-      <p class="files-path">${esc(path)}</p>
-      <p class="files-count">${MOCK_FILES.length} items</p>
-    </div>
-    <div class="file-scroll">
-      <table class="file-table">
-        <caption class="sr-only">Files in ${esc(path)}</caption>
-        <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Owner</th>
-            <th scope="col">Modified</th>
-            <th scope="col" class="file-size">Size</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${MOCK_FILES.map(
-            (file) => `<tr class="file-row">
-            <td>
-              <span class="file-name">
-                <span class="file-badge file-badge-${esc(file.type.toLowerCase())}" aria-hidden="true">${esc(file.type)}</span>
-                <span class="file-label">${esc(file.name)}</span>
-              </span>
-            </td>
-            <td class="file-owner">${esc(file.owner)}</td>
-            <td class="file-modified">${esc(file.modified)}</td>
-            <td class="file-size">${esc(file.size)}</td>
-          </tr>`,
-          ).join("")}
-        </tbody>
-      </table>
-    </div>
-  </section>`;
+      <div class="files-toolbar">
+        <h2 class="view-title">${icon("folder")}<span>Files</span></h2>
+        <p class="files-path">${esc(path)}</p>
+        <p class="files-count">${MOCK_FILES.length} items</p>
+      </div>
+      <div class="files-panes">
+        <ul class="file-list" aria-label="Documents">${rows}</ul>
+        ${renderFileDetail(selected)}
+      </div>
+    </section>`;
+}
+
+function selectFile(id) {
+  if (state.selectedFileId === id) return;
+  state.selectedFileId = id;
+  renderApp();
 }
 
 function renderMailView() {
@@ -509,6 +556,11 @@ function handleClick(event) {
   const chip = event.target.closest("[data-prompt]");
   if (chip) {
     sendCopilotMessage(chip.dataset.prompt);
+    return;
+  }
+  const file = event.target.closest("[data-file]");
+  if (file) {
+    selectFile(file.dataset.file);
     return;
   }
   const tab = event.target.closest("[data-view]");

@@ -79,13 +79,80 @@ def to_text(item):
     return ""
 
 
+DOCUMENT_TYPES = {
+    ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    ".pdf": "application/pdf",
+}
+
+_REFERENCE_INDEX = None
+
+
+def reference_index():
+    """document_id -> where the pack mentions it (built once from Teams + Outlook exports)."""
+    global _REFERENCE_INDEX
+    if _REFERENCE_INDEX is not None:
+        return _REFERENCE_INDEX
+
+    index = {}
+
+    def add(document_id, source, where, who, sent_at, body):
+        entry = index.setdefault(document_id, {"teams": 0, "mail": 0, "_mentions": []})
+        entry["teams" if source == "Teams" else "mail"] += 1
+        entry["_mentions"].append(
+            {
+                "source": source,
+                "where": where,
+                "who": who,
+                "when": human_time(sent_at),
+                "_sentAt": str(sent_at or ""),
+                "snippet": one_line(body, 160),
+            }
+        )
+
+    for message in read_json(TEAMS_EXPORT).get("messages", []):
+        for document_id in message.get("referenced_documents", []):
+            add(
+                document_id,
+                "Teams",
+                message.get("channel") or message.get("chat_name") or "",
+                message.get("sender", ""),
+                message.get("sent_at"),
+                message.get("body"),
+            )
+    for message in read_json(MAIL_EXPORT).get("messages", []):
+        for document_id in message.get("referenced_documents", []):
+            add(
+                document_id,
+                "Mail",
+                message.get("subject", ""),
+                (message.get("from") or {}).get("name", ""),
+                message.get("sent_at"),
+                message.get("body"),
+            )
+
+    for entry in index.values():
+        entry["_mentions"].sort(key=lambda mention: mention["_sentAt"], reverse=True)
+        entry["mentions"] = [
+            {key: value for key, value in mention.items() if key != "_sentAt"} for mention in entry["_mentions"][:4]
+        ]
+        del entry["_mentions"]
+
+    _REFERENCE_INDEX = index
+    return index
+
+
 def load_files():
+    references = reference_index()
     files = []
     for document in read_json(FILES_INDEX):
         path = DATA_DIR / str(document.get("relative_path", ""))
         exists = path.is_file()
+        document_id = document.get("document_id", "")
+        cited = references.get(document_id, {})
         files.append(
             {
+                "documentId": document_id,
                 "name": document.get("file_name", ""),
                 "type": str(document.get("file_format", "file")).upper(),
                 "size": human_size(path.stat().st_size) if exists else "—",
@@ -94,6 +161,12 @@ def load_files():
                 "status": document.get("status", ""),
                 "title": document.get("title", ""),
                 "topics": document.get("topics", []),
+                "sourceSystem": document.get("source_system", ""),
+                "relativePath": document.get("relative_path", ""),
+                "teamsReferences": cited.get("teams", 0),
+                "mailReferences": cited.get("mail", 0),
+                "mentions": cited.get("mentions", []),
+                "openUrl": f"/api/document/{document_id}",
             }
         )
     return files
@@ -177,7 +250,30 @@ def main():
                 except Exception as error:
                     self._json(500, {"error": f"{type(error).__name__}: {error}"})
                 return
+            if route.startswith("/api/document/"):
+                self.send_document(route.rsplit("/", 1)[-1])
+                return
             super().do_GET()
+
+        def send_document(self, document_id):
+            """Streams the real file from mock-data/ so the Files tab can open it."""
+            for document in read_json(FILES_INDEX):
+                if document.get("document_id") != document_id:
+                    continue
+                path = (DATA_DIR / str(document.get("relative_path", ""))).resolve()
+                if DATA_DIR.resolve() not in path.parents or not path.is_file():
+                    break
+                body = path.read_bytes()
+                filename = str(document.get("file_name", path.name)).replace('"', "")
+                self.send_response(200)
+                self.send_header("Content-Type", DOCUMENT_TYPES.get(path.suffix.lower(), "application/octet-stream"))
+                self.send_header("Content-Disposition", f'inline; filename="{filename}"')
+                self.send_header("Content-Length", str(len(body)))
+                self.send_header("Cache-Control", "no-store")
+                self.end_headers()
+                self.wfile.write(body)
+                return
+            self._json(404, {"error": f"unknown document {document_id}"})
 
     files, mail = load_files(), load_mail()
     base = os.environ.get("COPILOT_BASE_URL") or os.environ.get("OPENAI_BASE_URL") or teams_server.DEFAULT_BASE
