@@ -1,5 +1,7 @@
 # Digital Secretary — client memory for SD Worx payroll
 
+Video explanation: https://drive.google.com/file/d/13e0hl_VKvwbX0d43E9iZ9SPMt2o2LYrl/view?usp=sharing
+
 SD Worx runs payroll for clients on a consultancy / managed-payroll basis. This is a hackathon
 proof of concept: a per-client **digital secretary** that keeps track of what is actually true for
 that client right now.
@@ -105,3 +107,4 @@ Leuven 3010
 Vlaanderen, BE
 
 https://www.google.com/maps/search/?api=1&query=50.88767110000001,4.7621158&query_place_id=ChIJZ-8vmA5nUcRJnQjXb6H4jo
+
