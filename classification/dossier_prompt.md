@@ -17,7 +17,7 @@ a missing one: it will be dropped by the validator.
 ```json
 {
   "exceptions": [{"statement": "...", "overrides": "what standard rule it replaces",
-                  "scope": "who/what it covers (site, team, worker group)",
+                  "site": "Antwerpen | * | null", "worker_group": "arbeider | bediende | kader | * | null",
                   "authority": "client_instruction|client_collective|sector_agreement|law",
                   "valid_from": "YYYY-MM-DD or null", "valid_to": "YYYY-MM-DD or null",
                   "source_doc": "<doc_id>"}],
@@ -37,6 +37,10 @@ a missing one: it will be dropped by the validator.
 
 ## Hard rules
 
+0. **One tag = one value.** A tag never holds a list. When something applies to everything, the
+   value is `"*"`. If a rule applies to **several but not all** sites (or worker groups), repeat the
+   entry once per site/group with the same statement and a different `site` value — never widen it
+   to `"*"`. Never emit `"site": ["Antwerpen", "Gent"]` and never pack two facts into one string.
 1. **`source_doc` must be one of the supplied doc_ids.** No exception. If you cannot point at the
    document, do not emit the entry.
 2. **Dates in ISO (`YYYY-MM-DD`).** Convert `1 juli 2026` -> `2026-07-01`, `4/3/2026` -> `2026-03-04`.

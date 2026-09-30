@@ -691,6 +691,31 @@ ol {
   color: var(--muted);
 }
 
+/* ---------- Copilot answer states ---------- */
+
+.message-bubble {
+  white-space: pre-wrap;
+}
+
+.message-typing .message-bubble {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.message-error .message-bubble {
+  background: #fdf3f3;
+  border-color: #efc9c9;
+  color: #8a1f1f;
+}
+
+.message-bubble code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: #ececf2;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 860px) {

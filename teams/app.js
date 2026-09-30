@@ -1,5 +1,6 @@
 /* Teams Copilot demo: dependency-free mock of Teams + Copilot for the SD Worx workspace.
-   Copilot is the only real behavior; Files and Mail are read-only mock surfaces. */
+   Copilot answers are real model output: the question goes to /api/chat (teams/server.py),
+   which sends the whole mock-data pack as context. Files and Mail are read-only mock surfaces. */
 
 const VIEW_TABS = [
   { id: "copilot", label: "Copilot", icon: "copilot" },
@@ -28,14 +29,14 @@ const MOCK_TEAMS = [
   },
 ];
 
-const MOCK_FILES = [
+let MOCK_FILES = [
   { name: "Payroll Calendar.xlsx", type: "XLSX", size: "42 KB", modified: "Today, 09:24", owner: "Mihaly Csonka" },
   { name: "Client Overview.docx", type: "DOCX", size: "186 KB", modified: "Yesterday", owner: "Rostyslav Fedorov" },
   { name: "Onboarding Checklist.pdf", type: "PDF", size: "1.2 MB", modified: "Sep 29", owner: "Maxime Bloch" },
   { name: "Team Contacts.xlsx", type: "XLSX", size: "28 KB", modified: "Sep 27", owner: "Robert Akhmerov" },
 ];
 
-const MOCK_MAIL = [
+let MOCK_MAIL = [
   {
     sender: "Sarah De Smet",
     subject: "Payroll coordination for October",
@@ -71,22 +72,16 @@ const COPILOT_PROMPTS = [
   "Summarize the shared files",
 ];
 
-const COPILOT_REPLIES = {
-  payroll: "The next payroll cut-off is Friday at 16:00. The source is Payroll Calendar.xlsx in SD Worx > Shared.",
-  files:
-    "The Shared folder has 4 demo files, including Payroll Calendar.xlsx, Client Overview.docx, Onboarding Checklist.pdf, and Team Contacts.xlsx.",
-  fallback: "I can help with the SD Worx demo workspace. Ask me about payroll deadlines or the files in Shared.",
-};
-
 const state = {
   activeView: "copilot",
   selectedTeamId: "sd-worx",
   selectedChannelId: "shared",
+  pending: false,
   messages: [
     {
       id: "welcome",
       role: "assistant",
-      text: "I\u2019m Copilot for the SD Worx team. I can help with payroll questions or the files in Shared.",
+      text: "I\u2019m Copilot for the Proximus Belgium account. I have read this workspace: Teams channels, Outlook, SharePoint and the client memory. Ask me about cut-off rules, exceptions, owners or open issues.",
     },
   ],
 };
@@ -208,11 +203,21 @@ function renderWorkspaceHeader() {
 
 /* ---------- views ---------- */
 
+/* Loose markdown for model answers: escape first, then re-introduce only our own tags. */
+function formatAnswer(text) {
+  return esc(text)
+    .replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/`([^`\n]+)`/g, "<code>$1</code>");
+}
+
 function renderMessage(message) {
   const isUser = message.role === "user";
-  return `<div class="message ${isUser ? "message-user" : "message-assistant"}">
+  const classes = ["message", isUser ? "message-user" : "message-assistant"];
+  if (message.pending) classes.push("message-typing");
+  if (message.error) classes.push("message-error");
+  return `<div class="${classes.join(" ")}">
     <p class="message-role">${isUser ? "You" : "Copilot"}</p>
-    <p class="message-bubble">${esc(message.text)}</p>
+    <p class="message-bubble">${isUser ? esc(message.text) : formatAnswer(message.text)}</p>
   </div>`;
 }
 
@@ -317,7 +322,7 @@ function renderMailView() {
           <span class="reading-sender">${esc(selectedMail.sender)}</span>
           <span class="reading-time">${esc(selectedMail.time)}</span>
         </p>
-        <p class="reading-body">${esc(MAIL_READING_BODY)}</p>
+        <p class="reading-body">${esc(selectedMail.body ?? MAIL_READING_BODY)}</p>
         <p class="reading-note">Read-only demo message</p>
       </article>
     </div>
@@ -434,19 +439,54 @@ function init() {
 
 /* ---------- Copilot behavior ---------- */
 
-function getCopilotReply(message) {
-  const text = String(message ?? "").toLowerCase();
-  if (text.includes("deadline") || text.includes("payroll")) return COPILOT_REPLIES.payroll;
-  if (text.includes("file") || text.includes("document") || text.includes("shared")) return COPILOT_REPLIES.files;
-  return COPILOT_REPLIES.fallback;
+/* The question goes to the demo backend (teams/server.py), which sends the whole
+   mock-data pack as context and returns the model's answer. Keeping the conversation
+   here is enough for follow-up questions; nothing is persisted. */
+
+async function requestCopilotReply(history) {
+  const response = await fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ messages: history }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.error ?? `request failed (${response.status})`);
+  if (!data.reply) throw new Error("the model returned an empty answer");
+  return data.reply;
 }
 
-function sendCopilotMessage(text) {
+function conversation() {
+  return state.messages
+    .filter((message) => !message.pending && !message.error && message.id !== "welcome")
+    .map(({ role, text }) => ({ role, content: text }));
+}
+
+async function sendCopilotMessage(text) {
   const value = String(text ?? "").trim();
-  if (!value) return false;
+  if (!value || state.pending) return false;
   messageSeq += 1;
+  const replyId = `msg-${messageSeq}-reply`;
   state.messages.push({ id: `msg-${messageSeq}`, role: "user", text: value });
-  state.messages.push({ id: `msg-${messageSeq}-reply`, role: "assistant", text: getCopilotReply(value) });
+  state.messages.push({ id: replyId, role: "assistant", text: "Thinking\u2026", pending: true });
+  state.pending = true;
+  renderApp();
+  scrollMessagesToEnd();
+
+  const history = conversation();
+  let answer;
+  try {
+    answer = await requestCopilotReply(history);
+  } catch (error) {
+    answer = `Copilot is unavailable: ${error.message}`;
+  }
+
+  state.pending = false;
+  const reply = state.messages.find((message) => message.id === replyId);
+  if (reply) {
+    reply.text = answer;
+    reply.pending = false;
+    reply.error = answer.startsWith("Copilot is unavailable");
+  }
   renderApp();
   focusCopilotInput();
   scrollMessagesToEnd();
@@ -492,3 +532,21 @@ function bindEvents(root) {
 }
 
 init();
+
+/* Real mock data: /api/files and /api/mail come from server.py reading mock-data/.
+   Without that server the bundled demo rows above stay in place. */
+async function loadDemoData() {
+  try {
+    const [files, mail] = await Promise.all([
+      fetch("/api/files").then((response) => response.json()),
+      fetch("/api/mail").then((response) => response.json()),
+    ]);
+    if (Array.isArray(files.files) && files.files.length) MOCK_FILES = files.files;
+    if (Array.isArray(mail.messages) && mail.messages.length) MOCK_MAIL = mail.messages;
+    renderApp();
+  } catch (error) {
+    /* keep the bundled rows */
+  }
+}
+
+loadDemoData();

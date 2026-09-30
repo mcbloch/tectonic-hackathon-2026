@@ -1,0 +1,25 @@
+{
+ "client_id": "C5",
+ "client_name": "Ziekenhuis M",
+ "kind": "static ground truth - hand-written from the mock documents. Replace with classifier output when the classifier lands.",
+ "documents": [
+  "2026-02-klantinstructie-eindejaarspremie",
+  "2026-03-openstaand-dossier"
+ ],
+ "exceptions": [
+  {"id": "e1", "statement": "Voor deeltijdse medewerkers wordt de sectorale eindejaarspremie berekend op basis van de contractuele uren.", "overrides": "pro-rata regel op basis van de gepresteerde uren", "site": null, "worker_group": "*", "authority": "client_collective", "valid_from": null, "valid_to": null, "source_doc": "2026-02-klantinstructie-eindejaarspremie"},
+  {"id": "e2", "statement": "Medewerkers in dienst na 1 juli 2026 ontvangen de helft van de sectorale eindejaarspremie.", "overrides": "volledige sectorale eindejaarspremie (100% van het maandloon voor een volledig jaar)", "site": null, "worker_group": "*", "authority": "client_instruction", "valid_from": "2026-07-01", "valid_to": null, "source_doc": "2026-02-klantinstructie-eindejaarspremie"}
+ ],
+ "people": [
+  {"id": "p1", "name": "Ann Verlinden", "role": "Payroll Manager", "side": "client", "contact": "ann.verlinden@ziekenhuism.example", "source_doc": "2026-02-klantinstructie-eindejaarspremie"}
+ ],
+ "issues": [
+  {"id": "i1", "title": "Headcount-gegevens voor februari 2026 niet ontvangen - de loonrun van maart kan niet starten", "detail": "Stand 20 maart 2026.", "severity": "high", "status": "blocked", "owner_name": "Ann Verlinden", "raised_on": "2026-03-20", "next_action": "Gegevens opvragen bij de klant", "source_doc": "2026-03-openstaand-dossier"},
+  {"id": "i2", "title": "Dispuut over de overuren van de afdeling radiologie: 41 uur niet uitbetaald in januari", "detail": "SD Worx stelt een correctie van 1.284 EUR bruto voor; de klant heeft nog niet gereageerd.", "severity": "medium", "status": "waiting", "owner_name": null, "raised_on": "2026-03-20", "next_action": "Antwoord van de klant opvolgen", "source_doc": "2026-03-openstaand-dossier"},
+  {"id": "i3", "title": "Nieuwe versie van het arbeidsreglement (gewijzigd op 5 februari 2026) is nog niet opgenomen in het klantdossier", "detail": "Het arbeidsreglement werd gewijzigd op 5 februari 2026.", "severity": "low", "status": "open", "owner_name": null, "raised_on": "2026-03-20", "next_action": "Arbeidsreglement toevoegen aan het klantdossier", "source_doc": "2026-03-openstaand-dossier"}
+ ],
+ "deadlines": [
+  {"id": "d1", "what": "Levering van de maandelijkse looninput door de klant", "date": null, "schedule": "4e werkdag van de maand", "type": "delivery", "recurrence": "monthly", "owner_name": "Ann Verlinden", "source_doc": "2026-03-openstaand-dossier"},
+  {"id": "d2", "what": "Betaling van de sectorale eindejaarspremie", "date": "2026-12-15", "schedule": null, "type": "payment", "recurrence": "annual", "owner_name": "Ann Verlinden", "source_doc": "2026-02-klantinstructie-eindejaarspremie"}
+ ]
+}

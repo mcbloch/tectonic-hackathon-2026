@@ -1,0 +1,44 @@
+{
+ "client_id": "C2",
+ "client_name": "ChemCo",
+ "kind": "static ground truth - hand-written from the mock documents. Replace with classifier output when the classifier lands.",
+ "documents": [
+  "2026-01-sla-en-contacten",
+  "2026-02-klantinstructie-ploegenpremie",
+  "2026-03-notulen-ondernemingsraad",
+  "2026-03-ticket-48213-ploegenpremie",
+  "2026-04-sectorbericht-indexering"
+ ],
+ "exceptions": [
+  {"id": "e1", "statement": "Ploegenpremie 12% voor de late shift (14u-22u) en 18% voor de nachtshift (22u-6u).", "overrides": "sectorale ploegenpremie van 10% (PC 116)", "site": "Antwerpen", "worker_group": "arbeider", "authority": "client_collective", "valid_from": "2026-07-01", "valid_to": null, "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "e2", "statement": "Ploegenpremie 12% voor de late shift (14u-22u) en 18% voor de nachtshift (22u-6u).", "overrides": "sectorale ploegenpremie van 10% (PC 116)", "site": "Gent", "worker_group": "arbeider", "authority": "client_collective", "valid_from": "2026-07-01", "valid_to": null, "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "e3", "statement": "De onderhoudsploeg (13 personen) behoudt de oude regeling van 10% ploegenpremie.", "overrides": "bedrijfs-cao ploegenpremie van 12% (late shift) en 18% (nachtshift)", "site": null, "worker_group": "arbeider", "authority": "client_instruction", "valid_from": "2026-07-01", "valid_to": "2026-12-31", "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "e4", "statement": "Overwerkpremie boven 8 uur per week moet vooraf goedgekeurd worden door de HR Director.", "overrides": "geen voorafgaande klantgoedkeuring vereist", "site": null, "worker_group": "arbeider", "authority": "client_instruction", "valid_from": null, "valid_to": null, "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "e5", "statement": "Escalatie bij een blokkerende productiestoring: de consultant verwittigt de service manager binnen 4 uur; bij SLA-overschrijding contacteert de service manager de klant binnen 1 werkdag.", "overrides": null, "site": null, "worker_group": null, "authority": "client_instruction", "valid_from": null, "valid_to": null, "source_doc": "2026-01-sla-en-contacten"}
+ ],
+ "people": [
+  {"id": "p1", "name": "Marc D'Hondt", "role": "Service manager SD Worx", "side": "sdworx", "contact": "marc.dhondt@sdworx.example", "source_doc": "2026-01-sla-en-contacten"},
+  {"id": "p2", "name": "Els De Smet", "role": "Payroll consultant, eerste aanspreekpunt voor loonvragen", "side": "sdworx", "contact": "els.desmet@sdworx.example", "source_doc": "2026-01-sla-en-contacten"},
+  {"id": "p3", "name": "Nele Goossens", "role": "Legal & compliance", "side": "sdworx", "contact": "nele.goossens@sdworx.example", "source_doc": "2026-01-sla-en-contacten"},
+  {"id": "p4", "name": "Karim El Amrani", "role": "HR Director, voorzitter ondernemingsraad", "side": "client", "contact": "karim.elamrani@chemco.example", "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "p5", "name": "Lotte Vermeersch", "role": "Assistente HR Director, volgt de goedkeuringen op", "side": "client", "contact": null, "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "p6", "name": "Sofie Peeters", "role": "Vakbondsafgevaardigde ABVV", "side": "third_party", "contact": null, "source_doc": "2026-03-notulen-ondernemingsraad"}
+ ],
+ "issues": [
+  {"id": "i1", "title": "OR vraagt retroactieve toepassing van de ploegenpremie vanaf 1 april 2026", "detail": "SD Worx onderzoekt de haalbaarheid; antwoord tegen de volgende vergadering.", "severity": "medium", "status": "open", "owner_name": null, "raised_on": "2026-03-12", "next_action": "Haalbaarheid van de retroactieve toepassing onderzoeken", "source_doc": "2026-03-notulen-ondernemingsraad"},
+  {"id": "i2", "title": "Overuren van de onderhoudsploeg worden niet correct geregistreerd sinds januari 2026", "detail": "Wacht op de leverancier van het kloksysteem.", "severity": "high", "status": "waiting", "owner_name": "Lotte Vermeersch", "raised_on": "2026-03-12", "next_action": "Tijdregistratie laten nakijken", "source_doc": "2026-03-notulen-ondernemingsraad"},
+  {"id": "i3", "title": "Geen akkoord over de overwerkpremie op zondag", "detail": "Het punt blijft open en komt terug op de volgende vergadering.", "severity": "medium", "status": "open", "owner_name": null, "raised_on": "2026-03-12", "next_action": null, "source_doc": "2026-03-notulen-ondernemingsraad"},
+  {"id": "i4", "title": "Foutieve ploegenpremie voor 3 arbeiders van de onderhoudsploeg in de run van februari 2026", "detail": "18% toegepast in plaats van 10%. Oorzaak: de oude klantinstructie staat nog actief in de loonmotor. Impact ongeveer 640 EUR bruto.", "severity": "high", "status": "open", "owner_name": "Els De Smet", "raised_on": "2026-03-04", "next_action": "Bevestiging van Karim El Amrani dat de onderhoudsploeg onder de uitzondering valt; correctie verwerken in de run van april 2026", "source_doc": "2026-03-ticket-48213-ploegenpremie"}
+ ],
+ "deadlines": [
+  {"id": "d1", "what": "Looninput aanleveren door de klant", "date": null, "schedule": "3e werkdag van de maand", "type": "delivery", "recurrence": "monthly", "owner_name": null, "source_doc": "2026-01-sla-en-contacten"},
+  {"id": "d2", "what": "Loonbetaling", "date": null, "schedule": "laatste werkdag van de maand", "type": "payment", "recurrence": "monthly", "owner_name": null, "source_doc": "2026-01-sla-en-contacten"},
+  {"id": "d3", "what": "DmfA-aangifte", "date": null, "schedule": "per kwartaal, uiterlijk 30 dagen na het einde van het kwartaal", "type": "declaration", "recurrence": "quarterly", "owner_name": null, "source_doc": "2026-01-sla-en-contacten"},
+  {"id": "d4", "what": "Jaarlijkse fiche-opmaak", "date": null, "schedule": "in februari", "type": "declaration", "recurrence": "annual", "owner_name": null, "source_doc": "2026-01-sla-en-contacten"},
+  {"id": "d5", "what": "Inwerkingtreding van de bedrijfs-cao ploegenpremie 12%/18%", "date": "2026-07-01", "schedule": null, "type": "legal", "recurrence": "one_off", "owner_name": null, "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "d6", "what": "Volgende vergadering ondernemingsraad (14u, locatie Antwerpen)", "date": "2026-06-15", "schedule": null, "type": "meeting", "recurrence": "one_off", "owner_name": null, "source_doc": "2026-03-notulen-ondernemingsraad"},
+  {"id": "d7", "what": "Einde uitzondering onderhoudsploeg: de nieuwe premie 12%/18% wordt van toepassing", "date": "2026-12-31", "schedule": null, "type": "legal", "recurrence": "one_off", "owner_name": null, "source_doc": "2026-02-klantinstructie-ploegenpremie"},
+  {"id": "d8", "what": "Indexering sectorale lonen +1,32% vanaf loonperiode april 2026; verwerking uiterlijk in de run van mei 2026", "date": "2026-04-01", "schedule": null, "type": "legal", "recurrence": "one_off", "owner_name": null, "source_doc": "2026-04-sectorbericht-indexering"},
+  {"id": "d9", "what": "Bijdrage sectorfonds 0,4% op de brutolonen betalen", "date": "2026-05-31", "schedule": null, "type": "payment", "recurrence": "one_off", "owner_name": null, "source_doc": "2026-04-sectorbericht-indexering"}
+ ]
+}

@@ -28,7 +28,7 @@ PROMPT = (ROOT / "dossier_prompt.md").read_text()
 
 SEVERITY = ["high", "medium", "low"]
 I_STATUS = ["open", "waiting", "blocked", "done"]
-D_TYPE = ["declaration", "payment", "legal", "contract", "review", "meeting"]
+D_TYPE = ["declaration", "payment", "legal", "contract", "review", "meeting", "delivery"]
 RECURRENCE = ["one_off", "monthly", "quarterly", "annual"]
 SIDE = ["client", "sdworx", "third_party"]
 
@@ -40,12 +40,23 @@ EXC_WORDS = r"afwijk|in plaats van|uitzondering|instead of|deviat|specifiek voor
 DEADLINE_WORDS = r"uiterlijk|ten laatste|v[óo][óo]r \d|deadline|binnen \d|vanaf|ingangsdatum|treedt in werking"
 
 
+STATIC_SUFFIX = ".classification.json"
+
+
 def load_docs(folder: Path) -> list[dict]:
     docs = []
     for p in sorted(folder.rglob("*")):
-        if p.is_file() and p.suffix.lower() in C.TEXT_SUFFIXES:
+        if p.is_file() and p.suffix.lower() in C.TEXT_SUFFIXES and not p.name.endswith(STATIC_SUFFIX):
             docs.append({"doc_id": p.stem, "title": p.stem.replace("-", " "), "text": C.read_source(p)})
     return docs
+
+
+def load_static(folder: Path, client_id: str) -> dict | None:
+    """Hand-written ground truth for a client, if it exists. Used until the classifier lands."""
+    for candidate in (folder / f"{client_id}{STATIC_SUFFIX}", folder.parent / f"{client_id}{STATIC_SUFFIX}"):
+        if candidate.exists():
+            return json.loads(candidate.read_text())
+    return None
 
 
 def norm_date(raw: str | None) -> str | None:
@@ -120,7 +131,7 @@ def offline_dossier(cand: dict, docs: list[dict]) -> dict:
         t = t.split(". ")[0]
         return t[:160] if len(t.strip()) >= 15 else text[:160]
     return {
-        "exceptions": [{"statement": c["text"], "overrides": None, "scope": None,
+        "exceptions": [{"statement": c["text"], "overrides": None, "site": None, "worker_group": None,
                         "authority": "client_instruction", "valid_from": None, "valid_to": None,
                         "source_doc": c["source_doc"]} for c in cand["exception_lines"][:6]],
         "people": [{"name": p["name"], "role": None, "side": "client", "contact": None,
@@ -136,6 +147,22 @@ def offline_dossier(cand: dict, docs: list[dict]) -> dict:
                        "recurrence": c.get("recurrence", "one_off"), "owner_name": None,
                        "source_doc": c["source_doc"]} for c in cand["deadline_lines"][:8]],
     }
+
+
+def scalar(value, notes: list[str], where: str):
+    """One tag = one value. A list from the model is a schema violation: keep the first, report it."""
+    if isinstance(value, list):
+        notes.append(f"{where}: model returned a list - kept the first value, tag must be single-valued")
+        value = value[0] if value else None
+    if isinstance(value, dict):
+        notes.append(f"{where}: model returned an object - dropped, tag must be single-valued")
+        return None
+    if isinstance(value, str):
+        value = value.strip()
+        if "," in value and len(value) < 60:          # "Antwerpen, Gent" is two values in one string
+            notes.append(f"{where}: '{value}' looks like two values packed into one string - review")
+        return value or None
+    return value
 
 
 def one_of(value, allowed, default):
@@ -157,12 +184,20 @@ def validate(dossier: dict, doc_ids: set[str]) -> tuple[dict, list[str]]:
         return True
 
     exceptions = []
+    seen_exc = set()
     for e in filter(keep, dossier.get("exceptions") or []):
         stmt = (e.get("statement") or "").strip()
         if not stmt:
             continue
+        site = scalar(e.get("site"), notes, "exceptions.site")
+        group = scalar(e.get("worker_group"), notes, "exceptions.worker_group")
+        key = (stmt[:120].lower(), str(site).lower(), str(group).lower())
+        if key in seen_exc:                      # same fact, same scope: one entry
+            continue
+        seen_exc.add(key)
         exceptions.append({"id": f"e{len(exceptions)+1}", "statement": stmt[:300],
-                           "overrides": (e.get("overrides") or None), "scope": (e.get("scope") or None),
+                           "overrides": (e.get("overrides") or None),
+                           "site": site, "worker_group": group,
                            "authority": one_of(e.get("authority"),
                                                ["client_instruction", "client_collective", "sector_agreement", "law"],
                                                "client_instruction"),
@@ -230,9 +265,12 @@ def validate(dossier: dict, doc_ids: set[str]) -> tuple[dict, list[str]]:
     return clean, notes
 
 
-def build(client_id: str, docs: list[dict], send=None, backend: str = "offline") -> dict:
+def build(client_id: str, docs: list[dict], send=None, backend: str = "offline", static: dict | None = None) -> dict:
     cand = rules_candidates(docs)
-    if send is None:
+    if static is not None:
+        blocks = {k: (static.get(k) or []) for k in ("exceptions", "people", "issues", "deadlines")}
+        engine = "static classification (hand-written)"
+    elif send is None:
         blocks = offline_dossier(cand, docs)
         engine = "rules-only"
     else:
@@ -269,7 +307,10 @@ def render(d: dict) -> str:
     sections = [("EXCEPTIONS / UNIQUE RULES", "exceptions", lambda e: (
                     f"    {e['id']}  {e['statement'][:110]}"
                     f"{' | overrides: ' + e['overrides'][:60] if e['overrides'] else ''}"
-                    f"  [{e['authority']}{', from ' + e['valid_from'] if e['valid_from'] else ''}]"
+                    f"  [{e['authority']}{', site=' + e['site'] if e.get('site') else ''}"
+                    f"{', group=' + e['worker_group'] if e.get('worker_group') else ''}"
+                    f"{', from ' + e['valid_from'] if e['valid_from'] else ''}"
+                    f"{', to ' + e['valid_to'] if e.get('valid_to') else ''}]"
                     f"  <- {e['source_doc']}")),
                 ("PEOPLE / OWNERS", "people", lambda p: (
                     f"    {p['id']}  {p['name']:24} {str(p['role'] or '-'):42} {p['side']:11} <- {p['source_doc']}")),
@@ -287,6 +328,22 @@ def render(d: dict) -> str:
         out.append("NOTES")
         out += [f"    ! {n}" for n in d["notes"]]
     return "\n".join(out)
+
+
+def tag_rows(d: dict) -> list[dict]:
+    """The indexable form: one row per (entry, tag, value). Guarantees one value per tag,
+    and explodes any list a future field might still carry into separate rows."""
+    rows = []
+    base = {"client_id": d["client_id"], "generated_at": d["generated_at"]}
+    for block in ("exceptions", "people", "issues", "deadlines"):
+        for entry in d[block]:
+            for tag, value in entry.items():
+                if tag == "id" or value in (None, "", []):
+                    continue
+                for v in (value if isinstance(value, list) else [value]):
+                    rows.append({**base, "entry": entry["id"], "block": block, "tag": tag,
+                                 "value": v, "source_doc": entry.get("source_doc")})
+    return rows
 
 
 def portfolio(dossiers: list[dict]) -> str:
@@ -307,6 +364,15 @@ def portfolio(dossiers: list[dict]) -> str:
     return "\n".join(out)
 
 
+def write_outputs(d: dict) -> tuple[Path, Path]:
+    OUT.mkdir(parents=True, exist_ok=True)
+    j = OUT / f"{d['client_id']}.json"
+    t = OUT / f"{d['client_id']}.tags.jsonl"
+    j.write_text(json.dumps(d, indent=1, ensure_ascii=False))
+    t.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in tag_rows(d)) + "\n")
+    return j, t
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Build a client dossier from a folder of documents.")
     ap.add_argument("--client", help="client id from clients.json (e.g. C2)")
@@ -318,6 +384,8 @@ def main() -> None:
                     default="openai" if __import__("os").environ.get("OPENAI_API_KEY") else "offline")
     ap.add_argument("--model", default="gpt-4o-mini")
     ap.add_argument("--no-tools", action="store_true")
+    ap.add_argument("--reclassify", action="store_true",
+                    help="ignore <client>.classification.json and run the extractor instead")
     args = ap.parse_args()
 
     C.load_env()
@@ -333,20 +401,22 @@ def main() -> None:
             docs = load_docs(folder)
             if not docs:
                 continue
-            d = build(cid, docs, send=send, backend=args.backend)
-            (OUT / f"{cid}.json").write_text(json.dumps(d, indent=1, ensure_ascii=False))
+            static = None if args.reclassify else load_static(folder, cid)
+            d = build(cid, docs, send=send, backend=args.backend, static=static)
+            write_outputs(d)
             dossiers.append(d)
         print(portfolio(dossiers))
-        print(f"\n{len(dossiers)} dossiers -> {OUT}")
+        print(f"\n{len(dossiers)} dossiers (+ .tags.jsonl) -> {OUT}")
         return
 
     docs = load_docs(args.dir)
     if not docs:
         sys.exit(f"no supported documents under {args.dir}")
-    dossier = build(args.client, docs, send=send, backend=args.backend)
-    (OUT / f"{args.client}.json").write_text(json.dumps(dossier, indent=1, ensure_ascii=False))
+    static = None if args.reclassify else load_static(args.dir, args.client)
+    dossier = build(args.client, docs, send=send, backend=args.backend, static=static)
+    j, t = write_outputs(dossier)
     print(render(dossier))
-    print(f"\nwritten -> {OUT / (args.client + '.json')}")
+    print(f"\nwritten -> {j}\n           {t}")
 
 
 if __name__ == "__main__":
